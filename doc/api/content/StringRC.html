@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  kcc::StringRC</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  <A HREF="#DOC.DOCU">kcc::StringRC</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Immutable ref-counted wrapper to string (NOT MT-safe)</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>StringRC</B> (const <!1><A HREF="StringRC.html#DOC.2.54.3">StringRC</A>&amp; rhs)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>StringRC</B> (const <!1><A HREF="Char.html">Char</A>* s)<BR>
+<I> Create ref-counted string</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>StringRC</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; s)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const <!1><A HREF="Char.html">Char</A>* </TD><TD><B>c_str</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   int </TD><TD><B>compare</B> (const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>empty</B> () const <BR>
+<I> Utility</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="StringRC.html">StringRC</A>&amp; </TD><TD><B>operator = </B> (const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   </TD><TD><B>operator const String& </B> () const <BR>
+<I> Accessors</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   int </TD><TD><B>rc</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>str</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.54.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>~StringRC</B> ()<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Immutable ref-counted wrapper to string (NOT MT-safe)
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="StringRC"></A>
+<A NAME="DOC.2.54.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> StringRC(const <!1><A HREF="Char.html">Char</A>* s)</B></TT>
+<DD>
+Create ref-counted string
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>s</B> -  string to ref-<!1><A HREF="RepositoryBinding.html#DOC.2.112.10">count</A>
+<BR><B>rhs</B> -  RC string to <!1><A HREF="SharedPtr.html#DOC.2.2.17">attach</A> to<BR><DD></DL><P>
+<A NAME="StringRC"></A>
+<A NAME="DOC.2.54.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> StringRC(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; s)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringRC"></A>
+<A NAME="DOC.2.54.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> StringRC(const <!1><A HREF="StringRC.html#DOC.2.54.3">StringRC</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="~StringRC"></A>
+<A NAME="DOC.2.54.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~StringRC()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator = "></A>
+<A NAME="DOC.2.54.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="StringRC.html">StringRC</A>&amp; operator = (const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator const String& "></A>
+<A NAME="DOC.2.54.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   operator const String& () const </B></TT>
+<DD>
+Accessors
+<DL><DT><DD></DL><P>
+<A NAME="str"></A>
+<A NAME="DOC.2.54.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; str() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="c_str"></A>
+<A NAME="DOC.2.54.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="Char.html">Char</A>* c_str() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="empty"></A>
+<A NAME="DOC.2.54.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool empty() const </B></TT>
+<DD>
+Utility
+<DL><DT><DD></DL><P>
+<A NAME="compare"></A>
+<A NAME="DOC.2.54.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   int compare(const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs) const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="rc"></A>
+<A NAME="DOC.2.54.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   int rc() const </B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="str"></A>
+<A NAME="DOC.2.54.14.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> str</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="rc"></A>
+<A NAME="DOC.2.54.14.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int rc</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="Data"></A>
+<A NAME="DOC.2.54.14.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Data(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; s)</B></TT>
+<DL><DT><DD></DL><P></DL>
+</DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

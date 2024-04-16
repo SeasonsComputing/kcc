@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IPageResponse</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IPageResponse</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> HTTPResponse provider to stream resource to browser</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IIHTTPResponse,MIHTTPResponse.html,IIPageResponse,MIPageResponse.html">
+<param name=before value="M,M,M">
+<param name=after value="Md-SP,Md-,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.93.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>fullPath</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)<BR>
+<I> Get full path relative to appPath </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.93.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>init</B> (const <!1><A HREF="Properties.html">Properties</A>&amp; config, const <!1><A HREF="IPageResponse.html#DOC.2.93.1">Handlers</A>&amp; <!1><A HREF="IHTTPResponseDispatcher.html#DOC.2.85.2">handlers</A>)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.93.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>init</B> (const <!1><A HREF="Properties.html">Properties</A>&amp; config, const <!1><A HREF="IPageResponse.html#DOC.2.93.1">Handlers</A>&amp; <!1><A HREF="IHTTPResponseDispatcher.html#DOC.2.85.2">handlers</A>, const <!1><A HREF="kcc.html#DOC.2.48">StringMap</A>&amp; xforms)<BR>
+<I> Initialize response </I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.93.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>typedef  std::map&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, <!1><A HREF="IPageHandler.html">IPageHandler</A>*&gt; </TD><TD><B>Handlers</B> <BR>
+<I>Data structure to map request cmd to handler: URI request -> handler </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+HTTPResponse provider to stream resource to browser
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Handlers"></A>
+<A NAME="DOC.2.93.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::map&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, <!1><A HREF="IPageHandler.html">IPageHandler</A>*&gt; Handlers</B></TT>
+<DD>Data structure to map request cmd to handler: URI request -> handler 
+<DL><DT><DD></DL><P>
+<A NAME="init"></A>
+<A NAME="DOC.2.93.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool init(const <!1><A HREF="Properties.html">Properties</A>&amp; config, const <!1><A HREF="IPageResponse.html#DOC.2.93.1">Handlers</A>&amp; <!1><A HREF="IHTTPResponseDispatcher.html#DOC.2.85.2">handlers</A>, const <!1><A HREF="kcc.html#DOC.2.48">StringMap</A>&amp; xforms) = 0</B></TT>
+<DD>
+Initialize response
+
+<DL><DT><DT><B>Parameters:</B><DD><B>config</B> -  component <!1><A HREF="URL.html#DOC.2.75.15">parameters</A>
+<BR><B></B> - <!1><A HREF="IHTTPResponseDispatcher.html#DOC.2.85.2">handlers</A> page <!1><A HREF="IHTTPResponseDispatcher.html#DOC.2.85.2">handlers</A>
+<BR><B>xforms</B> -  transformations: <!1><A HREF="Thread.html#DOC.2.66.5">id</A> -> <!1><A HREF="URL.html#DOC.2.75.7">path</A> (otherwise xform assumes <!1><A HREF="URL.html#DOC.2.75.7">path</A>)
+<BR><DT><B>Returns:</B><DD>  true if initialized successfully<BR><DD></DL><P>
+<A NAME="init"></A>
+<A NAME="DOC.2.93.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool init(const <!1><A HREF="Properties.html">Properties</A>&amp; config, const <!1><A HREF="IPageResponse.html#DOC.2.93.1">Handlers</A>&amp; <!1><A HREF="IHTTPResponseDispatcher.html#DOC.2.85.2">handlers</A>) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="fullPath"></A>
+<A NAME="DOC.2.93.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="kcc.html#DOC.2.43">String</A> fullPath(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>) = 0</B></TT>
+<DD>
+Get full path relative to appPath
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> to qualify
+<BR><DT><B>Returns:</B><DD>  full path<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DT><B>See Also:</B><DD><!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

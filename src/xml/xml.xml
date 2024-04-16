@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Schema version="1.0" namespace="kcc">
+    <Type name="XMLConstraint" type="enum" ext="h">
+        <Attribute type="value" name="required" values="required"/>
+        <Attribute type="value" name="optional" values="optional"/>
+    </Type>
+    <Type name="XMLValue" type="enum" ext="h">
+        <Attribute type="value" name="boolean" values="{boolean}"/>
+        <Attribute type="value" name="number" values="{number}"/>
+        <Attribute type="value" name="isodate" values="{isodate}"/>
+    </Type>
+    <Type name="XMLType" type="enum" ext="h">
+        <Attribute type="value" name="value" values="value"/>
+        <Attribute type="value" name="atomic" values="atomic"/>
+        <Attribute type="value" name="list" values="list"/>
+        <Attribute type="value" name="cdata" values="cdata"/>
+    </Type>
+</Schema>

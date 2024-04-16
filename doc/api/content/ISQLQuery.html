@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::ISQLQuery</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::ISQLQuery</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> SQL result set backed by cursor</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IISQLResultSet,MISQLResultSet.html,IISQLQuery,MISQLQuery.html">
+<param name=before value="M,M,M">
+<param name=after value="Md-SP,Md-,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.101.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   unsigned long long </TD><TD><B>rows</B> ()<BR>
+<I> Position query result set cursor </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.101.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>seek</B> (unsigned long long <!1><A HREF="ITextResults.html#DOC.2.106.4">row</A>) throw(SQLException)<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+SQL result set backed by cursor
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="rows"></A>
+<A NAME="DOC.2.101.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   unsigned long long rows() = 0</B></TT>
+<DD>
+Position query result set cursor
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ITextResults.html#DOC.2.106.4">row</A> cursor <!1><A HREF="ITextResults.html#DOC.2.106.4">row</A> offset
+<BR><DT><B>Returns:</B><DD>  number of rows in cursor
+@throws SQLException if sql error<BR><DD></DL><P>
+<A NAME="seek"></A>
+<A NAME="DOC.2.101.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void seek(unsigned long long <!1><A HREF="ITextResults.html#DOC.2.106.4">row</A>) throw(SQLException) = 0</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

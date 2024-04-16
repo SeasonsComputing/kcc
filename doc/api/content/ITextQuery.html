@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::ITextQuery</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::ITextQuery</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Text query</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IITextQuery,MITextQuery.html,IITextStore,MITextStore.html">
+<param name=before value="M,M,M^-">
+<param name=after value="Md-,M,M">
+<param name=indent value="0,1,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.107.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>init</B> (const <!1><A HREF="Properties.html">Properties</A>&amp; config)<BR>
+<I> Text query properties </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.107.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="ITextResults.html">ITextResults</A>* </TD><TD><B>query</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>, TextDocument::Contents contents = TextDocument::C_METADATA) throw(TextException)<BR>
+<I> Query text from store </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Text query
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="init"></A>
+<A NAME="DOC.2.107.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool init(const <!1><A HREF="Properties.html">Properties</A>&amp; config) = 0</B></TT>
+<DD>
+Text query properties
+
+<DL><DT><DT><B>Parameters:</B><DD><B>config</B> -  <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> <!1><A HREF="ITextQuery.html#DOC.2.107.2">query</A> configuration
+<BR><DT><B>Returns:</B><DD>  true if initialized<BR><DD></DL><P>
+<A NAME="query"></A>
+<A NAME="DOC.2.107.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="ITextResults.html">ITextResults</A>* query(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>, TextDocument::Contents contents = TextDocument::C_METADATA) throw(TextException) = 0</B></TT>
+<DD>
+Query text from store
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ITextQuery.html#DOC.2.107.2">query</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>
+<BR><B>contents</B> -  OR'd <!1><A HREF="DOMWriter.html#DOC.2.15.9">attr</A>'s of <!1><A HREF="Exception.html#DOC.2.16.3">what</A> contents to populate 
+<BR><DT><B>Returns:</B><DD>  results (ownership IS consumed)
+@throws TextException if text error<BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="ITextStore.html">ITextStore</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

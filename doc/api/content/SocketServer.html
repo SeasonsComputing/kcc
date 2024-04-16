@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::SocketServer</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::SocketServer</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Socket server</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CSocket,MSocket.html,CSocketServer,MSocketServer.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.40.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>KCC_COMPONENT_EXCEPTION</B> (Closed)<BR>
+<I>Socket closed </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.40.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>SocketServer</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Socket.html#DOC.2.39.17">host</A>, int <!1><A HREF="Socket.html#DOC.2.39.18">port</A>, int queue = 32)<BR>
+<I> Socket server ctor </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.40.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="Socket.html#DOC.2.39.1">Handle</A> </TD><TD><B>accept</B> () throw(SocketServer::Closed)<BR>
+<I> Accept a client request (blocking call) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.40.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>listen</B> () throw(Socket::Failed)<BR>
+<I>Initiate client listening (will connect if not already) </I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Protected Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.40.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>onConnect</B> (<!1><A HREF="Socket.html#DOC.2.39.2">Address</A> addr) throw(Socket::Failed)<BR>
+<I>onConnect: Template method (GOF) - server binding connection </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Socket server
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="KCC_COMPONENT_EXCEPTION"></A>
+<A NAME="DOC.2.40.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> KCC_COMPONENT_EXCEPTION(Closed)</B></TT>
+<DD>Socket closed 
+<DL><DT><DD></DL><P>
+<A NAME="SocketServer"></A>
+<A NAME="DOC.2.40.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SocketServer(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Socket.html#DOC.2.39.17">host</A>, int <!1><A HREF="Socket.html#DOC.2.39.18">port</A>, int queue = 32)</B></TT>
+<DD>
+Socket server ctor
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Socket.html#DOC.2.39.17">host</A> <!1><A HREF="Socket.html#DOC.2.39.17">host</A> <!1><A HREF="Timers.html#DOC.2.72.2">name</A>
+<BR><B></B> - <!1><A HREF="Socket.html#DOC.2.39.18">port</A> <!1><A HREF="Socket.html#DOC.2.39.18">port</A> number
+<BR><B>queue</B> -  <!1><A HREF="SocketServer.html#DOC.2.40.3">listen</A> queue <!1><A HREF="Timers.html#DOC.2.72.10">size</A><BR><DD></DL><P>
+<A NAME="listen"></A>
+<A NAME="DOC.2.40.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void listen() throw(Socket::Failed)</B></TT>
+<DD>Initiate client listening (will connect if not already) 
+<DL><DT><DD></DL><P>
+<A NAME="accept"></A>
+<A NAME="DOC.2.40.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Socket.html#DOC.2.39.1">Handle</A> accept() throw(SocketServer::Closed)</B></TT>
+<DD>
+Accept a client request (blocking call)
+
+<DL><DT><DT><B>Returns:</B><DD>  handle to client socket<BR><DD></DL><P>
+<A NAME="onConnect"></A>
+<A NAME="DOC.2.40.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void onConnect(<!1><A HREF="Socket.html#DOC.2.39.2">Address</A> addr) throw(Socket::Failed)</B></TT>
+<DD>onConnect: Template method (GOF) - server binding connection 
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

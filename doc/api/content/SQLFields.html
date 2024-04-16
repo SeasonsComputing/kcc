@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>struct  kcc::SQLFields</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>struct  <A HREF="#DOC.DOCU">kcc::SQLFields</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> SQL field collection (managed)</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.2.99.1">SQLFields</A></B>(<!1><A HREF="ISQLConnection.html">ISQLConnection</A>* c)
+<DD><I>ctor/dtor </I>
+
+<A NAME="SQLFields"></A>
+<A NAME="DOC.2.99.7"></A>
+<DT>
+<IMG ALT="o" SRC=icon2.gif> <B>SQLFields</B>(const <!1><A HREF="SQLFields.html#DOC.2.99.7">SQLFields</A>&amp;)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   void <B><A HREF="#DOC.2.99.3">add</A></B>(ISQLField::Type t) throw(SQLException)
+<DD><I>Field collection operators </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   <!1><A HREF="ISQLField.html">ISQLField</A>* <B><A HREF="#DOC.2.99.6">at</A></B>(int n) throw(SQLException)
+
+<A NAME="m_con"></A>
+<A NAME="DOC.2.99.9"></A>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="ISQLConnection.html">ISQLConnection</A>* <B>m_con</B>
+
+<A NAME="m_fields"></A>
+<A NAME="DOC.2.99.10"></A>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>std::vector&lt;<!1><A HREF="ISQLField.html">ISQLField</A>*&gt;  <B>m_fields</B>
+
+<A NAME="operator = "></A>
+<A NAME="DOC.2.99.8"></A>
+<DT>
+<IMG ALT="o" SRC=icon2.gif><!1><A HREF="SQLFields.html">SQLFields</A>&amp; <B>operator = </B>(const <!1><A HREF="SQLFields.html">SQLFields</A>&amp;)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   <!1><A HREF="ISQLField.html">ISQLField</A>* <B><A HREF="#DOC.2.99.4">operator [] </A></B>(int n) throw(SQLException)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   int <B><A HREF="#DOC.2.99.5">size</A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.2.99.2">~SQLFields</A></B>()
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+SQL field collection (managed)</BLOCKQUOTE>
+<DL>
+
+<A NAME="SQLFields"></A>
+<A NAME="DOC.2.99.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SQLFields(<!1><A HREF="ISQLConnection.html">ISQLConnection</A>* c)</B></TT>
+<DD>ctor/dtor 
+<DL><DT><DD></DL><P>
+<A NAME="~SQLFields"></A>
+<A NAME="DOC.2.99.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~SQLFields()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="add"></A>
+<A NAME="DOC.2.99.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void add(ISQLField::Type t) throw(SQLException)</B></TT>
+<DD>Field collection operators 
+<DL><DT><DD></DL><P>
+<A NAME="operator [] "></A>
+<A NAME="DOC.2.99.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="ISQLField.html">ISQLField</A>* operator [] (int n) throw(SQLException)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="size"></A>
+<A NAME="DOC.2.99.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   int size()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="at"></A>
+<A NAME="DOC.2.99.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="ISQLField.html">ISQLField</A>* at(int n) throw(SQLException)</B></TT>
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

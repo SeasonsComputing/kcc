@@ -1,0 +1,24 @@
+<Properties>
+        <Property key="timeBetweenStatusUpdate" value="5" />
+
+        <Property key="config"                 value="../config/engines/sd-extraction.xml" />
+        <Property key="recurse"                value="1" />
+        <Property key="removeBatch"            value="1" />
+        <Property key="useExistingBatches"     value="1" />
+
+        <!-- The number of files to process in each batch -->
+        <Property key="componentProcessor" value="u_engine_sessionprocessor" />
+        <Property key="brokerURL"          value="cicero.umbrialistens.com:8300" />
+        <Property key="sessionName"        value="umbria-sd-extraction" />
+<!--
+        <Property key="componentProcessor"     value="u_engine_shellprocessor" />
+        <Property key="ShellProcessor.command" value="ssh $WORKER /var/lib/umbria/analytics/bin/engine.sh component=u_engine_analysispipelinebatch kcc.componentsSystemPathBinding=1 kcc.logVerbosity=1 kcc.logMax=64 kcc.logMaxSize=524288000 kcc.logPath=/var/lib/umbria/analytics/sdextraction/logs/ kcc.logName=$JOB_ID-$ITERATION. config=$CONFIG EngineAnalysisPipelineBatch.batchSize=31 EngineAnalysisPipelineBatch.batchStageList=xtract.content" />
+-->
+
+
+        <!-- The following 3 variables are ignored when useExistingBatches = 1 -->
+        <Property key="path" value="./"/>
+        <Property key="batchSize"          value="0" />
+        <Property key="batchCount"         value="80" />
+
+</Properties>

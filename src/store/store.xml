@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Schema version="1.0" namespace="kcc">
+    <Type name="TextQueryXml" type="enum" ext="h">
+        <Attribute type="value" name="root" values="TextQuery"/>
+        <Attribute type="value" name="rootService" values="service"/>
+        <Attribute type="value" name="rootWhen" values="when"/>
+        <Attribute type="value" name="rootDocuments" values="total"/>
+        <Attribute type="value" name="rootIndex" values="index"/>
+        <Attribute type="value" name="rootMaxCursors" values="maxCursors"/>
+        <Attribute type="value" name="rootCursors" values="cursors"/>
+        <Attribute type="value" name="rootExpire" values="expire"/>
+        <Attribute type="value" name="rootMessage" values="message"/>
+        <Attribute type="value" name="rootError" values="error"/>
+        <Attribute type="value" name="document" values="Document"/>
+        <Attribute type="value" name="documentRow" values="row"/>
+        <Attribute type="value" name="text" values="Text"/>
+        <Attribute type="value" name="match" values="Match"/>
+        <Attribute type="value" name="matchStartOffset" values="s"/>
+        <Attribute type="value" name="matchEndOffset" values="e"/>
+        <Attribute type="value" name="metadata" values="Metadata"/>
+        <Attribute type="value" name="metadataKey" values="k"/>
+        <Attribute type="value" name="metadataValue" values="v"/>
+        <Attribute type="value" name="term" values="Term"/>
+        <Attribute type="value" name="termTerm" values="t"/>
+        <Attribute type="value" name="termFrequency" values="f"/>
+        <Attribute type="value" name="status" values="Status"/>
+        <Attribute type="value" name="statusId" values="id"/>
+        <Attribute type="value" name="statusExpression" values="expr"/>
+        <Attribute type="value" name="statusContents" values="contents"/>
+        <Attribute type="value" name="statusSize" values="size"/>
+        <Attribute type="value" name="statusRow" values="row"/>
+        <Attribute type="value" name="statusTotal" values="total"/>
+        <Attribute type="value" name="statusAccessed" values="accessed"/>
+        <Attribute type="value" name="statusExpired" values="expired"/>
+        <Attribute type="value" name="time" values="time"/>
+    </Type>
+    <Type name="TextQueryRest" type="enum" ext="h">
+        <Attribute type="value" name="query" values="/query"/>
+        <Attribute type="value" name="queryExpression" values="expr"/>
+        <Attribute type="value" name="queryFlush" values="flush"/>
+        <Attribute type="value" name="queryContents" values="contents"/>
+        <Attribute type="value" name="queryMax" values="max"/>
+        <Attribute type="value" name="queryId" values="id"/>
+        <Attribute type="value" name="queryRow" values="row"/>
+        <Attribute type="value" name="status" values="/status"/>
+        <Attribute type="value" name="statusDetail" values="detail"/>
+        <Attribute type="value" name="close" values="/close"/>
+        <Attribute type="value" name="shutdown" values="/shutdown"/>
+        <Attribute type="value" name="service" values="/service"/>
+    </Type>
+</Schema>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IHTTPServer</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IHTTPServer</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> HTTP server specification</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="IIComponent,MIComponent.html,IIHTTPServer,MIHTTPServer.html">
+<param name=before value="M,M">
+<param name=after value="Md-,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.86.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>init</B> ( const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.6">host</A>, int <!1><A HREF="IHTTPServer.html#DOC.2.86.3">port</A>, <!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>* <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; notifyURL = Strings::empty(), int queue = 32, long sendWaitSec = 0, long recvWaitSec = 0)<BR>
+<I> Initialize server paramters </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.86.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>ip</B> ()<BR>
+<I> Accessors</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.86.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   int </TD><TD><B>port</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.86.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>start</B> () throw(Socket::Failed)<BR>
+<I> Start server  @throws Socket::Failed exception if error</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.86.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>stop</B> () throw(Socket::Failed)<BR>
+<I> Stop server  @throws Socket::Failed exception if error</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+HTTP server specification
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="init"></A>
+<A NAME="DOC.2.86.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool init( const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.6">host</A>, int <!1><A HREF="IHTTPServer.html#DOC.2.86.3">port</A>, <!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>* <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; notifyURL = Strings::empty(), int queue = 32, long sendWaitSec = 0, long recvWaitSec = 0) = 0</B></TT>
+<DD>
+Initialize server paramters
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.6">host</A> <!1><A HREF="URL.html#DOC.2.75.6">host</A> <!1><A HREF="Timers.html#DOC.2.72.2">name</A> for server
+<BR><B></B> - <!1><A HREF="IHTTPServer.html#DOC.2.86.3">port</A> <!1><A HREF="IHTTPServer.html#DOC.2.86.3">port</A> to <!1><A HREF="SocketServer.html#DOC.2.40.3">listen</A> for <!1><A HREF="HTTP.html">HTTP</A> <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.1">request</A> on
+<BR><B></B> - <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A> reponse provider to process <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.1">request</A>'s <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A>
+<BR><B></B> - <!1><A HREF="SynchCondition.html#DOC.2.68.4">notify</A> URL. Will <!1><A HREF="HTTPDispatch.html#DOC.2.19.2">send</A> an <!1><A HREF="HTTP.html">HTTP</A> <!1><A HREF="HTTP.html#DOC.2.18.2">GET</A> to {<!1><A HREF="URL.html">URL</A>}?action=(startup|shutdown)&<!1><A HREF="URL.html#DOC.2.75.6">host</A>={<!1><A HREF="URL.html#DOC.2.75.6">host</A>}&<!1><A HREF="IHTTPServer.html#DOC.2.86.3">port</A>={<!1><A HREF="IHTTPServer.html#DOC.2.86.3">port</A>}
+<BR><B>queue</B> -  queue <!1><A HREF="Timers.html#DOC.2.72.10">size</A> of incoming socket listeners
+<BR><B>sendWaitSec</B> -  timeout for <!1><A HREF="HTTPDispatch.html#DOC.2.19.2">send</A> (<!1><A HREF="Timers.html#DOC.2.72.7">secs</A>)
+<BR><B>recvWaitSec</B> -  timeout for receive (<!1><A HREF="Timers.html#DOC.2.72.7">secs</A>)
+<BR><DT><B>Returns:</B><DD>  true if initialized successfully<BR><DD></DL><P>
+<A NAME="ip"></A>
+<A NAME="DOC.2.86.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; ip() = 0</B></TT>
+<DD>
+Accessors
+<DL><DT><DD></DL><P>
+<A NAME="port"></A>
+<A NAME="DOC.2.86.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   int port() = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="start"></A>
+<A NAME="DOC.2.86.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void start() throw(Socket::Failed) = 0</B></TT>
+<DD>
+Start server 
+@throws Socket::Failed exception if error
+<DL><DT><DD></DL><P>
+<A NAME="stop"></A>
+<A NAME="DOC.2.86.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void stop() throw(Socket::Failed) = 0</B></TT>
+<DD>
+Stop server 
+@throws Socket::Failed exception if error
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

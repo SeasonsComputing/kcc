@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template<class ResponseHandlerT> struct  kcc::PageResponseWrapper</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>template&lt;class ResponseHandlerT&gt; struct  <A HREF="#DOC.DOCU">kcc::PageResponseWrapper</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Page handler wrapper for response handler (GOF: Adapter)</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.2.92.2">PageResponseWrapper</A></B>(ResponseHandlerT* rh = NULL)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ResponseHandlerT* <B><A HREF="#DOC.2.92.1">handler</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.2.92.4">onHandle</A></B>(const <!1><A HREF="HTTPRequest.html">HTTPRequest</A>&amp; r, <!1><A HREF="IPageReader.html">IPageReader</A>* in, <!1><A HREF="IPageWriter.html">IPageWriter</A>* <!1><A HREF="Log.html#DOC.2.33.23">out</A>, <!1><A HREF="IPageResponse.html">IPageResponse</A>*)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>ResponseHandlerT* <B><A HREF="#DOC.2.92.5">operator-></A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   <B><A HREF="#DOC.2.92.3">~PageResponseWrapper</A></B>()
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Page handler wrapper for response handler (GOF: Adapter)
+
+<P>Ownership of response delegate IS consumed.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="handler"></A>
+<A NAME="DOC.2.92.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ResponseHandlerT* handler</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PageResponseWrapper"></A>
+<A NAME="DOC.2.92.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PageResponseWrapper(ResponseHandlerT* rh = NULL)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="~PageResponseWrapper"></A>
+<A NAME="DOC.2.92.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~PageResponseWrapper()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="onHandle"></A>
+<A NAME="DOC.2.92.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void onHandle(const <!1><A HREF="HTTPRequest.html">HTTPRequest</A>&amp; r, <!1><A HREF="IPageReader.html">IPageReader</A>* in, <!1><A HREF="IPageWriter.html">IPageWriter</A>* <!1><A HREF="Log.html#DOC.2.33.23">out</A>, <!1><A HREF="IPageResponse.html">IPageResponse</A>*)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator->"></A>
+<A NAME="DOC.2.92.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>ResponseHandlerT* operator->()</B></TT>
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DT><B>See Also:</B><DD><!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>, <!1><A HREF="IPageHandler.html">IPageHandler</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

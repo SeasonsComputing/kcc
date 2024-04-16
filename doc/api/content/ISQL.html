@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::ISQL</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::ISQL</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> SQL facilities</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="IIComponent,MIComponent.html,IISQL,MISQL.html">
+<param name=before value="M,M">
+<param name=after value="Md-,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.97.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="ISQLConnection.html">ISQLConnection</A>* </TD><TD><B>connect</B> () throw(SQLException)<BR>
+<I> Connection SQL database </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.97.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="ISQLConnection.html">ISQLConnection</A>* </TD><TD><B>connect</B> ( const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.6">host</A>, long <!1><A HREF="URL.html#DOC.2.75.10">port</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; db, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; user, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; password) throw(SQLException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.97.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>init</B> (const <!1><A HREF="Properties.html">Properties</A>&amp; config)<BR>
+<I> Initialize SQL  </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+SQL facilities
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="init"></A>
+<A NAME="DOC.2.97.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool init(const <!1><A HREF="Properties.html">Properties</A>&amp; config) = 0</B></TT>
+<DD>
+Initialize SQL 
+
+<DL><DT><DT><B>Parameters:</B><DD><B>config</B> -  sql configuration
+<BR><DT><B>Returns:</B><DD>  true if initialized
+@throws SQLException if sql error<BR><DD></DL><P>
+<A NAME="connect"></A>
+<A NAME="DOC.2.97.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="ISQLConnection.html">ISQLConnection</A>* connect() throw(SQLException) = 0</B></TT>
+<DD>
+Connection SQL database
+
+<DL><DT><DT><B>Returns:</B><DD>  connection (ownership IS consumed)
+@throws SQLException if sql error<BR><DD></DL><P>
+<A NAME="connect"></A>
+<A NAME="DOC.2.97.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="ISQLConnection.html">ISQLConnection</A>* connect( const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.6">host</A>, long <!1><A HREF="URL.html#DOC.2.75.10">port</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; db, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; user, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; password) throw(SQLException) = 0</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::Components</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::Components</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Utility class to locate, bind, & manage a component module and access factory instances.</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.6.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="IComponentFactory.html">IComponentFactory</A>* </TD><TD><B>factory</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Thread.html#DOC.2.66.5">id</A>) throw(ComponentModule::ComponentNotFound, ComponentModule::FactoryNotFound)<BR>
+<I> Accessor to component factory for component id.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.6.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="IComponentLocator.html">IComponentLocator</A>* </TD><TD><B>locator</B> (bool defaultSystem = false)<BR>
+<I> Accessor to system locator NOTE: to get the locator for a specific component use module definition (@see ComponentModule::locator()) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.6.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="IComponentModuleManager.html">IComponentModuleManager</A>* </TD><TD><B>manager</B> ()<BR>
+<I> Accessor to system manager </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.6.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="ComponentModule.html">ComponentModule</A>&amp; </TD><TD><B>module</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Thread.html#DOC.2.66.5">id</A>) throw(ComponentModule::ComponentNotFound)<BR>
+<I> Accessor to component binding in cache.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.6.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>moduleIds</B> (<!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; ids)<BR>
+<I> Accessor to cached component id's.</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Utility class to locate, bind, & manage a component module and access factory instances.
+
+<P>Component Location:
+Components are located according to the following rules:
+
+<P>- System Locator (default)
+o Absolute Path (default)
+The system locator will use "./" to locate a a component relative to the kcc.systemPath path
+To override the default relative path set 
+kcc.componentsSystemPathOverride={path} {default=./}
+o Operating System Path
+To have the system _not_ specify a relative path (load:"comp.dll/so") set
+kcc.componentsSystemPathBinding=1 (default=0)
+
+<P>- Override System Locator
+To override the system locator specify:
+kcc.componentsLocator.SystemLocator={IComponentLocator provider name}
+kcc.componentsLocator.{IComponentLocator provider name}=DefaultSystemLocator
+
+<P>- Per Component Locator
+To override a locator per component specify:
+kcc.componentsLocator.{component provider name}={IComponentLocator provider name}
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="factory"></A>
+<A NAME="DOC.2.6.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="IComponentFactory.html">IComponentFactory</A>* factory(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Thread.html#DOC.2.66.5">id</A>) throw(ComponentModule::ComponentNotFound, ComponentModule::FactoryNotFound)</B></TT>
+<DD>
+Accessor to component factory for component id. 
+NOTE: to create a new factory instance use module(id)->constructFactory().
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Thread.html#DOC.2.66.5">id</A> <!1><A HREF="Thread.html#DOC.2.66.5">id</A> of component
+<BR><DT><B>Returns:</B><DD>  factory instance for id (ownership NOT consumed)
+@throw ComponentModule::ComponentNotFound component not found
+@throw ComponentModule::FactoryNotFound factory method not found<BR><DD></DL><P>
+<A NAME="module"></A>
+<A NAME="DOC.2.6.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="ComponentModule.html">ComponentModule</A>&amp; module(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Thread.html#DOC.2.66.5">id</A>) throw(ComponentModule::ComponentNotFound)</B></TT>
+<DD>
+Accessor to component binding in cache. If not bound will create and cache binding
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Thread.html#DOC.2.66.5">id</A> <!1><A HREF="Thread.html#DOC.2.66.5">id</A> of component
+<BR><DT><B>Returns:</B><DD>  module component module for id
+@throw ComponentModule::ComponentNotFound component not found<BR><DD></DL><P>
+<A NAME="moduleIds"></A>
+<A NAME="DOC.2.6.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void moduleIds(<!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; ids)</B></TT>
+<DD>
+Accessor to cached component id's.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>ids</B> -  where to place the names of cached component <!1><A HREF="Thread.html#DOC.2.66.5">id</A>'s<BR><DD></DL><P>
+<A NAME="locator"></A>
+<A NAME="DOC.2.6.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="IComponentLocator.html">IComponentLocator</A>* locator(bool defaultSystem = false)</B></TT>
+<DD>
+Accessor to system locator
+NOTE: to get the locator for a specific component use module definition (@see ComponentModule::locator())
+
+<DL><DT><DT><B>Parameters:</B><DD><B>defaultSystem</B> -  <!1><A HREF="Properties.html#DOC.2.38.14">get</A> the default system <!1><A HREF="Components.html#DOC.2.6.4">locator</A> otheriwse will return the overloaded <!1><A HREF="Components.html#DOC.2.6.4">locator</A> (if overloaded)
+<BR><DT><B>Returns:</B><DD>  system locator (ownership NOT consumed)<BR><DD></DL><P>
+<A NAME="manager"></A>
+<A NAME="DOC.2.6.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="IComponentModuleManager.html">IComponentModuleManager</A>* manager()</B></TT>
+<DD>
+Accessor to system manager
+
+<DL><DT><DT><B>Returns:</B><DD>  system manager (ownership NOT consumed)<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

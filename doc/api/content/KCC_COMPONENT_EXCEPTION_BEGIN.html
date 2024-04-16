@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>#define KCC_COMPONENT_EXCEPTION_BEGIN</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>#define <A HREF="#DOC.DOCU">KCC_COMPONENT_EXCEPTION_BEGIN</A></H2></TD><TD><H2>(_C)</H2></TD></TR></TABLE>
+<BLOCKQUOTE> Utility macro to create component exceptions.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Utility macro to create component exceptions.
+Required to force some compilers to emit exception code for 
+stateless/methodless type-only exceptions
+
+<P>Note:
+All component exceptions MUST derive from kcc::Exception
+
+<P>Stock Usage:
+KCC_COMPONENT_EXCEPTION(MyCompException)
+
+<P>Custom Usage:
+KCC_COMPONENT_EXCEPTION_BEGIN(MyCustCompException)
+String target;
+String regex;
+MyCustCompException(const String& what, const String& _target, const String& _regex) 
+: Exception(what), target(_target), regex(_regex)
+{}
+KCC_COMPONENT_EXCEPTION_END</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

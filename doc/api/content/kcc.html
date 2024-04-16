@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>namespace kcc</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>namespace <A HREF="#DOC.DOCU">kcc</A></H2></TD></H2></TD></TR></TABLE>
+
+<HR>
+<P><DL>
+ <DT>
+template&lt;class _C&gt; class  <B><A HREF="AutoPtr.html">AutoPtr</A></B>
+<DD><I> std::auto_ptr-like class with implicit conversion to ptr type</I>
+<DT>
+typedef  char <B><A HREF="Char.html">Char</A></B>
+<DD><I>String ADT's </I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="ComponentModule.html">ComponentModule</A></B>
+<DD><I> Provides the binding to a component module and locating the factory construction entry point so the component factory may be created.</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Components.html">Components</A></B>
+<DD><I> Utility class to locate, bind, & manage a component module and access factory instances.</I>
+<DT>
+template&lt;class _I&gt;inline   _I* <B><A HREF="Components_constructSafe.html">Components_constructSafe</A></B>(<!1><A HREF="IComponentFactory.html">IComponentFactory</A>* f) throw(ComponentModule::ComponentNotFound)
+<DD><I> RTTI versions of construct and downcast (throws exceptions on bad casts)</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>template&lt;class _I&gt;inline   _I* <B><A HREF="#DOC.2.8">Components_downcastSafe</A></B>(<!1><A HREF="IComponent.html">IComponent</A>* c) throw(ComponentModule::ComponentNotFound)
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Core.html">Core</A></B>
+<DD><I> Core: system root object</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="DOMFileReader.html">DOMFileReader</A></B>: public <!1><A HREF="DOMReader.html">DOMReader</A>
+<DD><I> Helper class for reading DOM nodes from a file (dom tree is loaded and managed)</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="DOMReader.html">DOMReader</A></B>
+<DD><I> Helper class for reading DOM nodes</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="DOMWriter.html">DOMWriter</A></B>
+<DD><I> Helper class for writing DOM nodes</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Dictionary.html">Dictionary</A></B>: public <!1><A HREF="kcc.html#DOC.2.50">StringMultimap</A>
+<DD><I> Dictionary (multi-map) ADT</I>
+<DT>
+typedef  std::pair&lt;StringMultimap::iterator, StringMultimap::iterator&gt; <B><A HREF="DictionaryFinder.html">DictionaryFinder</A></B>
+<DD><I>Finder Utility Types </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::pair&lt;StringMultimap::const_iterator, StringMultimap::const_iterator&gt; <B><A HREF="#DOC.2.11">DictionaryFinderConst</A></B>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Exception.html">Exception</A></B>: public std::exception
+<DD><I> Exception class that defines C-string behavior</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="HTTP.html">HTTP</A></B>
+<DD><I> HTTP Utilities </I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="HTTPDispatch.html">HTTPDispatch</A></B>
+<DD><I> HTTP dispatch helper </I>
+<DT>
+struct  <B><A HREF="HTTPRequest.html">HTTPRequest</A></B>
+<DD><I> HTTP request helper </I>
+<DT>
+interface  <B><A HREF="IComponent.html">IComponent</A></B>
+<DD><I> Component type specifier.</I>
+<DT>
+interface  <B><A HREF="IComponentFactory.html">IComponentFactory</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Component factory.</I>
+<DT>
+interface  <B><A HREF="IComponentLocator.html">IComponentLocator</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Provider for locating a component module</I>
+<DT>
+interface  <B><A HREF="IComponentModuleManager.html">IComponentModuleManager</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Interface for managing component binding</I>
+<DT>
+interface  <B><A HREF="IDOMNamedNodeMap.html">IDOMNamedNodeMap</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I>Map of DOM nodes </I>
+<DT>
+interface  <B><A HREF="IDOMNode.html">IDOMNode</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I>Read-only Node in DOM tree </I>
+<DT>
+interface  <B><A HREF="IDOMNodeList.html">IDOMNodeList</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I>List of DOM nodes </I>
+<DT>
+interface  <B><A HREF="IHTTPRequestReader.html">IHTTPRequestReader</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> HTTP request reader</I>
+<DT>
+interface  <B><A HREF="IHTTPResponse.html">IHTTPResponse</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> HTTP response specification</I>
+<DT>
+interface  <B><A HREF="IHTTPResponseDispatcher.html">IHTTPResponseDispatcher</A></B>: <!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>
+<DD><I> HTTP response dispatcher.</I>
+<DT>
+interface  <B><A HREF="IHTTPResponseShutdown.html">IHTTPResponseShutdown</A></B>: <!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>
+<DD><I> HTTP shutdown handler eg.</I>
+<DT>
+interface  <B><A HREF="IHTTPResponseWriter.html">IHTTPResponseWriter</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> HTTP response writer</I>
+<DT>
+interface  <B><A HREF="IHTTPServer.html">IHTTPServer</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> HTTP server specification</I>
+<DT>
+interface  <B><A HREF="IHTTPServerFactory.html">IHTTPServerFactory</A></B>: <!1><A HREF="IComponentFactory.html">IComponentFactory</A>
+<DD><I> HTTP server factory specification</I>
+<DT>
+interface  <B><A HREF="ILogDecorator.html">ILogDecorator</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Decorate log writing to allow delegation to an alternate log store (GOF: Decorator) </I>
+<DT>
+interface  <B><A HREF="IPageFormReader.html">IPageFormReader</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Page multi-part form reader</I>
+<DT>
+interface  <B><A HREF="IPageHandler.html">IPageHandler</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Page handler</I>
+<DT>
+interface  <B><A HREF="IPageReader.html">IPageReader</A></B>: <!1><A HREF="IHTTPRequestReader.html">IHTTPRequestReader</A>
+<DD><I> Page reader</I>
+<DT>
+interface  <B><A HREF="IPageResponse.html">IPageResponse</A></B>: <!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>
+<DD><I> HTTPResponse provider to stream resource to browser</I>
+<DT>
+interface  <B><A HREF="IPageWriter.html">IPageWriter</A></B>: <!1><A HREF="IHTTPResponseWriter.html">IHTTPResponseWriter</A>
+<DD><I> Page writer</I>
+<DT>
+interface  <B><A HREF="IRODOM.html">IRODOM</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Read-only DOM parser</I>
+<DT>
+interface  <B><A HREF="IRegex.html">IRegex</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Regular expressions.</I>
+<DT>
+interface  <B><A HREF="IRegexExpression.html">IRegexExpression</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Regex expression</I>
+<DT>
+interface  <B><A HREF="IRegexFactory.html">IRegexFactory</A></B>: <!1><A HREF="IComponentFactory.html">IComponentFactory</A>
+<DD><I> Regex factory specification</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="ISODate.html">ISODate</A></B>
+<DD><I> ISO Date ADT year   - whole year month  - 1 to 12 day    - 1 to 31 hour   - 0 to 24 minute - 0 to 59 second - 0 to 59</I>
+<DT>
+interface  <B><A HREF="ISQL.html">ISQL</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> SQL facilities</I>
+<DT>
+interface  <B><A HREF="ISQLConnection.html">ISQLConnection</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> SQL Connection</I>
+<DT>
+interface  <B><A HREF="ISQLField.html">ISQLField</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> SQL field</I>
+<DT>
+interface  <B><A HREF="ISQLQuery.html">ISQLQuery</A></B>: <!1><A HREF="ISQLResultSet.html">ISQLResultSet</A>
+<DD><I> SQL result set backed by cursor</I>
+<DT>
+interface  <B><A HREF="ISQLResultSet.html">ISQLResultSet</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> SQL query result set</I>
+<DT>
+interface  <B><A HREF="ISQLUpdate.html">ISQLUpdate</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> SQL update</I>
+<DT>
+interface  <B><A HREF="ITextQuery.html">ITextQuery</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Text query</I>
+<DT>
+interface  <B><A HREF="ITextResults.html">ITextResults</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Text results</I>
+<DT>
+interface  <B><A HREF="ITextStore.html">ITextStore</A></B>: <!1><A HREF="ITextQuery.html">ITextQuery</A>
+<DD><I> Text store (indexing & query facilities)</I>
+<DT>
+interface  <B><A HREF="IThread.html">IThread</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Interface for thread handler</I>
+<DT>
+interface  <B><A HREF="IThreadManager.html">IThreadManager</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> Interface for thread manager</I>
+<DT>
+interface  <B><A HREF="IXMLRepository.html">IXMLRepository</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> IXMLRepository - Repository services for storing & finding XML documents.</I>
+<DT>
+interface  <B><A HREF="IXMLRepositoryFinder.html">IXMLRepositoryFinder</A></B>: <!1><A HREF="IComponent.html">IComponent</A>
+<DD><I> IXMLRepositoryFinder - (GOF: Visitor) interface for repository finder callbacks</I>
+<DT>
+ <B><A HREF="KCC_COMPONENT_EXCEPTION.html">KCC_COMPONENT_EXCEPTION</A></B>(SQLException)
+<DD><I>SQL Exception </I>
+<DT>
+ <B><A HREF="KCC_COMPONENT_EXCEPTION.3.html">KCC_COMPONENT_EXCEPTION</A></B>(XMLRepositoryException)
+<DD><I>XML Repository Exception </I>
+<DT>
+ <B><A HREF="KCC_COMPONENT_EXCEPTION.2.html">KCC_COMPONENT_EXCEPTION</A></B>(TextException)
+<DD><I>Text Exception </I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Log.html">Log</A></B>
+<DD><I> Logging - 5 levels of verbosity (higher levels include all lower levels) info4     - inner loop metrics info3     - component metrics info2     - component status message or application metrics info1     - application status message warning   - component or application unxepected state error     - component or application error condition (always logged) exception - log exception including scope trace (always logged)</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="MD5.html">MD5</A></B>
+<DD><I> MD5 algorithm</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="MD5Digest.html">MD5Digest</A></B>
+<DD><I> MD5 digest</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Monitor.html">Monitor</A></B>: public <!1><A HREF="SynchCondition.html">SynchCondition</A>
+<DD><I> Thread monitor</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Mutex.html">Mutex</A></B>
+<DD><I> Syncronization mutex object for managing critical sections</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::map&lt;const <!1><A HREF="Char.html">Char</A>*, <!1><A HREF="Timers.html">Timers</A>, <!1><A HREF="TimersLess.html">TimersLess</A>&gt; <B><A HREF="#DOC.2.74">NamedTimers</A></B>
+<DT>
+template&lt;class ResponseHandlerT&gt; struct  <B><A HREF="PageResponseWrapper.html">PageResponseWrapper</A></B>: <!1><A HREF="IPageHandler.html">IPageHandler</A>
+<DD><I> Page handler wrapper for response handler (GOF: Adapter)</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Platform.html">Platform</A></B>
+<DD><I> Utility class for native platform operations</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Properties.html">Properties</A></B>
+<DD><I> Class to manage key/value properties ADT</I>
+<DT>
+template&lt;class ResultsT, class AtomicT&gt; class  <B><A HREF="RepositoryBinding.html">RepositoryBinding</A></B>: <!1><A HREF="IXMLRepositoryFinder.html">IXMLRepositoryFinder</A>
+<DD><I> Abstract implementation helper to bind IXMLRepository XML document to codegen'd IXMLSerializable value objects.</I>
+<DT>
+typedef  <!1><A HREF="ISODate.html">ISODate</A> <B><A HREF="SQLDate.html">SQLDate</A></B>
+<DD><I>SQL date </I>
+<DT>
+struct  <B><A HREF="SQLFields.html">SQLFields</A></B>
+<DD><I> SQL field collection (managed)</I>
+<DT>
+template&lt;class _C&gt; class  <B><A HREF="SharedPtr.html">SharedPtr</A></B>
+<DD><I> std::auto_ptr-like class with ref-counting and implicit conversion to ptr type</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Socket.html">Socket</A></B>
+<DD><I> Socket client</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="SocketServer.html">SocketServer</A></B>: public <!1><A HREF="Socket.html">Socket</A>
+<DD><I> Socket server</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::basic_string&lt;<!1><A HREF="Char.html">Char</A>&gt; <B><A HREF="#DOC.2.43">String</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::list&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; <B><A HREF="#DOC.2.45">StringList</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::map&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; <B><A HREF="#DOC.2.48">StringMap</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::map&lt;<!1><A HREF="StringRC.html">StringRC</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; <B><A HREF="#DOC.2.61">StringMapRC</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::multimap&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; <B><A HREF="#DOC.2.50">StringMultimap</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::multimap&lt;<!1><A HREF="StringRC.html">StringRC</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; <B><A HREF="#DOC.2.63">StringMultimapRC</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::multiset&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; <B><A HREF="#DOC.2.49">StringMultiset</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::multiset&lt;<!1><A HREF="StringRC.html">StringRC</A>&gt; <B><A HREF="#DOC.2.62">StringMultisetRC</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::pair&lt;String::const_iterator, String::const_iterator&gt; <B><A HREF="#DOC.2.52">StringPart</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::vector&lt;<!1><A HREF="kcc.html#DOC.2.52">StringPart</A>&gt; <B><A HREF="#DOC.2.53">StringParts</A></B>
+<DT>
+class  <B><A HREF="StringRC.html">StringRC</A></B>
+<DD><I> Immutable ref-counted wrapper to string (NOT MT-safe)</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::set&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; <B><A HREF="#DOC.2.46">StringSet</A></B>
+<DT>
+typedef  std::set&lt;<!1><A HREF="StringRC.html">StringRC</A>&gt; <B><A HREF="StringSetRC.html">StringSetRC</A></B>
+<DD><I>RC String types </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::stack&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; <B><A HREF="#DOC.2.47">StringStack</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::basic_stringstream&lt;<!1><A HREF="Char.html">Char</A>&gt; <B><A HREF="#DOC.2.51">StringStream</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::vector&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; <B><A HREF="#DOC.2.44">StringVector</A></B>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Strings.html">Strings</A></B>
+<DD><I> String Utilities</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="SynchCondition.html">SynchCondition</A></B>
+<DD><I> Thread synchronization condition abstract class.</I>
+<DT>
+struct  <B><A HREF="TextDocument.html">TextDocument</A></B>
+<DD><I> Text document</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::vector&lt;<!1><A HREF="TextDocument.html">TextDocument</A>&gt; <B><A HREF="#DOC.2.105">TextDocuments</A></B>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="Thread.html">Thread</A></B>: public <!1><A HREF="IThread.html">IThread</A>
+<DD><I> Thread object invoker.</I>
+<DT>
+struct  <B><A HREF="Timer.html">Timer</A></B>
+<DD><I> Timer ADT</I>
+<DT>
+struct  <B><A HREF="TimerLess.html">TimerLess</A></B>
+<DT>
+struct  <B><A HREF="Timers.html">Timers</A></B>
+<DD><I> Timers Stack ADT</I>
+<DT>
+struct  <B><A HREF="TimersLess.html">TimersLess</A></B>
+<DD><I> Named Timers Stack ADT</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="URL.html">URL</A></B>
+<DD><I> URL ADT</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="UUID.html">UUID</A></B>
+<DD><I> UUID algorithm</I>
+<DT>
+class  KCC_CORE_EXPORT <B><A HREF="UUIDDigest.html">UUIDDigest</A></B>
+<DD><I> UUID digest</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   const bool <B><A HREF="#DOC.2.57">operator != </A></B>(const <!1><A HREF="StringRC.html">StringRC</A>&amp; lhs, const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   const <!1><A HREF="StringRC.html">StringRC</A> <B><A HREF="#DOC.2.58">operator +  </A></B>(const <!1><A HREF="StringRC.html">StringRC</A>&amp; lhs, const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   bool <B><A HREF="#DOC.2.76">operator <  </A></B>(const <!1><A HREF="URL.html">URL</A>&amp; lhs, const <!1><A HREF="URL.html">URL</A>&amp; rhs)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   const bool <B><A HREF="#DOC.2.55">operator <  </A></B>(const <!1><A HREF="StringRC.html">StringRC</A>&amp; lhs, const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   bool <B><A HREF="#DOC.2.30">operator <  </A></B>(const <!1><A HREF="ISODate.html">ISODate</A>&amp; lhs, const <!1><A HREF="ISODate.html">ISODate</A>&amp; rhs)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   std::ostream&amp; <B><A HREF="#DOC.2.78">operator << </A></B>(std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, const <!1><A HREF="URL.html">URL</A>&amp; url)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   std::ostream&amp; <B><A HREF="#DOC.2.32">operator << </A></B>(std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, const <!1><A HREF="ISODate.html">ISODate</A>&amp; d)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   std::ostream&amp; <B><A HREF="#DOC.2.59">operator << </A></B>(std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, const <!1><A HREF="StringRC.html">StringRC</A>&amp; s)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   const bool <B><A HREF="#DOC.2.56">operator == </A></B>(const <!1><A HREF="StringRC.html">StringRC</A>&amp; lhs, const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   bool <B><A HREF="#DOC.2.77">operator == </A></B>(const <!1><A HREF="URL.html">URL</A>&amp; lhs, const <!1><A HREF="URL.html">URL</A>&amp; rhs)
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   bool <B><A HREF="#DOC.2.31">operator == </A></B>(const <!1><A HREF="ISODate.html">ISODate</A>&amp; lhs, const <!1><A HREF="ISODate.html">ISODate</A>&amp; rhs)
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<DL>
+
+<A NAME="Components_downcastSafe"></A>
+<A NAME="DOC.2.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>template&lt;class _I&gt;inline   _I* Components_downcastSafe(<!1><A HREF="IComponent.html">IComponent</A>* c) throw(ComponentModule::ComponentNotFound)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="DictionaryFinderConst"></A>
+<A NAME="DOC.2.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::pair&lt;StringMultimap::const_iterator, StringMultimap::const_iterator&gt; DictionaryFinderConst</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator <  "></A>
+<A NAME="DOC.2.30"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool operator <  (const <!1><A HREF="ISODate.html">ISODate</A>&amp; lhs, const <!1><A HREF="ISODate.html">ISODate</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator == "></A>
+<A NAME="DOC.2.31"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool operator == (const <!1><A HREF="ISODate.html">ISODate</A>&amp; lhs, const <!1><A HREF="ISODate.html">ISODate</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator << "></A>
+<A NAME="DOC.2.32"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   std::ostream&amp; operator << (std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, const <!1><A HREF="ISODate.html">ISODate</A>&amp; d)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="String"></A>
+<A NAME="DOC.2.43"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::basic_string&lt;<!1><A HREF="Char.html">Char</A>&gt; String</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringVector"></A>
+<A NAME="DOC.2.44"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::vector&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; StringVector</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringList"></A>
+<A NAME="DOC.2.45"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::list&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; StringList</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringSet"></A>
+<A NAME="DOC.2.46"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::set&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; StringSet</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringStack"></A>
+<A NAME="DOC.2.47"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::stack&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; StringStack</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringMap"></A>
+<A NAME="DOC.2.48"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::map&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; StringMap</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringMultiset"></A>
+<A NAME="DOC.2.49"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::multiset&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; StringMultiset</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringMultimap"></A>
+<A NAME="DOC.2.50"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::multimap&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; StringMultimap</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringStream"></A>
+<A NAME="DOC.2.51"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::basic_stringstream&lt;<!1><A HREF="Char.html">Char</A>&gt; StringStream</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringPart"></A>
+<A NAME="DOC.2.52"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::pair&lt;String::const_iterator, String::const_iterator&gt; StringPart</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringParts"></A>
+<A NAME="DOC.2.53"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::vector&lt;<!1><A HREF="kcc.html#DOC.2.52">StringPart</A>&gt; StringParts</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator <  "></A>
+<A NAME="DOC.2.55"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const bool operator <  (const <!1><A HREF="StringRC.html">StringRC</A>&amp; lhs, const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator == "></A>
+<A NAME="DOC.2.56"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const bool operator == (const <!1><A HREF="StringRC.html">StringRC</A>&amp; lhs, const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator != "></A>
+<A NAME="DOC.2.57"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const bool operator != (const <!1><A HREF="StringRC.html">StringRC</A>&amp; lhs, const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator +  "></A>
+<A NAME="DOC.2.58"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="StringRC.html">StringRC</A> operator +  (const <!1><A HREF="StringRC.html">StringRC</A>&amp; lhs, const <!1><A HREF="StringRC.html">StringRC</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator << "></A>
+<A NAME="DOC.2.59"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   std::ostream&amp; operator << (std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, const <!1><A HREF="StringRC.html">StringRC</A>&amp; s)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringMapRC"></A>
+<A NAME="DOC.2.61"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::map&lt;<!1><A HREF="StringRC.html">StringRC</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; StringMapRC</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringMultisetRC"></A>
+<A NAME="DOC.2.62"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::multiset&lt;<!1><A HREF="StringRC.html">StringRC</A>&gt; StringMultisetRC</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="StringMultimapRC"></A>
+<A NAME="DOC.2.63"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::multimap&lt;<!1><A HREF="StringRC.html">StringRC</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&gt; StringMultimapRC</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="NamedTimers"></A>
+<A NAME="DOC.2.74"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::map&lt;const <!1><A HREF="Char.html">Char</A>*, <!1><A HREF="Timers.html">Timers</A>, <!1><A HREF="TimersLess.html">TimersLess</A>&gt; NamedTimers</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator <  "></A>
+<A NAME="DOC.2.76"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool operator <  (const <!1><A HREF="URL.html">URL</A>&amp; lhs, const <!1><A HREF="URL.html">URL</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator == "></A>
+<A NAME="DOC.2.77"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool operator == (const <!1><A HREF="URL.html">URL</A>&amp; lhs, const <!1><A HREF="URL.html">URL</A>&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator << "></A>
+<A NAME="DOC.2.78"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   std::ostream&amp; operator << (std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, const <!1><A HREF="URL.html">URL</A>&amp; url)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TextDocuments"></A>
+<A NAME="DOC.2.105"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::vector&lt;<!1><A HREF="TextDocument.html">TextDocument</A>&gt; TextDocuments</B></TT>
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

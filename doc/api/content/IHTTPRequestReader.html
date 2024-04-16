@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IHTTPRequestReader</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IHTTPRequestReader</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> HTTP request reader</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IIHTTPRequestReader,MIHTTPRequestReader.html,IIPageReader,MIPageReader.html">
+<param name=before value="M,M,M^-">
+<param name=after value="Md-,M,M">
+<param name=indent value="0,1,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.81.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>content</B> (const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; data) throw(Socket::Failed)<BR>
+<I> Read text content from http (content type MUST be text, consumer MUST validate PRIOR to calling) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.81.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>read</B> (char* buf, int sz, int&amp; actual) throw(Socket::Failed)<BR>
+<I> Read raw data from http </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.81.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>request</B> (<!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; headers, int&amp; <!1><A HREF="Timers.html#DOC.2.72.10">size</A>) throw(Socket::Failed)<BR>
+<I> Read request headers.</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+HTTP request reader
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="request"></A>
+<A NAME="DOC.2.81.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void request(<!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; headers, int&amp; <!1><A HREF="Timers.html#DOC.2.72.10">size</A>) throw(Socket::Failed) = 0</B></TT>
+<DD>
+Read request headers. Read a line delimted by EOL until EOL+EOL reached.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>headers</B> -  header <!1><A HREF="ISQLQuery.html#DOC.2.101.1">rows</A> <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.3">read</A>
+<BR><B></B> - <!1><A HREF="Timers.html#DOC.2.72.10">size</A> <!1><A HREF="Timers.html#DOC.2.72.10">size</A> of full header (# of bytes <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.3">read</A>)
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="content"></A>
+<A NAME="DOC.2.81.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void content(const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; data) throw(Socket::Failed) = 0</B></TT>
+<DD>
+Read text content from http (content type MUST be text, consumer MUST validate PRIOR to calling)
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A> <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.1">request</A> <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>
+<BR><B>data</B> -  output param to place <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.2">content</A>
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="read"></A>
+<A NAME="DOC.2.81.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void read(char* buf, int sz, int&amp; actual) throw(Socket::Failed) = 0</B></TT>
+<DD>
+Read raw data from http
+
+<DL><DT><DT><B>Parameters:</B><DD><B>buf</B> -  buffer to <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.3">read</A> into
+<BR><B>sz</B> -  <!1><A HREF="Timers.html#DOC.2.72.10">size</A> of buffer
+<BR><B>actual</B> -  actual bytes <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.3">read</A>
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="IPageReader.html">IPageReader</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

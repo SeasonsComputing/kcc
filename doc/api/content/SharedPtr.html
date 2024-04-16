@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template<class _C> class  kcc::SharedPtr</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>template&lt;class _C&gt; class  <A HREF="#DOC.DOCU">kcc::SharedPtr</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> std::auto_ptr-like class with ref-counting and implicit conversion to ptr type</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>SharedPtr</B> (const <!1><A HREF="SharedPtr.html#DOC.2.2.2">SharedPtr</A>&lt;_C&gt;&amp; rhs)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>explicit </TD><TD><B>SharedPtr</B> (_C* p = NULL)<BR>
+<I> Create ref-counted auto-descruct pointer</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>null</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const _C&amp; </TD><TD><B>operator *  </B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   _C&amp; </TD><TD><B>operator *        </B> ()<BR>
+<I> Accessors</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const _C* </TD><TD><B>operator -> </B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   _C* </TD><TD><B>operator ->       </B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="SharedPtr.html">SharedPtr</A>&lt;_C&gt; &amp; </TD><TD><B>operator = </B> (const <!1><A HREF="SharedPtr.html">SharedPtr</A>&lt;_C&gt;&amp; rhs)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="SharedPtr.html">SharedPtr</A>&lt;_C&gt; &amp; </TD><TD><B>operator = </B> (_C* rhs)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   </TD><TD><B>operator _C*          </B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   </TD><TD><B>operator const _C*    </B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   int </TD><TD><B>rc</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   _C* </TD><TD><B>release</B> ()<BR>
+<I> Utility</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   void </TD><TD><B>reset</B> (_C* p = NULL)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.2.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>~SharedPtr</B> ()<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+std::auto_ptr-like class with ref-counting and implicit conversion to ptr type</BLOCKQUOTE>
+<DL>
+
+<A NAME="SharedPtr"></A>
+<A NAME="DOC.2.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>explicit SharedPtr(_C* p = NULL)</B></TT>
+<DD>
+Create ref-counted auto-descruct pointer
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>p</B> -  pointer to ref-<!1><A HREF="RepositoryBinding.html#DOC.2.112.10">count</A> & auto-destruct 
+<BR><B>rhs</B> -  pointer to <!1><A HREF="SharedPtr.html#DOC.2.2.17">attach</A><BR><DD></DL><P>
+<A NAME="SharedPtr"></A>
+<A NAME="DOC.2.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SharedPtr(const <!1><A HREF="SharedPtr.html#DOC.2.2.2">SharedPtr</A>&lt;_C&gt;&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator = "></A>
+<A NAME="DOC.2.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="SharedPtr.html">SharedPtr</A>&lt;_C&gt; &amp; operator = (const <!1><A HREF="SharedPtr.html">SharedPtr</A>&lt;_C&gt;&amp; rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator = "></A>
+<A NAME="DOC.2.2.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="SharedPtr.html">SharedPtr</A>&lt;_C&gt; &amp; operator = (_C* rhs)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="~SharedPtr"></A>
+<A NAME="DOC.2.2.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~SharedPtr()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator *        "></A>
+<A NAME="DOC.2.2.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   _C&amp; operator *        ()</B></TT>
+<DD>
+Accessors
+<DL><DT><DD></DL><P>
+<A NAME="operator ->       "></A>
+<A NAME="DOC.2.2.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   _C* operator ->       ()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator *  "></A>
+<A NAME="DOC.2.2.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const _C&amp; operator *  () const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator -> "></A>
+<A NAME="DOC.2.2.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const _C* operator -> () const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator _C*          "></A>
+<A NAME="DOC.2.2.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   operator _C*          ()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator const _C*    "></A>
+<A NAME="DOC.2.2.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   operator const _C*    () const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="null"></A>
+<A NAME="DOC.2.2.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool null() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="release"></A>
+<A NAME="DOC.2.2.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   _C* release()</B></TT>
+<DD>
+Utility
+<DL><DT><DD></DL><P>
+<A NAME="reset"></A>
+<A NAME="DOC.2.2.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void reset(_C* p = NULL)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="rc"></A>
+<A NAME="DOC.2.2.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   int rc() const </B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="Self"></A>
+<A NAME="DOC.2.2.16.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Self(_C* p)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="~Self"></A>
+<A NAME="DOC.2.2.16.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~Self()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_rc"></A>
+<A NAME="DOC.2.2.16.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int m_rc</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_p"></A>
+<A NAME="DOC.2.2.16.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>_C* m_p</B></TT>
+<DL><DT><DD></DL><P></DL>
+</DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

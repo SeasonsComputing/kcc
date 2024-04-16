@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::HTTPDispatch</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::HTTPDispatch</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> HTTP dispatch helper </BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.19.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>HTTPDispatch</B> ()<BR>
+<I> Construct dispatch</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.19.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   void </TD><TD><B>content</B> (const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; receivedData) throw(Socket::Failed)<BR>
+<I> Retrieve HTTP content from client </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.19.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   int </TD><TD><B>response</B> (<!1><A HREF="HTTPRequest.html">HTTPRequest</A>&amp; <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.1">request</A>) throw(Socket::Failed)<BR>
+<I> Get response from HTTP dispatch </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.19.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>send</B> ( const <!1><A HREF="URL.html">URL</A>&amp; url, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.1">method</A>, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers = Dictionary::empty()) throw(Socket::Failed)<BR>
+<I> Send dispatch to HTTP </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.19.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   void </TD><TD><B>write</B> (std::istream&amp; data) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.19.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   void </TD><TD><B>write</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; data) throw(Socket::Failed)<BR>
+<I> Send data to HTTP dispatch </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+HTTP dispatch helper 
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="HTTPDispatch"></A>
+<A NAME="DOC.2.19.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> HTTPDispatch()</B></TT>
+<DD>
+Construct dispatch
+<DL><DT><DD></DL><P>
+<A NAME="send"></A>
+<A NAME="DOC.2.19.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void send( const <!1><A HREF="URL.html">URL</A>&amp; url, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.1">method</A>, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers = Dictionary::empty()) throw(Socket::Failed)</B></TT>
+<DD>
+Send dispatch to HTTP
+
+<DL><DT><DT><B>Parameters:</B><DD><B>url</B> -  disparch url
+<BR><B></B> - <!1><A HREF="HTTPRequest.html#DOC.2.17.1">method</A> <!1><A HREF="HTTP.html">HTTP</A> <!1><A HREF="HTTPRequest.html#DOC.2.17.1">method</A>
+<BR><B>headers</B> -  additional <!1><A HREF="HTTP.html">HTTP</A> connection header
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.2.19.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void write(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; data) throw(Socket::Failed)</B></TT>
+<DD>
+Send data to HTTP dispatch
+
+<DL><DT><DT><B>Parameters:</B><DD><B>data</B> -  data to <!1><A HREF="HTTPDispatch.html#DOC.2.19.2">send</A>
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.2.19.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void write(std::istream&amp; data) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="response"></A>
+<A NAME="DOC.2.19.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   int response(<!1><A HREF="HTTPRequest.html">HTTPRequest</A>&amp; <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.1">request</A>) throw(Socket::Failed)</B></TT>
+<DD>
+Get response from HTTP dispatch
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.1">request</A> <!1><A HREF="HTTPDispatch.html#DOC.2.19.5">response</A> <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>
+<BR><DT><B>Returns:</B><DD>  HTTP response code
+@throws Socket::Failed exception if error<BR><DD></DL><P>
+<A NAME="content"></A>
+<A NAME="DOC.2.19.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void content(const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; receivedData) throw(Socket::Failed)</B></TT>
+<DD>
+Retrieve HTTP content from client
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A> <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.1">request</A> <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>
+<BR><B>data</B> -  output param to place <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> <!1><A HREF="HTTPDispatch.html#DOC.2.19.6">content</A>
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

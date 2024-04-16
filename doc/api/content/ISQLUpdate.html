@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::ISQLUpdate</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::ISQLUpdate</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> SQL update</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="IIComponent,MIComponent.html,IISQLUpdate,MISQLUpdate.html">
+<param name=before value="M,M">
+<param name=after value="Md-,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.102.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   int </TD><TD><B>execute</B> () throw(SQLException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.102.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   unsigned long long </TD><TD><B>insertId</B> ()<BR>
+<I> Get last insert id </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.102.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>prepare</B> (<!1><A HREF="SQLFields.html">SQLFields</A>&amp; params) throw(SQLException)<BR>
+<I> Prepare update & execute update </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+SQL update
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="prepare"></A>
+<A NAME="DOC.2.102.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void prepare(<!1><A HREF="SQLFields.html">SQLFields</A>&amp; params) throw(SQLException) = 0</B></TT>
+<DD>
+Prepare update & execute update
+
+<DL><DT><DT><B>Parameters:</B><DD><B>params</B> -  collection of param fields
+<BR><DT><B>Returns:</B><DD>  number of rows changed
+@throws SQLException if sql error<BR><DD></DL><P>
+<A NAME="execute"></A>
+<A NAME="DOC.2.102.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   int execute() throw(SQLException) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="insertId"></A>
+<A NAME="DOC.2.102.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   unsigned long long insertId() = 0</B></TT>
+<DD>
+Get last insert id
+
+<DL><DT><DT><B>Returns:</B><DD>  last insert id<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::Dictionary</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::Dictionary</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Dictionary (multi-map) ADT</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="MStringMultimap,M,CDictionary,MDictionary.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Dictionary</B> (Dictionary::const_iterator <!1><A HREF="ISQLResultSet.html#DOC.2.100.4">begin</A>, Dictionary::const_iterator <!1><A HREF="IPageFormReader.html#DOC.2.89.5">end</A>)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Dictionary</B> ()<BR>
+<I> Construct dictionary, empty or from existing dictionary</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Dictionary</B> (const <!1><A HREF="Dictionary.html#DOC.2.12.2">Dictionary</A>&amp; dict)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; </TD><TD><B>empty</B> ()<BR>
+<I> Empty dictionary (GOF: Singleton, Null-Object) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>exists</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key) const <BR>
+<I> Query existence of key </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   <!1><A HREF="kcc.html#DOC.2.11">DictionaryFinderConst</A> </TD><TD><B>finder</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   <!1><A HREF="DictionaryFinder.html">DictionaryFinder</A> </TD><TD><B>finder</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key)<BR>
+<I> Convenience finder to find set of values </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>operator () </B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key)<BR>
+<I> Convenience insert operator </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>operator [] </B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key) const <BR>
+<I> Convenience finder operator </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.12.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   </TD><TD><B>~Dictionary</B> ()<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Dictionary (multi-map) ADT
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Dictionary"></A>
+<A NAME="DOC.2.12.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Dictionary()</B></TT>
+<DD>
+Construct dictionary, empty or from existing dictionary
+<DL><DT><DD></DL><P>
+<A NAME="Dictionary"></A>
+<A NAME="DOC.2.12.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Dictionary(const <!1><A HREF="Dictionary.html#DOC.2.12.2">Dictionary</A>&amp; dict)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="Dictionary"></A>
+<A NAME="DOC.2.12.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Dictionary(Dictionary::const_iterator <!1><A HREF="ISQLResultSet.html#DOC.2.100.4">begin</A>, Dictionary::const_iterator <!1><A HREF="IPageFormReader.html#DOC.2.89.5">end</A>)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="~Dictionary"></A>
+<A NAME="DOC.2.12.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Dictionary()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator () "></A>
+<A NAME="DOC.2.12.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; operator () (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key)</B></TT>
+<DD>
+Convenience insert operator
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  key to <!1><A HREF="SQLFields.html#DOC.2.99.3">add</A>
+<BR><DT><B>Returns:</B><DD>  reference to key value<BR><DD></DL><P>
+<A NAME="operator [] "></A>
+<A NAME="DOC.2.12.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; operator [] (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key) const </B></TT>
+<DD>
+Convenience finder operator
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  to <!1><A HREF="RepositoryBinding.html#DOC.2.112.8">find</A>
+<BR><DT><B>Returns:</B><DD>  value or empty if not exists<BR><DD></DL><P>
+<A NAME="exists"></A>
+<A NAME="DOC.2.12.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool exists(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key) const </B></TT>
+<DD>
+Query existence of key
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  to <!1><A HREF="RepositoryBinding.html#DOC.2.112.8">find</A>
+<BR><DT><B>Returns:</B><DD>  true if exists<BR><DD></DL><P>
+<A NAME="finder"></A>
+<A NAME="DOC.2.12.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="DictionaryFinder.html">DictionaryFinder</A> finder(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key)</B></TT>
+<DD>
+Convenience finder to find set of values
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  to <!1><A HREF="RepositoryBinding.html#DOC.2.112.8">find</A>
+<BR><DT><B>Returns:</B><DD>  property finder with bounds (first=lower, second=upper)<BR><DD></DL><P>
+<A NAME="finder"></A>
+<A NAME="DOC.2.12.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="kcc.html#DOC.2.11">DictionaryFinderConst</A> finder(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key) const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="empty"></A>
+<A NAME="DOC.2.12.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; empty()</B></TT>
+<DD>
+Empty dictionary (GOF: Singleton, Null-Object)
+
+<DL><DT><DT><B>Returns:</B><DD>  empty dictionary<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::ITextStore</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::ITextStore</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Text store (indexing & query facilities)</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IITextQuery,MITextQuery.html,IITextStore,MITextStore.html">
+<param name=before value="M,M,M">
+<param name=after value="Md-SP,Md-,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.108.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>indexClose</B> () throw(TextException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.108.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   long </TD><TD><B>indexDocuments</B> () throw(TextException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.108.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>indexIsOpen</B> () throw(TextException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.108.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>indexOpen</B> () throw(TextException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.108.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>indexOptimize</B> () throw(TextException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.108.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>indexRepository</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.108.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>indexText</B> (<!1><A HREF="TextDocument.html">TextDocument</A>&amp; txtdoc, TextDocument::Contents contents = TextDocument::C_METADATA) throw(TextException)<BR>
+<I> Index text into store </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.108.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>init</B> (const <!1><A HREF="Properties.html">Properties</A>&amp; config)<BR>
+<I> Text component properties </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.108.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="ITextResults.html">ITextResults</A>* </TD><TD><B>query</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>, TextDocument::Contents contents = TextDocument::C_METADATA) throw(TextException)<BR>
+<I> Query text from store </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Text store (indexing & query facilities)
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="init"></A>
+<A NAME="DOC.2.108.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool init(const <!1><A HREF="Properties.html">Properties</A>&amp; config) = 0</B></TT>
+<DD>
+Text component properties
+
+<DL><DT><DT><B>Parameters:</B><DD><B>config</B> -  <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> store configuration
+<BR><DT><B>Returns:</B><DD>  true if initialized<BR><DD></DL><P>
+<A NAME="indexRepository"></A>
+<A NAME="DOC.2.108.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; indexRepository() = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="query"></A>
+<A NAME="DOC.2.108.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="ITextResults.html">ITextResults</A>* query(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>, TextDocument::Contents contents = TextDocument::C_METADATA) throw(TextException) = 0</B></TT>
+<DD>
+Query text from store
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ITextStore.html#DOC.2.108.3">query</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>
+<BR><B>contents</B> -  OR'd <!1><A HREF="DOMWriter.html#DOC.2.15.9">attr</A>'s of <!1><A HREF="Exception.html#DOC.2.16.3">what</A> contents to populate 
+<BR><DT><B>Returns:</B><DD>  results (ownership IS consumed)
+@throws TextException if text error<BR><DD></DL><P>
+<A NAME="indexText"></A>
+<A NAME="DOC.2.108.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void indexText(<!1><A HREF="TextDocument.html">TextDocument</A>&amp; txtdoc, TextDocument::Contents contents = TextDocument::C_METADATA) throw(TextException) = 0</B></TT>
+<DD>
+Index text into store
+
+<DL><DT><DT><B>Parameters:</B><DD><B>document</B> -  txtdoc to index (document.text required, document.metadata optional, termCount ignored)
+<BR><B>contents</B> -  document contents (<!1><A HREF="TextDocument.html#DOC.2.104.2.1">C_METADATA</A> to index <!1><A HREF="TextDocument.html#DOC.2.104.6">metadata</A>, 
+<!1><A HREF="TextDocument.html#DOC.2.104.2.2">C_TEXT</A> to store <!1><A HREF="Thread.html#DOC.2.66.15">complete</A> <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> in index, <!1><A HREF="TextDocument.html#DOC.2.104.2.3">C_TERMS</A> to store tokenized <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> & counts)
+@throws TextException if <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="indexDocuments"></A>
+<A NAME="DOC.2.108.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   long indexDocuments() throw(TextException) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="indexOpen"></A>
+<A NAME="DOC.2.108.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void indexOpen() throw(TextException) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="indexIsOpen"></A>
+<A NAME="DOC.2.108.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool indexIsOpen() throw(TextException) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="indexOptimize"></A>
+<A NAME="DOC.2.108.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void indexOptimize() throw(TextException) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="indexClose"></A>
+<A NAME="DOC.2.108.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void indexClose() throw(TextException) = 0</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,49 @@
+# BUILD_HOME
+# set it to the HOME directory if it is not already set
+BUILD_HOME?=$(HOME)
+
+# kcc
+export KCC_HOME=$(BUILD_HOME)/science/kcc
+export KCC_BLD=$(KCC_HOME)/bld
+export KCC_INC=$(KCC_HOME)/inc
+export KCC_SRC=$(KCC_HOME)/src
+export KCC_TST=$(KCC_HOME)/tst
+export KCC_BIN=$(KCC_BLD)/linux/bin
+export KCC_MAKE=$(KCC_BLD)/linux/make
+export KCC_OBJ=$(KCC_BIN)/kcc
+export KCC_TST_OBJ=$(KCC_BIN)/tst
+
+# opt: all
+export GENERAL_COMPILE_OPTIONS=-fPIC -D_REENTRANT -DKCC_LINUX -I $(KCC_HOME) -Wall
+export GENERAL_LINK_OPTIONS=-fPIC -L $(KCC_BIN)
+
+# opt: debug
+#export DEBUG_OPTIONS=-g -DKCC_DEBUG
+export DEBUG_OPTIONS=
+# opt: profile
+#export PROFILE_OPTIONS=-pg
+export PROFILE_OPTIONS=
+# opt: optimize
+export OPTIMIZE_OPTIONS=-O3 -ffloat-store
+#export OPTIMIZE_OPTIONS=
+
+# build
+export COMPILE_OPTIONS=$(GENERAL_COMPILE_OPTIONS) $(DEBUG_OPTIONS) $(PROFILE_OPTIONS) $(OPTIMIZE_OPTIONS)
+export LINK_OPTIONS=$(GENERAL_LINK_OPTIONS) $(PROFILE_OPTIONS)
+
+# runtime
+export LD_LIBRARY_PATH=$(BUILD_HOME)/science/umbria/bld/linux/bin
+
+# MYSQL++
+export MYSQLPP_INC=/usr/include/mysql
+export MYSQLPP_LIB=/usr/lib/mysql
+export MYSQLPP_LIB64=/usr/lib64/mysql
+
+# WordNet
+export WNHOME=/imports/home/pluto/wordnet-2.1
+
+# lbixml
+export LIBXML_INC=/usr/include/libxml2
+
+# libxslt
+export LIBXSLT_INC=/usr/include/libxslt

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::Thread</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::Thread</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Thread object invoker.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IIThread,MIThread.html,CThread,MThread.html">
+<param name=before value="M,M,M">
+<param name=after value="Md-SP,Md_,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Thread</B> (<!1><A HREF="IThread.html">IThread</A>* invoker, const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="Thread.html#DOC.2.66.3">name</A> = NULL, <!1><A HREF="IThreadManager.html">IThreadManager</A>* <!1><A HREF="Components.html#DOC.2.6.5">manager</A> = NULL)<BR>
+<I> Used for invoker delegation </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   unsigned long </TD><TD><B>current</B> ()<BR>
+<I> Return current thread id </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>go</B> (bool joinable = false)<BR>
+<I> Begin thread exectution </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>unsigned long </TD><TD><B>id</B> ()<BR>
+<I> Query unique thread id </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>invoke</B> ()<BR>
+<I>Delegate thread handler </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>join</B> (<!1><A HREF="Thread.html">Thread</A>* thread)<BR>
+<I> Joins thread with calling thread </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>kill</B> ()<BR>
+<I> Cancel thread execution.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const <!1><A HREF="Char.html">Char</A>* </TD><TD><B>name</B> () const <BR>
+<I> Query thread name </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>sleep</B> (long ms)<BR>
+<I> Utility method to sleep calling thread </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   </TD><TD><B>~Thread</B> ()<BR>
+<I> DO NOT CALL.</I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Protected Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.66.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Thread</B> (const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="Thread.html#DOC.2.66.3">name</A> = NULL, <!1><A HREF="IThreadManager.html">IThreadManager</A>* <!1><A HREF="Components.html#DOC.2.6.5">manager</A> = NULL)<BR>
+<I> Use for derivatives </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Thread object invoker. Threads must be created on the
+heap. Thread objects are automatically destructed when
+the invoker is completed. Never delete a thread.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Thread"></A>
+<A NAME="DOC.2.66.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Thread(<!1><A HREF="IThread.html">IThread</A>* invoker, const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="Thread.html#DOC.2.66.3">name</A> = NULL, <!1><A HREF="IThreadManager.html">IThreadManager</A>* <!1><A HREF="Components.html#DOC.2.6.5">manager</A> = NULL)</B></TT>
+<DD>
+Used for invoker delegation
+
+<DL><DT><DT><B>Parameters:</B><DD><B>invoker</B> -  invoker to handle thread (ownership NOT consumed)
+<BR><B></B> - <!1><A HREF="Thread.html#DOC.2.66.3">name</A> thread <!1><A HREF="Thread.html#DOC.2.66.3">name</A>
+<BR><B></B> - <!1><A HREF="Components.html#DOC.2.6.5">manager</A> thread <!1><A HREF="Components.html#DOC.2.6.5">manager</A> (NOT CONSUMED)<BR><DD></DL><P>
+<A NAME="~Thread"></A>
+<A NAME="DOC.2.66.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Thread()</B></TT>
+<DD>
+DO NOT CALL. Threads are cleaned when invoke()
+returns or kill() is called
+<DL><DT><DD></DL><P>
+<A NAME="name"></A>
+<A NAME="DOC.2.66.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="Char.html">Char</A>* name() const </B></TT>
+<DD>
+Query thread name
+
+<DL><DT><DT><B>Returns:</B><DD>  token name (or NULL if not set)<BR><DD></DL><P>
+<A NAME="go"></A>
+<A NAME="DOC.2.66.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void go(bool joinable = false)</B></TT>
+<DD>
+Begin thread exectution
+
+<DL><DT><DT><B>Parameters:</B><DD><B>joinable</B> -  is thread joinable (to allow Thread::join) or detached<BR><DD></DL><P>
+<A NAME="id"></A>
+<A NAME="DOC.2.66.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned long id()</B></TT>
+<DD>
+Query unique thread id
+
+<DL><DT><DT><B>Returns:</B><DD>  thread id<BR><DD></DL><P>
+<A NAME="kill"></A>
+<A NAME="DOC.2.66.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void kill()</B></TT>
+<DD>
+Cancel thread execution. Will trigger a destructor call.
+<DL><DT><DD></DL><P>
+<A NAME="invoke"></A>
+<A NAME="DOC.2.66.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void invoke()</B></TT>
+<DD>Delegate thread handler 
+<DL><DT><DD></DL><P>
+<A NAME="current"></A>
+<A NAME="DOC.2.66.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   unsigned long current()</B></TT>
+<DD>
+Return current thread id
+
+<DL><DT><DT><B>Returns:</B><DD>  thread id of calling thread<BR><DD></DL><P>
+<A NAME="sleep"></A>
+<A NAME="DOC.2.66.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void sleep(long ms)</B></TT>
+<DD>
+Utility method to sleep calling thread
+
+<DL><DT><DT><B>Parameters:</B><DD><B>ms</B> -  milliseconds to <!1><A HREF="Thread.html#DOC.2.66.9">sleep</A> for<BR><DD></DL><P>
+<A NAME="join"></A>
+<A NAME="DOC.2.66.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool join(<!1><A HREF="Thread.html">Thread</A>* thread)</B></TT>
+<DD>
+Joins thread with calling thread
+
+<DL><DT><DT><B>Parameters:</B><DD><B>thread</B> -  thread to <!1><A HREF="Thread.html#DOC.2.66.10">join</A> to (must have been <!1><A HREF="Platform.html#DOC.2.37.6.2">created</A> joinable)
+<BR><DT><B>Returns:</B><DD>  true if successful<BR><DD></DL><P>
+<A NAME="Thread"></A>
+<A NAME="DOC.2.66.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Thread(const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="Thread.html#DOC.2.66.3">name</A> = NULL, <!1><A HREF="IThreadManager.html">IThreadManager</A>* <!1><A HREF="Components.html#DOC.2.6.5">manager</A> = NULL)</B></TT>
+<DD>
+Use for derivatives
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Thread.html#DOC.2.66.3">name</A> thread <!1><A HREF="Thread.html#DOC.2.66.3">name</A>
+<BR><B></B> - <!1><A HREF="Components.html#DOC.2.6.5">manager</A> thread <!1><A HREF="Components.html#DOC.2.6.5">manager</A> (NOT CONSUMED)<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>template<class ResultsT, class AtomicT> class  kcc::RepositoryBinding</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>template&lt;class ResultsT, class AtomicT&gt; class  <A HREF="#DOC.DOCU">kcc::RepositoryBinding</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Abstract implementation helper to bind IXMLRepository XML document to codegen'd IXMLSerializable value objects.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IIXMLRepositoryFinder,MIXMLRepositoryFinder.html,CRepositoryBinding,MRepositoryBinding.html">
+<param name=before value="M,M,M">
+<param name=after value="Md-SP,Md-,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>RepositoryBinding</B> ()<BR>
+<I>Ctor/Dtor </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>byAll</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>byAttr</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; k, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; v)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>byName</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; n)<BR>
+<I> Query strings</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   long </TD><TD><B>count</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>) throw(XMLRepositoryException)<BR>
+<I> Count of all value objects in repository </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>exists</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Timers.html#DOC.2.72.2">name</A>) throw(XMLRepositoryException)<BR>
+<I> Query if value exists </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>find</B> (ResultsT&amp; <!1><A HREF="ITextResults.html#DOC.2.106.5">results</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true) throw(XMLRepositoryException)<BR>
+<I> Find a value object result set in repository </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>find</B> (AtomicT&amp; value, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>) throw(XMLRepositoryException)<BR>
+<I> Find a value object in repository </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>init</B> (<!1><A HREF="IXMLRepository.html">IXMLRepository</A>* repository)<BR>
+<I> Initialize binding </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>insert</B> (AtomicT&amp; value) throw(XMLRepositoryException)<BR>
+<I> Insert into repository; name must be unique  </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>remove</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Timers.html#DOC.2.72.2">name</A>) throw(XMLRepositoryException)<BR>
+<I> Remove value object from repository </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>replace</B> (AtomicT&amp; value) throw(XMLRepositoryException)<BR>
+<I> Replace value object in repository </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>update</B> (AtomicT&amp; value) throw(XMLRepositoryException)<BR>
+<I> Update value object in repository </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.112.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   </TD><TD><B>~RepositoryBinding</B> ()<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Abstract implementation helper to bind IXMLRepository XML document to codegen'd IXMLSerializable value objects.
+
+<P>o Implementation is synchronized
+o Value object must have a 'name' attribute that's unique
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="RepositoryBinding"></A>
+<A NAME="DOC.2.112.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> RepositoryBinding()</B></TT>
+<DD>Ctor/Dtor 
+<DL><DT><DD></DL><P>
+<A NAME="~RepositoryBinding"></A>
+<A NAME="DOC.2.112.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~RepositoryBinding()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="init"></A>
+<A NAME="DOC.2.112.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void init(<!1><A HREF="IXMLRepository.html">IXMLRepository</A>* repository)</B></TT>
+<DD>
+Initialize binding
+
+<DL><DT><DT><B>Parameters:</B><DD><B>repository</B> -  xmldb repository (ownership IS consumed)<BR><DD></DL><P>
+<A NAME="insert"></A>
+<A NAME="DOC.2.112.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool insert(AtomicT&amp; value) throw(XMLRepositoryException)</B></TT>
+<DD>
+Insert into repository; name must be unique 
+
+<DL><DT><DT><B>Parameters:</B><DD><B>value</B> -  value to <!1><A HREF="RepositoryBinding.html#DOC.2.112.4">insert</A>
+<BR><DT><B>Returns:</B><DD>  false if not unique
+@throws XMLRepositoryException if error<BR><DD></DL><P>
+<A NAME="update"></A>
+<A NAME="DOC.2.112.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool update(AtomicT&amp; value) throw(XMLRepositoryException)</B></TT>
+<DD>
+Update value object in repository
+
+<DL><DT><DT><B>Parameters:</B><DD><B>value</B> -  value to <!1><A HREF="RepositoryBinding.html#DOC.2.112.5">update</A>
+<BR><DT><B>Returns:</B><DD>  false if not found
+@throws XMLRepositoryException if error<BR><DD></DL><P>
+<A NAME="replace"></A>
+<A NAME="DOC.2.112.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void replace(AtomicT&amp; value) throw(XMLRepositoryException)</B></TT>
+<DD>
+Replace value object in repository
+
+<DL><DT><DT><B>Parameters:</B><DD><B>value</B> -  value to <!1><A HREF="RepositoryBinding.html#DOC.2.112.6">replace</A>
+@throws XMLRepositoryException if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="remove"></A>
+<A NAME="DOC.2.112.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool remove(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Timers.html#DOC.2.72.2">name</A>) throw(XMLRepositoryException)</B></TT>
+<DD>
+Remove value object from repository
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Timers.html#DOC.2.72.2">name</A> of object to <!1><A HREF="RepositoryBinding.html#DOC.2.112.7">remove</A>
+<BR><DT><B>Returns:</B><DD>  false if not found
+@throws XMLRepositoryException if error<BR><DD></DL><P>
+<A NAME="find"></A>
+<A NAME="DOC.2.112.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool find(AtomicT&amp; value, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>) throw(XMLRepositoryException)</B></TT>
+<DD>
+Find a value object in repository
+
+<DL><DT><DT><B>Parameters:</B><DD><B>value</B> -  <!1><A HREF="Log.html#DOC.2.33.23">out</A>-param of value object found (first found)
+<BR><B></B> - <!1><A HREF="URL.html#DOC.2.75.8">query</A> <!1><A HREF="RepositoryBinding.html#DOC.2.112.8">find</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>
+<BR><DT><B>Returns:</B><DD>  false if not found
+@throws XMLRepositoryException if error<BR><DD></DL><P>
+<A NAME="find"></A>
+<A NAME="DOC.2.112.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void find(ResultsT&amp; <!1><A HREF="ITextResults.html#DOC.2.106.5">results</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true) throw(XMLRepositoryException)</B></TT>
+<DD>
+Find a value object result set in repository
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ITextResults.html#DOC.2.106.5">results</A> <!1><A HREF="Log.html#DOC.2.33.23">out</A>-param of value objects found
+<BR><B></B> - <!1><A HREF="URL.html#DOC.2.75.8">query</A> <!1><A HREF="RepositoryBinding.html#DOC.2.112.9">find</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>
+@throws XMLRepositoryException if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="count"></A>
+<A NAME="DOC.2.112.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   long count(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>) throw(XMLRepositoryException)</B></TT>
+<DD>
+Count of all value objects in repository
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.8">query</A> <!1><A HREF="RepositoryBinding.html#DOC.2.112.8">find</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>
+<BR><DT><B>Returns:</B><DD>  count
+@throws XMLRepositoryException if error<BR><DD></DL><P>
+<A NAME="exists"></A>
+<A NAME="DOC.2.112.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool exists(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Timers.html#DOC.2.72.2">name</A>) throw(XMLRepositoryException)</B></TT>
+<DD>
+Query if value exists
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.8">query</A> <!1><A HREF="URL.html#DOC.2.75.8">query</A> <!1><A HREF="ComponentModule.html#DOC.2.3.10">definition</A> of <!1><A HREF="Exception.html#DOC.2.16.3">what</A> to <!1><A HREF="RepositoryBinding.html#DOC.2.112.10">count</A>
+<BR><B></B> - <!1><A HREF="Timers.html#DOC.2.72.2">name</A> of object to test existence
+<BR><DT><B>Returns:</B><DD>  true if exists
+@throws XMLRepositoryException if error<BR><DD></DL><P>
+<A NAME="byName"></A>
+<A NAME="DOC.2.112.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="kcc.html#DOC.2.43">String</A> byName(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; n)</B></TT>
+<DD>
+Query strings
+<DL><DT><DD></DL><P>
+<A NAME="byAttr"></A>
+<A NAME="DOC.2.112.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="kcc.html#DOC.2.43">String</A> byAttr(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; k, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; v)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="byAll"></A>
+<A NAME="DOC.2.112.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="kcc.html#DOC.2.43">String</A> byAll()</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: winapp, Configuration: Debug|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "e:\tvk\Work\Active\Kuumba\kcc\bld\win\bin\tst\RSP000040.rsp" with contents
+[
+/Od /Ob1 /Op /Ot /I "..\..\..\..\\" /D "KCC_WINDOWS" /D "KCC_DEBUG" /D "_MBCS" /Gm /EHsc /RTC1 /MDd /GS /GR /Fo"..\..\bin\tst/" /Fd"..\..\bin\tst/vc70.pdb" /W3 /c /Wp64 /Zi /TP
+\tvk\Work\Active\Kuumba\kcc\src\winui\WinAppTray.cpp
+]
+Creating command line "cl.exe @e:\tvk\Work\Active\Kuumba\kcc\bld\win\bin\tst\RSP000040.rsp /nologo"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+WinAppTray.cpp
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(33) : error C2065: 'USHORT' : undeclared identifier
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(33) : error C2955: 'std::vector' : use of class template requires template argument list
+        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\vector(896) : see declaration of 'std::vector'
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(33) : error C2955: 'std::vector' : use of class template requires template argument list
+        c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\include\vector(896) : see declaration of 'std::vector'
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(39) : error C2146: syntax error : missing ';' before identifier 'idResource'
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(39) : error C2501: 'kcc::IWinAppTrayHandler::Config::USHORT' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(39) : error C2501: 'kcc::IWinAppTrayHandler::Config::idResource' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(40) : error C2146: syntax error : missing ';' before identifier 'idIconTaskTray'
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(40) : error C2501: 'kcc::IWinAppTrayHandler::Config::USHORT' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(40) : error C2501: 'kcc::IWinAppTrayHandler::Config::idIconTaskTray' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(42) : error C2146: syntax error : missing ';' before identifier 'idMenuDefault'
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(42) : error C2501: 'kcc::IWinAppTrayHandler::Config::USHORT' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(42) : error C2501: 'kcc::IWinAppTrayHandler::Config::idMenuDefault' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(43) : error C2146: syntax error : missing ';' before identifier 'idMenuExit'
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(43) : error C2501: 'kcc::IWinAppTrayHandler::Config::USHORT' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(43) : error C2501: 'kcc::IWinAppTrayHandler::Config::idMenuExit' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\IWinAppTrayHandler.h(55) : error C2061: syntax error : identifier 'gpsProperties'
+..\..\..\..\inc\winui\WinAppTray.h(36) : error C2061: syntax error : identifier 'HINSTANCE'
+..\..\..\..\inc\winui\WinAppTray.h(59) : error C2061: syntax error : identifier 'USHORT'
+..\..\..\..\inc\winui\WinAppTray.h(75) : error C2146: syntax error : missing ';' before identifier 'trayHWND'
+..\..\..\..\inc\winui\WinAppTray.h(75) : error C2433: 'kcc::WinAppTray::HWND' : 'virtual' not permitted on data declarations
+..\..\..\..\inc\winui\WinAppTray.h(75) : error C2501: 'kcc::WinAppTray::HWND' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\WinAppTray.h(75) : warning C4183: 'trayHWND': missing return type; assumed to be a member function returning 'int'
+..\..\..\..\inc\winui\WinAppTray.h(117) : error C2061: syntax error : identifier 'HWND'
+..\..\..\..\inc\winui\WinAppTray.h(125) : error C2146: syntax error : missing ';' before identifier 'm_mutex'
+..\..\..\..\inc\winui\WinAppTray.h(125) : error C2501: 'kcc::WinAppTray::HANDLE' : missing storage-class or type specifiers
+..\..\..\..\inc\winui\WinAppTray.h(125) : error C2501: 'kcc::WinAppTray::m_mutex' : missing storage-class or type specifiers
+c:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\include\atlwin.h(27) : fatal error C1189: #error :  atlwin.h requires atlbase.h to be included first
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://e:\tvk\Work\Active\Kuumba\kcc\bld\win\bin\tst\BuildLog.htm"
+winapp - 26 error(s), 1 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

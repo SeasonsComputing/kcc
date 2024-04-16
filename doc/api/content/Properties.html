@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::Properties</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::Properties</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Class to manage key/value properties ADT</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Properties</B> (const <!1><A HREF="Properties.html#DOC.2.38.2">Properties</A>&amp; <!1><A HREF="Core.html#DOC.2.9.2">properties</A>)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Properties</B> ()<BR>
+<I>Properties ctor/dtor </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.22"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>asMap</B> (<!1><A HREF="kcc.html#DOC.2.48">StringMap</A>&amp; map, bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true) const <BR>
+<I> Query contents as string map </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>clear</B> ()<BR>
+<I> Clears existing properties</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.23"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   const <!1><A HREF="Properties.html">Properties</A>&amp; </TD><TD><B>empty</B> ()<BR>
+<I> Empty properties collection (GOF: Singleton, Null-Object) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>erase</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key)<BR>
+<I> Remove if key exists </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>exists</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key) const <BR>
+<I> Query if key exists </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>fromXML</B> (std::istream&amp; in, bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true)<BR>
+<I> Deserialize properties from an xml stream </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>long </TD><TD><B>get</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, long value) const <BR>
+<I> Query for value (init must be called prior to use) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>get</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value) const <BR>
+<I> Query for value (init must be called prior to use) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>double </TD><TD><B>get</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, double value) const <BR>
+<I> Query for value (init must be called prior to use) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.21"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>keys</B> (<!1><A HREF="kcc.html#DOC.2.46">StringSet</A>&amp; <!1><A HREF="Properties.html#DOC.2.38.21">keys</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; prefix = Strings::empty()) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.20"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>keys</B> (<!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; <!1><A HREF="Properties.html#DOC.2.38.20">keys</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; prefix = Strings::empty()) const <BR>
+<I> Get all properties keys </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>load</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true)<BR>
+<I> Load properties from a file </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>load</B> (int argc, const char* argv[], bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true)<BR>
+<I> Load properties from command line args </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>load</B> (const <!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; args, bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true)<BR>
+<I> Load properties from vector {key}={value} rows </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="Properties.html">Properties</A>&amp; </TD><TD><B>operator = </B> (const <!1><A HREF="Properties.html">Properties</A>&amp;)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>save</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>) const <BR>
+<I> Save properties to a file </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>set</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, long value)<BR>
+<I> Set a key and value (init must be called prior to use) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.19"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>set</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, double value)<BR>
+<I> Set a key and value (init must be called prior to use) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>set</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value)<BR>
+<I> Set a key and value (init must be called prior to use) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>toXML</B> (std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, bool noPrologue = false) const <BR>
+<I> Serialize properties to XML </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   </TD><TD><B>~Properties</B> ()<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Protected Fields</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.38.24"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.48">StringMap</A> </TD><TD><B>m_properties</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Class to manage key/value properties ADT
+
+<P>XML:
+<Properties>
+<Property key='foo' value='bar' />
+...
+</Properties>
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Properties"></A>
+<A NAME="DOC.2.38.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Properties()</B></TT>
+<DD>Properties ctor/dtor 
+<DL><DT><DD></DL><P>
+<A NAME="Properties"></A>
+<A NAME="DOC.2.38.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Properties(const <!1><A HREF="Properties.html#DOC.2.38.2">Properties</A>&amp; <!1><A HREF="Core.html#DOC.2.9.2">properties</A>)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator = "></A>
+<A NAME="DOC.2.38.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Properties.html">Properties</A>&amp; operator = (const <!1><A HREF="Properties.html">Properties</A>&amp;)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="~Properties"></A>
+<A NAME="DOC.2.38.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Properties()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="clear"></A>
+<A NAME="DOC.2.38.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void clear()</B></TT>
+<DD>
+Clears existing properties
+<DL><DT><DD></DL><P>
+<A NAME="load"></A>
+<A NAME="DOC.2.38.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool load(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true)</B></TT>
+<DD>
+Load properties from a file
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> to <!1><A HREF="Properties.html#DOC.2.38.6">load</A> from
+<BR><B></B> - <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> this object's <!1><A HREF="Core.html#DOC.2.9.2">properties</A> prior to loading
+<BR><DT><B>Returns:</B><DD>  true if loaded <BR><DD></DL><P>
+<A NAME="load"></A>
+<A NAME="DOC.2.38.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool load(const <!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; args, bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true)</B></TT>
+<DD>
+Load properties from vector {key}={value} rows
+
+<DL><DT><DT><B>Parameters:</B><DD><B>args</B> -  <!1><A HREF="ISQLQuery.html#DOC.2.101.1">rows</A> of key/value pairs
+<BR><B></B> - <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> this object's <!1><A HREF="Core.html#DOC.2.9.2">properties</A> prior to loading
+<BR><DT><B>Returns:</B><DD>  true if loaded <BR><DD></DL><P>
+<A NAME="load"></A>
+<A NAME="DOC.2.38.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool load(int argc, const char* argv[], bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true)</B></TT>
+<DD>
+Load properties from command line args
+
+<DL><DT><DT><B>Parameters:</B><DD><B>argc</B> -  command line arg <!1><A HREF="RepositoryBinding.html#DOC.2.112.10">count</A>
+<BR><B>argv</B> -  command line args
+<BR><B></B> - <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> this object's <!1><A HREF="Core.html#DOC.2.9.2">properties</A> prior to loading
+<BR><DT><B>Returns:</B><DD>  true if loaded <BR><DD></DL><P>
+<A NAME="save"></A>
+<A NAME="DOC.2.38.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool save(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>) const </B></TT>
+<DD>
+Save properties to a file
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> to <!1><A HREF="Properties.html#DOC.2.38.9">save</A> to
+<BR><DT><B>Returns:</B><DD>  true if saved<BR><DD></DL><P>
+<A NAME="fromXML"></A>
+<A NAME="DOC.2.38.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool fromXML(std::istream&amp; in, bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true)</B></TT>
+<DD>
+Deserialize properties from an xml stream
+
+<DL><DT><DT><B>Parameters:</B><DD><B>in</B> -  <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> stream
+<BR><B></B> - <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> this object's <!1><A HREF="Core.html#DOC.2.9.2">properties</A> prior to loading
+<BR><DT><B>Returns:</B><DD>  true if deserialized<BR><DD></DL><P>
+<A NAME="toXML"></A>
+<A NAME="DOC.2.38.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool toXML(std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, bool noPrologue = false) const </B></TT>
+<DD>
+Serialize properties to XML
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Log.html#DOC.2.33.23">out</A> stream to serialize to
+<BR><B>noPrologue</B> -  son't emit an <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> prologue
+<BR><DT><B>Returns:</B><DD>  true if written<BR><DD></DL><P>
+<A NAME="exists"></A>
+<A NAME="DOC.2.38.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool exists(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key) const </B></TT>
+<DD>
+Query if key exists
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  key to check for
+<BR><DT><B>Returns:</B><DD>  true if key is set<BR><DD></DL><P>
+<A NAME="erase"></A>
+<A NAME="DOC.2.38.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool erase(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key)</B></TT>
+<DD>
+Remove if key exists
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  key to <!1><A HREF="Properties.html#DOC.2.38.13">erase</A>
+<BR><DT><B>Returns:</B><DD>  true if found and erased<BR><DD></DL><P>
+<A NAME="get"></A>
+<A NAME="DOC.2.38.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; get(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value) const </B></TT>
+<DD>
+Query for value (init must be called prior to use)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  key of value
+<BR><B>value</B> -  default value<BR><DD></DL><P>
+<A NAME="get"></A>
+<A NAME="DOC.2.38.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>long get(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, long value) const </B></TT>
+<DD>
+Query for value (init must be called prior to use)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  key of value
+<BR><B>value</B> -  default value<BR><DD></DL><P>
+<A NAME="get"></A>
+<A NAME="DOC.2.38.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>double get(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, double value) const </B></TT>
+<DD>
+Query for value (init must be called prior to use)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  key of value
+<BR><B>value</B> -  default value<BR><DD></DL><P>
+<A NAME="set"></A>
+<A NAME="DOC.2.38.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void set(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value)</B></TT>
+<DD>
+Set a key and value (init must be called prior to use)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  key of value
+<BR><B>value</B> -  value<BR><DD></DL><P>
+<A NAME="set"></A>
+<A NAME="DOC.2.38.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void set(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, long value)</B></TT>
+<DD>
+Set a key and value (init must be called prior to use)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  key of value
+<BR><B>value</B> -  value<BR><DD></DL><P>
+<A NAME="set"></A>
+<A NAME="DOC.2.38.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void set(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; key, double value)</B></TT>
+<DD>
+Set a key and value (init must be called prior to use)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>key</B> -  key of value
+<BR><B>value</B> -  value<BR><DD></DL><P>
+<A NAME="keys"></A>
+<A NAME="DOC.2.38.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void keys(<!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; <!1><A HREF="Properties.html#DOC.2.38.20">keys</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; prefix = Strings::empty()) const </B></TT>
+<DD>
+Get all properties keys
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Properties.html#DOC.2.38.20">keys</A> <!1><A HREF="Log.html#DOC.2.33.23">out</A> value containing <!1><A HREF="Properties.html#DOC.2.38.20">keys</A>
+<BR><B>prefix</B> -  prefix of <!1><A HREF="Properties.html#DOC.2.38.20">keys</A> to <!1><A HREF="Strings.html#DOC.2.41.33">match</A>, <!1><A HREF="Properties.html#DOC.2.38.23">empty</A> == *<BR><DD></DL><P>
+<A NAME="keys"></A>
+<A NAME="DOC.2.38.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void keys(<!1><A HREF="kcc.html#DOC.2.46">StringSet</A>&amp; <!1><A HREF="Properties.html#DOC.2.38.21">keys</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; prefix = Strings::empty()) const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="asMap"></A>
+<A NAME="DOC.2.38.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void asMap(<!1><A HREF="kcc.html#DOC.2.48">StringMap</A>&amp; map, bool <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> = true) const </B></TT>
+<DD>
+Query contents as string map
+
+<DL><DT><DT><B>Parameters:</B><DD><B>map</B> -  <!1><A HREF="Log.html#DOC.2.33.23">out</A>-param map to populate
+<BR><B></B> - <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> <!1><A HREF="Properties.html#DOC.2.38.5">clear</A> <!1><A HREF="Log.html#DOC.2.33.23">out</A>-param map<BR><DD></DL><P>
+<A NAME="empty"></A>
+<A NAME="DOC.2.38.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const <!1><A HREF="Properties.html">Properties</A>&amp; empty()</B></TT>
+<DD>
+Empty properties collection (GOF: Singleton, Null-Object)
+
+<DL><DT><DT><B>Returns:</B><DD>  empty properties<BR><DD></DL><P>
+<A NAME="m_properties"></A>
+<A NAME="DOC.2.38.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.48">StringMap</A> m_properties</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IHTTPResponseDispatcher</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IHTTPResponseDispatcher</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> HTTP response dispatcher.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IIHTTPResponse,MIHTTPResponse.html,IIHTTPResponseDispatcher,MIHTTPResponseDispatcher.html">
+<param name=before value="M,M,M">
+<param name=after value="Md-SP,Md-,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.85.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="IHTTPResponseDispatcher.html#DOC.2.85.1">ResponseHandlers</A>&amp; </TD><TD><B>handlers</B> ()<BR>
+<I> Accessor to handlers map</I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.85.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>typedef  std::map&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, <!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>*&gt; </TD><TD><B>ResponseHandlers</B> <BR>
+<I>Map from path to response </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+HTTP response dispatcher. HTTP Response that delegates path to handler.
+e.g. 
+"/" -> &handlerHome, "/service" -> &handlerService
+
+<P>Ownership of handlers is NOT consumed.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="ResponseHandlers"></A>
+<A NAME="DOC.2.85.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::map&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, <!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>*&gt; ResponseHandlers</B></TT>
+<DD>Map from path to response 
+<DL><DT><DD></DL><P>
+<A NAME="handlers"></A>
+<A NAME="DOC.2.85.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="IHTTPResponseDispatcher.html#DOC.2.85.1">ResponseHandlers</A>&amp; handlers() = 0</B></TT>
+<DD>
+Accessor to handlers map
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

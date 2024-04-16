@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::ITextResults</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::ITextResults</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Text results</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="IIComponent,MIComponent.html,IITextResults,MITextResults.html">
+<param name=before value="M,M">
+<param name=after value="Md-,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.106.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>next</B> () throw(TextException)<BR>
+<I> Query if more results available </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.106.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>results</B> (<!1><A HREF="TextDocument.html">TextDocument</A>&amp; txtdoc) throw(TextException)<BR>
+<I> Fetch results </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.106.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   long </TD><TD><B>row</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.106.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>seek</B> (long <!1><A HREF="ITextResults.html#DOC.2.106.4">row</A>) throw(TextException)<BR>
+<I> Seek to row </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.106.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   long </TD><TD><B>total</B> ()<BR>
+<I> Results totals</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Text results
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="next"></A>
+<A NAME="DOC.2.106.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool next() throw(TextException) = 0</B></TT>
+<DD>
+Query if more results available
+
+<DL><DT><DT><B>Returns:</B><DD>  true if results available
+@throws TextException if text error<BR><DD></DL><P>
+<A NAME="seek"></A>
+<A NAME="DOC.2.106.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void seek(long <!1><A HREF="ITextResults.html#DOC.2.106.4">row</A>) throw(TextException) = 0</B></TT>
+<DD>
+Seek to row
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ITextResults.html#DOC.2.106.4">row</A> <!1><A HREF="ITextResults.html#DOC.2.106.4">row</A> to position cursor <!1><A HREF="SQLFields.html#DOC.2.99.6">at</A>
+@throws TextException if <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="total"></A>
+<A NAME="DOC.2.106.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   long total() = 0</B></TT>
+<DD>
+Results totals
+<DL><DT><DD></DL><P>
+<A NAME="row"></A>
+<A NAME="DOC.2.106.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   long row() = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="results"></A>
+<A NAME="DOC.2.106.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void results(<!1><A HREF="TextDocument.html">TextDocument</A>&amp; txtdoc) throw(TextException) = 0</B></TT>
+<DD>
+Fetch results
+
+<DL><DT><DT><B>Parameters:</B><DD><B>txtdoc</B> -  <!1><A HREF="Log.html#DOC.2.33.23">out</A>-param of document <!1><A HREF="ITextResults.html#DOC.2.106.5">results</A>
+@throws TextException if <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IComponentModuleManager</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IComponentModuleManager</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Interface for managing component binding</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="IIComponent,MIComponent.html,IIComponentModuleManager,MIComponentModuleManager.html">
+<param name=before value="M,M">
+<param name=after value="Md-,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.5.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>onBind</B> (<!1><A HREF="ComponentModule.html">ComponentModule</A>* <!1><A HREF="Components.html#DOC.2.6.2">module</A>)<BR>
+<I> Notification of binding (called post binding) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.5.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>onUnbind</B> (<!1><A HREF="ComponentModule.html">ComponentModule</A>* <!1><A HREF="Components.html#DOC.2.6.2">module</A>)<BR>
+<I> Notification of unbinding (called prior to unbinding) </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Interface for managing component binding
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="onBind"></A>
+<A NAME="DOC.2.5.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void onBind(<!1><A HREF="ComponentModule.html">ComponentModule</A>* <!1><A HREF="Components.html#DOC.2.6.2">module</A>) = 0</B></TT>
+<DD>
+Notification of binding (called post binding)
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Components.html#DOC.2.6.2">module</A> component <!1><A HREF="Components.html#DOC.2.6.2">module</A> <!1><A HREF="ComponentModule.html#DOC.2.3.8">bound</A><BR><DD></DL><P>
+<A NAME="onUnbind"></A>
+<A NAME="DOC.2.5.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void onUnbind(<!1><A HREF="ComponentModule.html">ComponentModule</A>* <!1><A HREF="Components.html#DOC.2.6.2">module</A>) = 0</B></TT>
+<DD>
+Notification of unbinding (called prior to unbinding)
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Components.html#DOC.2.6.2">module</A> component <!1><A HREF="Components.html#DOC.2.6.2">module</A> <!1><A HREF="ComponentModule.html#DOC.2.3.8">bound</A><BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

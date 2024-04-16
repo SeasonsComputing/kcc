@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IRODOM</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IRODOM</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Read-only DOM parser</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="IIComponent,MIComponent.html,IIRODOM,MIRODOM.html">
+<param name=before value="M,M">
+<param name=after value="Md-,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.25.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>KCC_COMPONENT_EXCEPTION</B> (ParseFailed)<BR>
+<I>Parse failed exception </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.25.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="IDOMNode.html">IDOMNode</A>* </TD><TD><B>parseHTML</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; html) throw(IRODOM::ParseFailed)<BR>
+<I> Construct DOM from HTML input </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.25.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="IDOMNode.html">IDOMNode</A>* </TD><TD><B>parseXML</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A>) throw(IRODOM::ParseFailed)<BR>
+<I> Construct DOM from XML input </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Read-only DOM parser
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="KCC_COMPONENT_EXCEPTION"></A>
+<A NAME="DOC.2.25.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> KCC_COMPONENT_EXCEPTION(ParseFailed)</B></TT>
+<DD>Parse failed exception 
+<DL><DT><DD></DL><P>
+<A NAME="parseXML"></A>
+<A NAME="DOC.2.25.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="IDOMNode.html">IDOMNode</A>* parseXML(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A>) throw(IRODOM::ParseFailed) = 0</B></TT>
+<DD>
+Construct DOM from XML input
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> input to <!1><A HREF="UUIDDigest.html#DOC.2.79.5">parse</A>
+<BR><DT><B>Returns:</B><DD>  document root node or null if invalid or parse error (ownership IS consumed)<BR><DD></DL><P>
+<A NAME="parseHTML"></A>
+<A NAME="DOC.2.25.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="IDOMNode.html">IDOMNode</A>* parseHTML(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; html) throw(IRODOM::ParseFailed) = 0</B></TT>
+<DD>
+Construct DOM from HTML input
+
+<DL><DT><DT><B>Parameters:</B><DD><B>html</B> -  input to <!1><A HREF="UUIDDigest.html#DOC.2.79.5">parse</A>
+<BR><DT><B>Returns:</B><DD>  document root node or null if invalid or parse error (ownership IS consumed)<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

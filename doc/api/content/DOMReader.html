@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::DOMReader</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::DOMReader</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Helper class for reading DOM nodes</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CDOMReader,MDOMReader.html,CDOMFileReader,MDOMFileReader.html">
+<param name=before value="M,M^_">
+<param name=after value="M,M">
+<param name=indent value="0,0">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>DOMReader</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>)<BR>
+<I> Initialize an DOM reader </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>KCC_COMPONENT_EXCEPTION</B> (NotFoundException)<BR>
+<I>Error reading DOM exception </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>attr</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagAttr) throw(DOMReader::NotFoundException)<BR>
+<I> Search node attribute tag and retrieve its text </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>attr</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagAttr, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value) throw(DOMReader::NotFoundException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>attrOp</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagAttr, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value)<BR>
+<I> Query optional DOM attribute </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>cdata</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>)<BR>
+<I> Search first node child first for CDATA </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>comment</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>)<BR>
+<I> Search node child first comment </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* </TD><TD><B>doc</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagDoc) throw(DOMReader::NotFoundException)<BR>
+<I> Query DOM document node </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* </TD><TD><B>node</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag) throw(DOMReader::NotFoundException)<BR>
+<I> Query DOM node </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* </TD><TD><B>nodeOp</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag) throw(DOMReader::NotFoundException)<BR>
+<I> Query optional DOM node </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* </TD><TD><B>nodePathQuery</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> = NULL)<BR>
+<I> Query DOM node using path expression  </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>nodeTx</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag) throw(DOMReader::NotFoundException)<BR>
+<I> Query DOM node text </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IDOMNodeList.html">IDOMNodeList</A>* </TD><TD><B>nodes</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagNode)<BR>
+<I> Query root node children for specific tags (shallow search) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IDOMNodeList.html">IDOMNodeList</A>* </TD><TD><B>nodes</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagDoc, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagNode) throw(DOMReader::NotFoundException)<BR>
+<I> Query document root node children for specific tags (shallow search) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* </TD><TD><B>root</B> ()<BR>
+<I> Accessor to DOM root </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>text</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>)<BR>
+<I> Search first node child first for text </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   </TD><TD><B>~DOMReader</B> ()<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Protected Fields</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.13.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* </TD><TD><B>m_root</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Helper class for reading DOM nodes
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="KCC_COMPONENT_EXCEPTION"></A>
+<A NAME="DOC.2.13.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> KCC_COMPONENT_EXCEPTION(NotFoundException)</B></TT>
+<DD>Error reading DOM exception 
+<DL><DT><DD></DL><P>
+<A NAME="DOMReader"></A>
+<A NAME="DOC.2.13.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DOMReader(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>)</B></TT>
+<DD>
+Initialize an DOM reader
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A> <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> of DOM tree<BR><DD></DL><P>
+<A NAME="~DOMReader"></A>
+<A NAME="DOC.2.13.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~DOMReader()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="root"></A>
+<A NAME="DOC.2.13.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* root()</B></TT>
+<DD>
+Accessor to DOM root
+
+<DL><DT><DT><B>Returns:</B><DD>  DOM root<BR><DD></DL><P>
+<A NAME="nodePathQuery"></A>
+<A NAME="DOC.2.13.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* nodePathQuery(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> = NULL)</B></TT>
+<DD>
+Query DOM node using path expression 
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> unix shell <!1><A HREF="URL.html#DOC.2.75.7">path</A> e.g. /html/body/title or relative table/tbody
+<BR><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to search from (default is <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>)
+<BR><DT><B>Returns:</B><DD>  node or null if not found<BR><DD></DL><P>
+<A NAME="doc"></A>
+<A NAME="DOC.2.13.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* doc(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagDoc) throw(DOMReader::NotFoundException)</B></TT>
+<DD>
+Query DOM document node
+
+<DL><DT><DT><B>Throws:</B><DD><B>DOMReader::NotFoundException</B>  if error getting document<BR><DT><B>Parameters:</B><DD><B>tagDoc</B> -  tag of document <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>
+<BR><DT><B>Returns:</B><DD>  document node
+<BR><DD></DL><P>
+<A NAME="node"></A>
+<A NAME="DOC.2.13.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* node(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag) throw(DOMReader::NotFoundException)</B></TT>
+<DD>
+Query DOM node
+
+<DL><DT><DT><B>Throws:</B><DD><B>DOMReader::NotFoundException</B>  if node not found or more than 1 found<BR><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to search
+<BR><B>tag</B> -  tag of <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>
+<BR><DT><B>Returns:</B><DD>  node to locate
+<BR><DD></DL><P>
+<A NAME="nodeOp"></A>
+<A NAME="DOC.2.13.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* nodeOp(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag) throw(DOMReader::NotFoundException)</B></TT>
+<DD>
+Query optional DOM node
+
+<DL><DT><DT><B>Throws:</B><DD><B>DOMReader::NotFoundException</B>  if error<BR><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to search
+<BR><B>tag</B> -  tag of <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> (or <!1><A HREF="SharedPtr.html#DOC.2.2.12">null</A> if not found)
+<BR><DT><B>Returns:</B><DD>  node to locate
+<BR><DD></DL><P>
+<A NAME="nodeTx"></A>
+<A NAME="DOC.2.13.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> nodeTx(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag) throw(DOMReader::NotFoundException)</B></TT>
+<DD>
+Query DOM node text
+
+<DL><DT><DT><B>Throws:</B><DD><B>DOMReader::NotFoundException</B>  if node not found or more than 1 found<BR><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to search
+<BR><B>tag</B> -  tag of <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>
+<BR><DT><B>Returns:</B><DD>  text of node
+<BR><DD></DL><P>
+<A NAME="nodes"></A>
+<A NAME="DOC.2.13.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IDOMNodeList.html">IDOMNodeList</A>* nodes(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagNode)</B></TT>
+<DD>
+Query root node children for specific tags (shallow search)
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to search
+@oaram tagNode <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to search for
+<BR><DT><B>Returns:</B><DD>  list of nodes matching tag (ownership IS consumed)<BR><DD></DL><P>
+<A NAME="nodes"></A>
+<A NAME="DOC.2.13.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IDOMNodeList.html">IDOMNodeList</A>* nodes(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagDoc, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagNode) throw(DOMReader::NotFoundException)</B></TT>
+<DD>
+Query document root node children for specific tags (shallow search)
+
+<DL><DT><DT><B>Throws:</B><DD><B>DOMReader::NotFoundException</B>  if error getting nodes<BR><DT><B>Parameters:</B><DD><B>tagDoc</B> -  tag of document <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>
+@oaram tagNode <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to search for
+<BR><DT><B>Returns:</B><DD>  list of nodes matching tag (ownership IS consumed)
+<BR><DD></DL><P>
+<A NAME="text"></A>
+<A NAME="DOC.2.13.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> text(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>)</B></TT>
+<DD>
+Search first node child first for text
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to <!1><A HREF="Properties.html#DOC.2.38.14">get</A> <!1><A HREF="DOMReader.html#DOC.2.13.12">text</A> for
+<BR><DT><B>Returns:</B><DD>  text of node or empty string if no text node<BR><DD></DL><P>
+<A NAME="cdata"></A>
+<A NAME="DOC.2.13.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> cdata(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>)</B></TT>
+<DD>
+Search first node child first for CDATA
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to <!1><A HREF="Properties.html#DOC.2.38.14">get</A> <!1><A HREF="DOMReader.html#DOC.2.13.12">text</A> for
+<BR><DT><B>Returns:</B><DD>  text of node or empty string if no text node<BR><DD></DL><P>
+<A NAME="comment"></A>
+<A NAME="DOC.2.13.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> comment(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>)</B></TT>
+<DD>
+Search node child first comment
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to <!1><A HREF="Properties.html#DOC.2.38.14">get</A> <!1><A HREF="DOMReader.html#DOC.2.13.12">text</A> for
+<BR><DT><B>Returns:</B><DD>  text of node or empty string if no text node<BR><DD></DL><P>
+<A NAME="attr"></A>
+<A NAME="DOC.2.13.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> attr(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagAttr) throw(DOMReader::NotFoundException)</B></TT>
+<DD>
+Search node attribute tag and retrieve its text
+
+<DL><DT><DT><B>Throws:</B><DD><B>DOMReader::NotFoundException</B>  if no text found<BR><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to <!1><A HREF="Properties.html#DOC.2.38.14">get</A> attribute <!1><A HREF="DOMReader.html#DOC.2.13.12">text</A> for
+<BR><B>tagAttr</B> -  tag of attribute
+<BR><DT><B>Returns:</B><DD>  text of node
+<BR><DD></DL><P>
+<A NAME="attr"></A>
+<A NAME="DOC.2.13.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void attr(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagAttr, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value) throw(DOMReader::NotFoundException)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="attrOp"></A>
+<A NAME="DOC.2.13.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool attrOp(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tagAttr, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value)</B></TT>
+<DD>
+Query optional DOM attribute
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> <!1><A HREF="DOMReader.html#DOC.2.13.7">node</A> to search
+<BR><B>tag</B> -  tag of attribute (or <!1><A HREF="SharedPtr.html#DOC.2.2.12">null</A> if not found)
+<BR><B>value</B> -  <!1><A HREF="Log.html#DOC.2.33.23">out</A> param of attribute value if <!1><A HREF="RepositoryBinding.html#DOC.2.112.11">exists</A>
+<BR><DT><B>Returns:</B><DD>  true if attribute exists<BR><DD></DL><P>
+<A NAME="m_root"></A>
+<A NAME="DOC.2.13.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="IDOMNode.html">IDOMNode</A>* m_root</B></TT>
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="DOMFileReader.html">DOMFileReader</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer 
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

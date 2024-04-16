@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::ISQLConnection</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::ISQLConnection</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> SQL Connection</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="IIComponent,MIComponent.html,IISQLConnection,MISQLConnection.html">
+<param name=before value="M,M">
+<param name=after value="Md-,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>begin</B> () throw(SQLException)<BR>
+<I> Transaction sql @throws SQLException if sql error</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>commit</B> () throw(SQLException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   int </TD><TD><B>execute</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException)<BR>
+<I> Execute sql </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   int </TD><TD><B>executeBatch</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="ISQLField.html">ISQLField</A>* </TD><TD><B>field</B> (ISQLField::Type t) throw(SQLException)<BR>
+<I> Construct sql field </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   unsigned long long </TD><TD><B>insertId</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="ISQLQuery.html">ISQLQuery</A>* </TD><TD><B>query</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="ISQLResultSet.html">ISQLResultSet</A>* </TD><TD><B>results</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException)<BR>
+<I> Query sql </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>rollback</B> () throw()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.98.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="ISQLUpdate.html">ISQLUpdate</A>* </TD><TD><B>update</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException)<BR>
+<I> Update sql </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+SQL Connection
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="execute"></A>
+<A NAME="DOC.2.98.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   int execute(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException) = 0</B></TT>
+<DD>
+Execute sql
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ISQLConnection.html#DOC.2.98.9">query</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>
+<BR><DT><B>Returns:</B><DD>  number of rows changed
+@throws SQLException if sql error<BR><DD></DL><P>
+<A NAME="executeBatch"></A>
+<A NAME="DOC.2.98.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   int executeBatch(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="insertId"></A>
+<A NAME="DOC.2.98.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   unsigned long long insertId() = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="begin"></A>
+<A NAME="DOC.2.98.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void begin() throw(SQLException) = 0</B></TT>
+<DD>
+Transaction sql
+@throws SQLException if sql error
+<DL><DT><DD></DL><P>
+<A NAME="commit"></A>
+<A NAME="DOC.2.98.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void commit() throw(SQLException) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="rollback"></A>
+<A NAME="DOC.2.98.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool rollback() throw() = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="field"></A>
+<A NAME="DOC.2.98.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="ISQLField.html">ISQLField</A>* field(ISQLField::Type t) throw(SQLException) = 0</B></TT>
+<DD>
+Construct sql field
+
+<DL><DT><DT><B>Parameters:</B><DD><B>t</B> -  <!1><A HREF="ISQLField.html#DOC.2.96.2">type</A> of <!1><A HREF="ISQLConnection.html#DOC.2.98.7">field</A>
+<BR><DT><B>Returns:</B><DD>  field (ownership IS consumed)
+@throws SQLException if sql error<BR><DD></DL><P>
+<A NAME="results"></A>
+<A NAME="DOC.2.98.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="ISQLResultSet.html">ISQLResultSet</A>* results(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException) = 0</B></TT>
+<DD>
+Query sql
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ISQLConnection.html#DOC.2.98.9">query</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>
+<BR><DT><B>Returns:</B><DD>  result set/query (ownership IS consumed)
+@throws SQLException if sql error<BR><DD></DL><P>
+<A NAME="query"></A>
+<A NAME="DOC.2.98.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="ISQLQuery.html">ISQLQuery</A>* query(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="update"></A>
+<A NAME="DOC.2.98.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="ISQLUpdate.html">ISQLUpdate</A>* update(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>) throw(SQLException) = 0</B></TT>
+<DD>
+Update sql
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ISQLConnection.html#DOC.2.98.10">update</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.3">expression</A>
+<BR><DT><B>Returns:</B><DD>  update (ownership IS consumed)
+@throws SQLException if sql error<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

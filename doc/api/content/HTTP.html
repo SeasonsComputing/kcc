@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::HTTP</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::HTTP</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> HTTP Utilities </BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>DELETE</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>GET</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>POST</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>PUT</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>content</B> (<!1><A HREF="Socket.html">Socket</A>&amp; client, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; data) throw(Socket::Failed)<BR>
+<I> Retrieve http content (content type MUST be of text type, caller MUST validate PRIOR to calling) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   int </TD><TD><B>deletexml</B> (const <!1><A HREF="URL.html">URL</A>&amp; url) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.19"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>getCookies</B> (<!1><A HREF="Dictionary.html">Dictionary</A>&amp; cookies, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true)<BR>
+<I> Decode and get cookies from http attributes </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   int </TD><TD><B>getxml</B> (const <!1><A HREF="URL.html">URL</A>&amp; url, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; receivedXml) throw(Socket::Failed)<BR>
+<I> Helper wrappers for GET/PUT/POST/DELETE of xml data </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.20"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>parseAttributeValue</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; fullValue, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value, <!1><A HREF="Dictionary.html">Dictionary</A>&amp; params)<BR>
+<I> Parse attribute value with parameters (eg.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   int </TD><TD><B>postxml</B> (const <!1><A HREF="URL.html">URL</A>&amp; url, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; sendXml, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; receivedXml) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   int </TD><TD><B>putxml</B> (const <!1><A HREF="URL.html">URL</A>&amp; url, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; sendXml) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>request</B> (<!1><A HREF="Socket.html">Socket</A>&amp; client, <!1><A HREF="HTTPRequest.html">HTTPRequest</A>&amp; <!1><A HREF="HTTP.html#DOC.2.18.6">request</A>) throw(Socket::Failed)<BR>
+<I> Retrieve http request header </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>requestHeaders</B> (<!1><A HREF="Socket.html">Socket</A>&amp; client, <!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; headers, int&amp; <!1><A HREF="Timers.html#DOC.2.72.10">size</A>) throw(Socket::Failed)<BR>
+<I> Read request headers.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>response</B> (<!1><A HREF="Socket.html">Socket</A>&amp; client, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, int len, int <!1><A HREF="HTTP.html#DOC.2.18.11">response</A> = 200) throw(Socket::Failed)<BR>
+<I> Write HTTP response header </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>setCookies</B> (const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; cookies, <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, long age = 0L, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A> = Platform::fsSep())<BR>
+<I> Encode and set cookies into http header </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>setHeaders</B> (<!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IPageFormReader.html#DOC.2.89.1.1">contentType</A>, bool nocache)<BR>
+<I> Set http headers </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>setHeadersXml</B> (<!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers)<BR>
+<I> Set xml headers and disable caching </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>write</B> (<!1><A HREF="Socket.html">Socket</A>&amp; client, std::istream&amp; data) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>write</B> (<!1><A HREF="Socket.html">Socket</A>&amp; client, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; data) throw(Socket::Failed)<BR>
+<I> Send data to HTTP </I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.18.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>Code</B> <BR>
+<I>HTTP Response Codes </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+HTTP Utilities
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="Code"></A>
+<A NAME="DOC.2.18.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  Code</B></TT>
+<DD>HTTP Response Codes 
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="C_OK"></A>
+<A NAME="DOC.2.18.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_OK</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="C_NOT_MODIFIED"></A>
+<A NAME="DOC.2.18.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_NOT_MODIFIED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="C_FORBIDDEN"></A>
+<A NAME="DOC.2.18.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_FORBIDDEN</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="C_NOT_FOUND"></A>
+<A NAME="DOC.2.18.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_NOT_FOUND</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="C_ERROR"></A>
+<A NAME="DOC.2.18.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_ERROR</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="GET"></A>
+<A NAME="DOC.2.18.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; GET()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="POST"></A>
+<A NAME="DOC.2.18.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; POST()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="DELETE"></A>
+<A NAME="DOC.2.18.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; DELETE()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PUT"></A>
+<A NAME="DOC.2.18.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; PUT()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="request"></A>
+<A NAME="DOC.2.18.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void request(<!1><A HREF="Socket.html">Socket</A>&amp; client, <!1><A HREF="HTTPRequest.html">HTTPRequest</A>&amp; <!1><A HREF="HTTP.html#DOC.2.18.6">request</A>) throw(Socket::Failed)</B></TT>
+<DD>
+Retrieve http request header
+
+<DL><DT><DT><B>Parameters:</B><DD><B>client</B> -  connected & unread socket to fetch <!1><A HREF="HTTP.html#DOC.2.18.6">request</A> from
+<BR><B></B> - <!1><A HREF="HTTP.html#DOC.2.18.6">request</A> output param where <!1><A HREF="HTTP.html#DOC.2.18.6">request</A> header is places
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="requestHeaders"></A>
+<A NAME="DOC.2.18.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void requestHeaders(<!1><A HREF="Socket.html">Socket</A>&amp; client, <!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; headers, int&amp; <!1><A HREF="Timers.html#DOC.2.72.10">size</A>) throw(Socket::Failed)</B></TT>
+<DD>
+Read request headers. Read a line delimted by EOL until EOL+EOL reached.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>client</B> -  connected & unread socket to fetch <!1><A HREF="HTTP.html#DOC.2.18.6">request</A> from
+<BR><B>headers</B> -  header <!1><A HREF="ISQLQuery.html#DOC.2.101.1">rows</A> <!1><A HREF="Socket.html#DOC.2.39.11">read</A>
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.2.18.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void write(<!1><A HREF="Socket.html">Socket</A>&amp; client, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; data) throw(Socket::Failed)</B></TT>
+<DD>
+Send data to HTTP
+
+<DL><DT><DT><B>Parameters:</B><DD><B>data</B> -  data to <!1><A HREF="HTTPDispatch.html#DOC.2.19.2">send</A>
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.2.18.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void write(<!1><A HREF="Socket.html">Socket</A>&amp; client, std::istream&amp; data) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="content"></A>
+<A NAME="DOC.2.18.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void content(<!1><A HREF="Socket.html">Socket</A>&amp; client, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; data) throw(Socket::Failed)</B></TT>
+<DD>
+Retrieve http content (content type MUST be of text type, caller MUST validate PRIOR to calling)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>client</B> -  connected & unread socket to fetch <!1><A HREF="HTTP.html#DOC.2.18.6">request</A> from
+<BR><B></B> - <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A> <!1><A HREF="HTTP.html#DOC.2.18.6">request</A> <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>
+<BR><B>data</B> -  output param to place <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> <!1><A HREF="HTTP.html#DOC.2.18.10">content</A>
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="response"></A>
+<A NAME="DOC.2.18.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void response(<!1><A HREF="Socket.html">Socket</A>&amp; client, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, int len, int <!1><A HREF="HTTP.html#DOC.2.18.11">response</A> = 200) throw(Socket::Failed)</B></TT>
+<DD>
+Write HTTP response header
+
+<DL><DT><DT><B>Parameters:</B><DD><B>client</B> -  connected socket to <!1><A HREF="HTTP.html#DOC.2.18.8">write</A> to
+<BR><B>headers</B> -  <!1><A HREF="HTTP.html#DOC.2.18.11">response</A> headers
+<BR><B>len</B> -  <!1><A HREF="HTTP.html#DOC.2.18.11">response</A> <!1><A HREF="ITextResults.html#DOC.2.106.3">total</A> length
+<BR><B></B> - <!1><A HREF="HTTP.html#DOC.2.18.11">response</A> code
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="getxml"></A>
+<A NAME="DOC.2.18.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   int getxml(const <!1><A HREF="URL.html">URL</A>&amp; url, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; receivedXml) throw(Socket::Failed)</B></TT>
+<DD>
+Helper wrappers for GET/PUT/POST/DELETE of xml data
+
+<DL><DT><DT><B>Parameters:</B><DD><B>url</B> -  url of <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> <!1><A HREF="URL.html#DOC.2.75.6">host</A>
+<BR><B>sendXml</B> -  <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> to <!1><A HREF="HTTPDispatch.html#DOC.2.19.2">send</A>
+<BR><B>receivedXml</B> -  <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> received
+<BR><DT><B>Returns:</B><DD>  HTTP response code
+@throws Socket::Failed exception if error<BR><DD></DL><P>
+<A NAME="putxml"></A>
+<A NAME="DOC.2.18.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   int putxml(const <!1><A HREF="URL.html">URL</A>&amp; url, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; sendXml) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="postxml"></A>
+<A NAME="DOC.2.18.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   int postxml(const <!1><A HREF="URL.html">URL</A>&amp; url, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; sendXml, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; receivedXml) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="deletexml"></A>
+<A NAME="DOC.2.18.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   int deletexml(const <!1><A HREF="URL.html">URL</A>&amp; url) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="setHeaders"></A>
+<A NAME="DOC.2.18.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void setHeaders(<!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IPageFormReader.html#DOC.2.89.1.1">contentType</A>, bool nocache)</B></TT>
+<DD>
+Set http headers
+
+<DL><DT><DT><B>Parameters:</B><DD><B>headers</B> -  headers to <!1><A HREF="Properties.html#DOC.2.38.17">set</A> directives
+<BR><B></B> - <!1><A HREF="HTTP.html#DOC.2.18.10">content</A> http <!1><A HREF="HTTP.html#DOC.2.18.10">content</A> <!1><A HREF="ISQLField.html#DOC.2.96.2">type</A>, e.g. "<!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>/<!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A>", "<!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>/html"
+<BR><B>nocache</B> -  <!1><A HREF="Properties.html#DOC.2.38.17">set</A> no-cache headers<BR><DD></DL><P>
+<A NAME="setHeadersXml"></A>
+<A NAME="DOC.2.18.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void setHeadersXml(<!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers)</B></TT>
+<DD>
+Set xml headers and disable caching
+
+<DL><DT><DT><B>Parameters:</B><DD><B>headers</B> -  headers to <!1><A HREF="Properties.html#DOC.2.38.17">set</A> directives<BR><DD></DL><P>
+<A NAME="setCookies"></A>
+<A NAME="DOC.2.18.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void setCookies(const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; cookies, <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, long age = 0L, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A> = Platform::fsSep())</B></TT>
+<DD>
+Encode and set cookies into http header
+
+<DL><DT><DT><B>Parameters:</B><DD><B>cookies</B> -  data to <!1><A HREF="Properties.html#DOC.2.38.17">set</A> in headers
+<BR><B>headers</B> -  <!1><A HREF="HTTP.html#DOC.2.18.11">response</A> headers to <!1><A HREF="Properties.html#DOC.2.38.17">set</A> cookies into
+<BR><B>age</B> -  cookie age in seconds
+<BR><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> for cookie<BR><DD></DL><P>
+<A NAME="getCookies"></A>
+<A NAME="DOC.2.18.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void getCookies(<!1><A HREF="Dictionary.html">Dictionary</A>&amp; cookies, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true)</B></TT>
+<DD>
+Decode and get cookies from http attributes
+
+<DL><DT><DT><B>Parameters:</B><DD><B>cookies</B> -  data to <!1><A HREF="Properties.html#DOC.2.38.14">get</A> from headers
+<BR><B></B> - <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A> <!1><A HREF="HTTP.html#DOC.2.18.6">request</A> <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A> to <!1><A HREF="Properties.html#DOC.2.38.14">get</A> cookies from
+<BR><B></B> - <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> cookies collection prior to populating<BR><DD></DL><P>
+<A NAME="parseAttributeValue"></A>
+<A NAME="DOC.2.18.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool parseAttributeValue(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; fullValue, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value, <!1><A HREF="Dictionary.html">Dictionary</A>&amp; params)</B></TT>
+<DD>
+Parse attribute value with parameters (eg. Key: value; param-key=param-value; param-key=param-value)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>fullValue</B> -  full value from attribute
+<BR><B>value</B> -  actual value (<!1><A HREF="Log.html#DOC.2.33.23">out</A>-param)
+<BR><B>params</B> -  attribute value params
+<BR><DT><B>Returns:</B><DD>  true if parsed successfully<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DT><B>See Also:</B><DD><!1><A HREF="HTTPDispatch.html">HTTPDispatch</A> for a simplified <!1><A HREF="HTTP.html">HTTP</A> object <!1><A HREF="HTTP.html#DOC.2.18.6">request</A>/<!1><A HREF="HTTP.html#DOC.2.18.11">response</A> helper
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

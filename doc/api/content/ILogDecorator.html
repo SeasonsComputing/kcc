@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::ILogDecorator</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::ILogDecorator</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Decorate log writing to allow delegation to an alternate log store (GOF: Decorator) </BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="IIComponent,MIComponent.html,IILogDecorator,MILogDecorator.html">
+<param name=before value="M,M">
+<param name=after value="Md-,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.34.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>onWrite</B> ( const <!1><A HREF="Char.html">Char</A>* prefix, long <!1><A HREF="Scope.html#DOC.2.33.2.3">threadId</A>, const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="Scope.html#DOC.2.33.2.4">context</A>, const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="Timers.html#DOC.2.72.2">name</A>, const <!1><A HREF="Char.html">Char</A>* when, const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>)<BR>
+<I> Notification of log writing NOTE: pointers are only valid during the call; make copies if needed </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Decorate log writing to allow delegation to an alternate log store (GOF: Decorator) 
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="onWrite"></A>
+<A NAME="DOC.2.34.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool onWrite( const <!1><A HREF="Char.html">Char</A>* prefix, long <!1><A HREF="Scope.html#DOC.2.33.2.3">threadId</A>, const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="Scope.html#DOC.2.33.2.4">context</A>, const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="Timers.html#DOC.2.72.2">name</A>, const <!1><A HREF="Char.html">Char</A>* when, const <!1><A HREF="Char.html">Char</A>* <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>) = 0</B></TT>
+<DD>
+Notification of log writing
+NOTE: pointers are only valid during the call; make copies if needed
+
+<DL><DT><DT><B>Parameters:</B><DD><B>prefix</B> -    <!1><A HREF="Log.html#DOC.2.33.3">verbosity</A> prefix (<!1><A HREF="Log.html#DOC.2.33.19">info1</A>-<!1><A HREF="Log.html#DOC.2.33.30">info4</A>, <!1><A HREF="Log.html#DOC.2.33.21">warning</A>, <!1><A HREF="Log.html#DOC.2.33.22">error</A>, <!1><A HREF="Log.html#DOC.2.33.29">exception</A>, <!1><A HREF="Log.html#DOC.2.33.23">out</A>)
+<BR><B></B> - <!1><A HREF="Scope.html#DOC.2.33.2.3">threadId</A> <!1><A HREF="Thread.html#DOC.2.66.5">id</A> of logging thread      (scope.threadId)
+<BR><B></B> - <!1><A HREF="Scope.html#DOC.2.33.2.4">context</A>  <!1><A HREF="Scope.html#DOC.2.33.2.4">context</A> of logging thread (scope.context)
+<BR><B></B> - <!1><A HREF="Timers.html#DOC.2.72.2">name</A>     <!1><A HREF="Timers.html#DOC.2.72.2">name</A> of logging <!1><A HREF="Scope.html#DOC.2.33.2.4">context</A>   (scope.name)
+<BR><B>when</B> -      when logged (ISO date <!1><A HREF="ISODate.html#DOC.2.29.23">time</A>)
+<BR><B></B> - <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>     log message <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>
+<BR><DT><B>Returns:</B><DD>  true if kcc logger should log to file<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

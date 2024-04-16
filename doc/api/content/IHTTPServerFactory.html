@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IHTTPServerFactory</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IHTTPServerFactory</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> HTTP server factory specification</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IIComponentFactory,MIComponentFactory.html,IIHTTPServerFactory,MIHTTPServerFactory.html">
+<param name=before value="M,M,M">
+<param name=after value="Md-SP,Md-,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.87.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="IHTTPResponseDispatcher.html">IHTTPResponseDispatcher</A>* </TD><TD><B>constructDispatcher</B> ()<BR>
+<I> Construct HTTP response dispatcher (ownership IS consumed)</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.87.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="IHTTPServer.html">IHTTPServer</A>* </TD><TD><B>constructServer</B> ()<BR>
+<I> Construct HTTP server (ownership IS consumed)</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.87.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>* </TD><TD><B>constructServiceStatus</B> ()<BR>
+<I> Construct service process-status </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.87.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="IHTTPResponseShutdown.html">IHTTPResponseShutdown</A>* </TD><TD><B>constructShutdown</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; service = Strings::empty())<BR>
+<I> Construct response shutdown </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+HTTP server factory specification
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="constructServer"></A>
+<A NAME="DOC.2.87.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="IHTTPServer.html">IHTTPServer</A>* constructServer() = 0</B></TT>
+<DD>
+Construct HTTP server (ownership IS consumed)
+<DL><DT><DD></DL><P>
+<A NAME="constructDispatcher"></A>
+<A NAME="DOC.2.87.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="IHTTPResponseDispatcher.html">IHTTPResponseDispatcher</A>* constructDispatcher() = 0</B></TT>
+<DD>
+Construct HTTP response dispatcher (ownership IS consumed)
+<DL><DT><DD></DL><P>
+<A NAME="constructShutdown"></A>
+<A NAME="DOC.2.87.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="IHTTPResponseShutdown.html">IHTTPResponseShutdown</A>* constructShutdown(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; service = Strings::empty()) = 0</B></TT>
+<DD>
+Construct response shutdown
+
+<DL><DT><DT><B>Parameters:</B><DD><B>service</B> -  service <!1><A HREF="Timers.html#DOC.2.72.2">name</A> (optional)
+<BR><DT><B>Returns:</B><DD>  handler (ownership IS consumed)<BR><DD></DL><P>
+<A NAME="constructServiceStatus"></A>
+<A NAME="DOC.2.87.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="IHTTPResponse.html">IHTTPResponse</A>* constructServiceStatus() = 0</B></TT>
+<DD>
+Construct service process-status
+
+<DL><DT><DT><B>Returns:</B><DD>  handler (ownership IS consumed)<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

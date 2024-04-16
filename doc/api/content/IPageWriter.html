@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IPageWriter</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IPageWriter</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Page writer</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IIHTTPResponseWriter,MIHTTPResponseWriter.html,IIPageWriter,MIPageWriter.html">
+<param name=before value="M,M,M">
+<param name=after value="Md-SP,Md-,M">
+<param name=indent value="0,1,2">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.91.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>resource</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>) throw(Socket::Failed)<BR>
+<I> Stream resource to writer </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.91.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>transform</B> ( const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; xform, const <!1><A HREF="kcc.html#DOC.2.48">StringMap</A>&amp; xformParams, <!1><A HREF="IPageWriter.html#DOC.2.91.1">TransformType</A> <!1><A HREF="ISQLField.html#DOC.2.96.2">type</A>, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers) throw(IXMLTransform::TransformException, Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.91.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>transform</B> ( std::istream&amp; <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; xform, const <!1><A HREF="kcc.html#DOC.2.48">StringMap</A>&amp; xformParams, <!1><A HREF="IPageWriter.html#DOC.2.91.1">TransformType</A> <!1><A HREF="ISQLField.html#DOC.2.96.2">type</A>, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers) throw(IXMLTransform::TransformException, Socket::Failed)<BR>
+<I> Write transformed xml (client-caching disabled) </I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.91.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>TransformType</B> <BR>
+<I>Transformation Type </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Page writer
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="TransformType"></A>
+<A NAME="DOC.2.91.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  TransformType</B></TT>
+<DD>Transformation Type 
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="TT_HTML"></A>
+<A NAME="DOC.2.91.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TT_HTML</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TT_XML"></A>
+<A NAME="DOC.2.91.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TT_XML</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="transform"></A>
+<A NAME="DOC.2.91.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void transform( std::istream&amp; <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; xform, const <!1><A HREF="kcc.html#DOC.2.48">StringMap</A>&amp; xformParams, <!1><A HREF="IPageWriter.html#DOC.2.91.1">TransformType</A> <!1><A HREF="ISQLField.html#DOC.2.96.2">type</A>, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers) throw(IXMLTransform::TransformException, Socket::Failed) = 0</B></TT>
+<DD>
+Write transformed xml (client-caching disabled)
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> to <!1><A HREF="IPageWriter.html#DOC.2.91.2">transform</A>
+<BR><B>xform</B> -  transformation <!1><A HREF="URL.html#DOC.2.75.7">path</A> or <!1><A HREF="Thread.html#DOC.2.66.5">id</A>
+xform is searched in xform map first, otherwise it's a <!1><A HREF="URL.html#DOC.2.75.7">path</A> (<!1><A HREF="Log.html#DOC.2.33.8">file</A> OR url)
+<BR><B>xformParams</B> -  paraemeters to pass to style sheet
+<BR><B></B> - <!1><A HREF="ISQLField.html#DOC.2.96.2">type</A> <!1><A HREF="ISQLField.html#DOC.2.96.2">type</A> of transformation
+<BR><B>headers</B> -  <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A> headers
+@throw IXMLTransform::TransformException if <!1><A HREF="Log.html#DOC.2.33.22">error</A> transforming
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="transform"></A>
+<A NAME="DOC.2.91.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void transform( const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; xform, const <!1><A HREF="kcc.html#DOC.2.48">StringMap</A>&amp; xformParams, <!1><A HREF="IPageWriter.html#DOC.2.91.1">TransformType</A> <!1><A HREF="ISQLField.html#DOC.2.96.2">type</A>, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers) throw(IXMLTransform::TransformException, Socket::Failed) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="resource"></A>
+<A NAME="DOC.2.91.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void resource(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>) throw(Socket::Failed) = 0</B></TT>
+<DD>
+Stream resource to writer
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> to <!1><A HREF="IPageWriter.html#DOC.2.91.4">resource</A>
+<BR><B></B> - <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A> <!1><A HREF="IHTTPRequestReader.html#DOC.2.81.1">request</A> <!1><A HREF="HTTPRequest.html#DOC.2.17.6">attributes</A>
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DT><B>See Also:</B><DD><!1><A HREF="IHTTPResponseWriter.html">IHTTPResponseWriter</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

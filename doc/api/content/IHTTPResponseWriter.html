@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IHTTPResponseWriter</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IHTTPResponseWriter</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> HTTP response writer</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="IIComponent,MIComponent.html,IIHTTPResponseWriter,MIHTTPResponseWriter.html,IIPageWriter,MIPageWriter.html">
+<param name=before value="M,M,M^-">
+<param name=after value="Md-,M,M">
+<param name=indent value="0,1,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.82.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>response</B> (const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, int len, int <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.3">response</A> = HTTP::C_OK) throw(Socket::Failed)<BR>
+<I> Write response headers </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.82.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>response</B> (std::istream&amp; in, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, int <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A> = HTTP::C_OK) throw(Socket::Failed)<BR>
+<I> Write complete response (headers & content) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.82.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>response</B> (int <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.2">response</A>) throw(Socket::Failed)<BR>
+<I> Write response code only response </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.82.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>write</B> (const char* buf, int sz) throw(Socket::Failed)<BR>
+<I> Writer response </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.82.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>xml</B> (std::istream&amp; in) throw(Socket::Failed)<BR>
+<I> Write xml (client-caching disabled) </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+HTTP response writer
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="response"></A>
+<A NAME="DOC.2.82.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void response(std::istream&amp; in, const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, int <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A> = HTTP::C_OK) throw(Socket::Failed) = 0</B></TT>
+<DD>
+Write complete response (headers & content)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>in</B> -  <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A> to <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.4">write</A>
+<BR><B>headers</B> -  <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A> headers
+<BR><B></B> - <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.1">response</A> code
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="response"></A>
+<A NAME="DOC.2.82.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void response(int <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.2">response</A>) throw(Socket::Failed) = 0</B></TT>
+<DD>
+Write response code only response
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.2">response</A> code
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="response"></A>
+<A NAME="DOC.2.82.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void response(const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; headers, int len, int <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.3">response</A> = HTTP::C_OK) throw(Socket::Failed) = 0</B></TT>
+<DD>
+Write response headers
+
+<DL><DT><DT><B>Parameters:</B><DD><B>headers</B> -  <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.3">response</A> headers
+<BR><B>len</B> -  <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.3">response</A> <!1><A HREF="ITextResults.html#DOC.2.106.3">total</A> length
+<BR><B></B> - <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.3">response</A> code
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.2.82.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void write(const char* buf, int sz) throw(Socket::Failed) = 0</B></TT>
+<DD>
+Writer response
+
+<DL><DT><DT><B>Parameters:</B><DD><B>buf</B> -  buffer to writer
+<BR><B>sz</B> -  <!1><A HREF="Timers.html#DOC.2.72.10">size</A> of buffer
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P>
+<A NAME="xml"></A>
+<A NAME="DOC.2.82.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void xml(std::istream&amp; in) throw(Socket::Failed) = 0</B></TT>
+<DD>
+Write xml (client-caching disabled)
+
+<DL><DT><DT><B>Parameters:</B><DD><B>in</B> -  <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> to <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.4">write</A>
+@throws Socket::Failed <!1><A HREF="Log.html#DOC.2.33.29">exception</A> if <!1><A HREF="Log.html#DOC.2.33.22">error</A><BR><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="IPageWriter.html">IPageWriter</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

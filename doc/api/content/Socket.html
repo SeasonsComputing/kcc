@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::Socket</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::Socket</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Socket client</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CSocket,MSocket.html,CSocketServer,MSocketServer.html">
+<param name=before value="M,M^_">
+<param name=after value="M,M">
+<param name=indent value="0,0">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>KCC_COMPONENT_EXCEPTION</B> (<!1><A HREF="IRegex.html#DOC.2.22.3">Failed</A>)<BR>
+<I>Socket operation failed exception </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Socket</B> (<!1><A HREF="Socket.html#DOC.2.39.1">Handle</A> handle) throw(Socket::Failed)<BR>
+<I> Socket client ctor.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Socket</B> ()<BR>
+<I> Socket client ctor</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Socket</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Socket.html#DOC.2.39.17">host</A>, int <!1><A HREF="Socket.html#DOC.2.39.18">port</A>)<BR>
+<I> Socket client ctor </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>close</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>connect</B> () throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>connect</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Socket.html#DOC.2.39.17">host</A>, int <!1><A HREF="Socket.html#DOC.2.39.18">port</A>) throw(Socket::Failed)<BR>
+<I>Socket lifecycle </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.21"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int </TD><TD><B>getOption</B> (<!1><A HREF="Socket.html#DOC.2.39.20">SocketOption</A> o) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.25"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>getTimeout</B> (<!1><A HREF="Socket.html#DOC.2.39.24">TimeoutOption</A> t, long&amp; sec, long&amp; microsec) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>host</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>ip</B> ()<BR>
+<I>Accessors </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   int </TD><TD><B>port</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>read</B> (char* buf, int sz, int&amp; actual) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>read</B> (long&amp; l) throw(Socket::Failed)<BR>
+<I>Reader methods </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.22"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>setOption</B> (<!1><A HREF="Socket.html#DOC.2.39.20">SocketOption</A> o, int value) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.26"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>setTimeout</B> (<!1><A HREF="Socket.html#DOC.2.39.24">TimeoutOption</A> t, long sec, long microsec) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>write</B> (const char* buf, int sz) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>write</B> (long l) throw(Socket::Failed)<BR>
+<I>Writer methods </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>write</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; s) throw(Socket::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   </TD><TD><B>~Socket</B> ()<BR>
+<I>Close socket </I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>typedef  void* </TD><TD><B>Address</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>typedef  int </TD><TD><B>Handle</B> <BR>
+<I>Socket types </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.19"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>OptionFlags</B> <BR>
+<I>Option Flags </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.20"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>typedef  unsigned int </TD><TD><B>SocketOption</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.23"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>TimeoutFlags</B> <BR>
+<I>Timeout Flags </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.24"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>typedef  unsigned int </TD><TD><B>TimeoutOption</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Protected Fields</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.30"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="Socket.html#DOC.2.39.1">Handle</A> </TD><TD><B>m_handle</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.28"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>m_host</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.27"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>m_ip</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.29"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int </TD><TD><B>m_port</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Protected Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.39.31"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>onConnect</B> (<!1><A HREF="Socket.html#DOC.2.39.2">Address</A> addr) throw(Socket::Failed)<BR>
+<I>onConnect: Template method (GOF) - client connection to server </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Socket client
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Handle"></A>
+<A NAME="DOC.2.39.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  int Handle</B></TT>
+<DD>Socket types 
+<DL><DT><DD></DL><P>
+<A NAME="Address"></A>
+<A NAME="DOC.2.39.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  void* Address</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="KCC_COMPONENT_EXCEPTION"></A>
+<A NAME="DOC.2.39.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> KCC_COMPONENT_EXCEPTION(<!1><A HREF="IRegex.html#DOC.2.22.3">Failed</A>)</B></TT>
+<DD>Socket operation failed exception 
+<DL><DT><DD></DL><P>
+<A NAME="Socket"></A>
+<A NAME="DOC.2.39.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Socket()</B></TT>
+<DD>
+Socket client ctor
+<DL><DT><DD></DL><P>
+<A NAME="Socket"></A>
+<A NAME="DOC.2.39.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Socket(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Socket.html#DOC.2.39.17">host</A>, int <!1><A HREF="Socket.html#DOC.2.39.18">port</A>)</B></TT>
+<DD>
+Socket client ctor
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Socket.html#DOC.2.39.17">host</A> <!1><A HREF="Socket.html#DOC.2.39.17">host</A> <!1><A HREF="Timers.html#DOC.2.72.2">name</A>
+<BR><B></B> - <!1><A HREF="Socket.html#DOC.2.39.18">port</A> <!1><A HREF="Socket.html#DOC.2.39.18">port</A> number<BR><DD></DL><P>
+<A NAME="Socket"></A>
+<A NAME="DOC.2.39.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Socket(<!1><A HREF="Socket.html#DOC.2.39.1">Handle</A> handle) throw(Socket::Failed)</B></TT>
+<DD>
+Socket client ctor. Attach to handle.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>handle</B> -  socket to <!1><A HREF="SharedPtr.html#DOC.2.2.17">attach</A> to
+@throw Socket::Failed if invalid handle<BR><DD></DL><P>
+<A NAME="~Socket"></A>
+<A NAME="DOC.2.39.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~Socket()</B></TT>
+<DD>Close socket 
+<DL><DT><DD></DL><P>
+<A NAME="connect"></A>
+<A NAME="DOC.2.39.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void connect(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Socket.html#DOC.2.39.17">host</A>, int <!1><A HREF="Socket.html#DOC.2.39.18">port</A>) throw(Socket::Failed)</B></TT>
+<DD>Socket lifecycle 
+<DL><DT><DD></DL><P>
+<A NAME="connect"></A>
+<A NAME="DOC.2.39.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void connect() throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="close"></A>
+<A NAME="DOC.2.39.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void close()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="read"></A>
+<A NAME="DOC.2.39.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void read(long&amp; l) throw(Socket::Failed)</B></TT>
+<DD>Reader methods 
+<DL><DT><DD></DL><P>
+<A NAME="read"></A>
+<A NAME="DOC.2.39.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void read(char* buf, int sz, int&amp; actual) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.2.39.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void write(long l) throw(Socket::Failed)</B></TT>
+<DD>Writer methods 
+<DL><DT><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.2.39.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void write(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; s) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="write"></A>
+<A NAME="DOC.2.39.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void write(const char* buf, int sz) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="ip"></A>
+<A NAME="DOC.2.39.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; ip()</B></TT>
+<DD>Accessors 
+<DL><DT><DD></DL><P>
+<A NAME="host"></A>
+<A NAME="DOC.2.39.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; host()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="port"></A>
+<A NAME="DOC.2.39.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   int port()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="OptionFlags"></A>
+<A NAME="DOC.2.39.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  OptionFlags</B></TT>
+<DD>Option Flags 
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="O_KEEPALIVE"></A>
+<A NAME="DOC.2.39.19.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_KEEPALIVE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="O_LINGER"></A>
+<A NAME="DOC.2.39.19.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_LINGER</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="O_SNDBUF"></A>
+<A NAME="DOC.2.39.19.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_SNDBUF</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="O_RCVBUF"></A>
+<A NAME="DOC.2.39.19.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_RCVBUF</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="SocketOption"></A>
+<A NAME="DOC.2.39.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  unsigned int SocketOption</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="getOption"></A>
+<A NAME="DOC.2.39.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getOption(<!1><A HREF="Socket.html#DOC.2.39.20">SocketOption</A> o) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="setOption"></A>
+<A NAME="DOC.2.39.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setOption(<!1><A HREF="Socket.html#DOC.2.39.20">SocketOption</A> o, int value) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TimeoutFlags"></A>
+<A NAME="DOC.2.39.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  TimeoutFlags</B></TT>
+<DD>Timeout Flags 
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="T_SEND"></A>
+<A NAME="DOC.2.39.23.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> T_SEND</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="T_RECEIVE"></A>
+<A NAME="DOC.2.39.23.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> T_RECEIVE</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="TimeoutOption"></A>
+<A NAME="DOC.2.39.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  unsigned int TimeoutOption</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="getTimeout"></A>
+<A NAME="DOC.2.39.25"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void getTimeout(<!1><A HREF="Socket.html#DOC.2.39.24">TimeoutOption</A> t, long&amp; sec, long&amp; microsec) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="setTimeout"></A>
+<A NAME="DOC.2.39.26"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setTimeout(<!1><A HREF="Socket.html#DOC.2.39.24">TimeoutOption</A> t, long sec, long microsec) throw(Socket::Failed)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_ip"></A>
+<A NAME="DOC.2.39.27"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> m_ip</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_host"></A>
+<A NAME="DOC.2.39.28"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> m_host</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_port"></A>
+<A NAME="DOC.2.39.29"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int m_port</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_handle"></A>
+<A NAME="DOC.2.39.30"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Socket.html#DOC.2.39.1">Handle</A> m_handle</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="onConnect"></A>
+<A NAME="DOC.2.39.31"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void onConnect(<!1><A HREF="Socket.html#DOC.2.39.2">Address</A> addr) throw(Socket::Failed)</B></TT>
+<DD>onConnect: Template method (GOF) - client connection to server 
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="SocketServer.html">SocketServer</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

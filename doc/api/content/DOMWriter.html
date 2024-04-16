@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::DOMWriter</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::DOMWriter</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Helper class for writing DOM nodes</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>DOMWriter</B> (std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, bool noPrologue = false)<BR>
+<I> Initialize an DOM writer </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>KCC_COMPONENT_EXCEPTION</B> (NotOpenException)<BR>
+<I>Error writing DOM exception </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>attr</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value, bool <!1><A HREF="URL.html#DOC.2.75.17">encode</A> = true) throw(DOMWriter::NotOpenException)<BR>
+<I> Write an DOM attribute (element must have started) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>attr</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, bool value, bool label = true) throw(DOMWriter::NotOpenException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>attr</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, double value, const <!1><A HREF="Char.html">Char</A>* f = "%.4f") throw(DOMWriter::NotOpenException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>attr</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, long value, const <!1><A HREF="Char.html">Char</A>* f = "%d") throw(DOMWriter::NotOpenException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>attr</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, const <!1><A HREF="Char.html">Char</A>* value, bool <!1><A HREF="URL.html#DOC.2.75.17">encode</A> = true) throw(DOMWriter::NotOpenException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>attr</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, const <!1><A HREF="ISODate.html">ISODate</A>&amp; value, ISODate::Format f = ISODate::F_NONE) throw(DOMWriter::NotOpenException)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>cdata</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value)<BR>
+<I> Write an DOM CDATA </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>comment</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value)<BR>
+<I> Write an DOM comment </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>end</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag)<BR>
+<I> End an DOM element </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>node</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>node</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>)<BR>
+<I> Serialize a DOM tree </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>start</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag)<BR>
+<I> Start an DOM element </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>text</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value, bool <!1><A HREF="URL.html#DOC.2.75.17">encode</A> = true)<BR>
+<I> Write an DOM text </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   </TD><TD><B>~DOMWriter</B> ()<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Protected Fields</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>m_open</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>std::ostream&amp; </TD><TD><B>m_out</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Protected Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.15.19"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>dumpNode</B> (const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMWriter.html#DOC.2.15.15">node</A>, std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>)<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Helper class for writing DOM nodes
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="KCC_COMPONENT_EXCEPTION"></A>
+<A NAME="DOC.2.15.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> KCC_COMPONENT_EXCEPTION(NotOpenException)</B></TT>
+<DD>Error writing DOM exception 
+<DL><DT><DD></DL><P>
+<A NAME="DOMWriter"></A>
+<A NAME="DOC.2.15.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DOMWriter(std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, bool noPrologue = false)</B></TT>
+<DD>
+Initialize an DOM writer
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Log.html#DOC.2.33.23">out</A> stream to <!1><A HREF="Socket.html#DOC.2.39.13">write</A> to
+<BR><B>noPrologue</B> -  don't emit an <!1><A HREF="IHTTPResponseWriter.html#DOC.2.82.5">xml</A> prologue<BR><DD></DL><P>
+<A NAME="~DOMWriter"></A>
+<A NAME="DOC.2.15.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~DOMWriter()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="start"></A>
+<A NAME="DOC.2.15.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void start(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag)</B></TT>
+<DD>
+Start an DOM element
+
+<DL><DT><DT><B>Parameters:</B><DD><B>tag</B> -  tag <!1><A HREF="Timers.html#DOC.2.72.2">name</A> of element<BR><DD></DL><P>
+<A NAME="end"></A>
+<A NAME="DOC.2.15.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void end(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag)</B></TT>
+<DD>
+End an DOM element
+
+<DL><DT><DT><B>Parameters:</B><DD><B>tag</B> -  tag <!1><A HREF="Timers.html#DOC.2.72.2">name</A> of element<BR><DD></DL><P>
+<A NAME="cdata"></A>
+<A NAME="DOC.2.15.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void cdata(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value)</B></TT>
+<DD>
+Write an DOM CDATA
+
+<DL><DT><DT><B>Parameters:</B><DD><B>tag</B> -  attribute <!1><A HREF="Timers.html#DOC.2.72.2">name</A>
+<BR><B>value</B> -  <!1><A HREF="DOMWriter.html#DOC.2.15.6">cdata</A> value<BR><DD></DL><P>
+<A NAME="text"></A>
+<A NAME="DOC.2.15.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void text(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value, bool <!1><A HREF="URL.html#DOC.2.75.17">encode</A> = true)</B></TT>
+<DD>
+Write an DOM text
+
+<DL><DT><DT><B>Parameters:</B><DD><B>tag</B> -  attribute <!1><A HREF="Timers.html#DOC.2.72.2">name</A>
+<BR><B>value</B> -  <!1><A HREF="DOMWriter.html#DOC.2.15.7">text</A> value
+<BR><B></B> - <!1><A HREF="URL.html#DOC.2.75.17">encode</A> <!1><A HREF="URL.html#DOC.2.75.17">encode</A> value<BR><DD></DL><P>
+<A NAME="comment"></A>
+<A NAME="DOC.2.15.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void comment(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value)</B></TT>
+<DD>
+Write an DOM comment
+
+<DL><DT><DT><B>Parameters:</B><DD><B>tag</B> -  attribute <!1><A HREF="Timers.html#DOC.2.72.2">name</A>
+<BR><B>value</B> -  <!1><A HREF="DOMWriter.html#DOC.2.15.8">comment</A> value<BR><DD></DL><P>
+<A NAME="attr"></A>
+<A NAME="DOC.2.15.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void attr(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; value, bool <!1><A HREF="URL.html#DOC.2.75.17">encode</A> = true) throw(DOMWriter::NotOpenException)</B></TT>
+<DD>
+Write an DOM attribute (element must have started)
+
+<DL><DT><DT><B>Throws:</B><DD><B>thrown</B>  if node not open<BR><DT><B>Parameters:</B><DD><B>tag</B> -  attribute <!1><A HREF="Timers.html#DOC.2.72.2">name</A>
+<BR><B>value</B> -  attribute value
+<BR><B></B> - <!1><A HREF="URL.html#DOC.2.75.17">encode</A> <!1><A HREF="URL.html#DOC.2.75.17">encode</A> value
+<BR><DD></DL><P>
+<A NAME="attr"></A>
+<A NAME="DOC.2.15.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void attr(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, const <!1><A HREF="Char.html">Char</A>* value, bool <!1><A HREF="URL.html#DOC.2.75.17">encode</A> = true) throw(DOMWriter::NotOpenException)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="attr"></A>
+<A NAME="DOC.2.15.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void attr(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, long value, const <!1><A HREF="Char.html">Char</A>* f = "%d") throw(DOMWriter::NotOpenException)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="attr"></A>
+<A NAME="DOC.2.15.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void attr(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, double value, const <!1><A HREF="Char.html">Char</A>* f = "%.4f") throw(DOMWriter::NotOpenException)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="attr"></A>
+<A NAME="DOC.2.15.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void attr(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, bool value, bool label = true) throw(DOMWriter::NotOpenException)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="attr"></A>
+<A NAME="DOC.2.15.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void attr(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; tag, const <!1><A HREF="ISODate.html">ISODate</A>&amp; value, ISODate::Format f = ISODate::F_NONE) throw(DOMWriter::NotOpenException)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="node"></A>
+<A NAME="DOC.2.15.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void node(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>)</B></TT>
+<DD>
+Serialize a DOM tree
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A> <!1><A HREF="DOMWriter.html#DOC.2.15.15">node</A> to serialize<BR><DD></DL><P>
+<A NAME="node"></A>
+<A NAME="DOC.2.15.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void node(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_out"></A>
+<A NAME="DOC.2.15.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::ostream&amp; m_out</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_open"></A>
+<A NAME="DOC.2.15.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool m_open</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="dumpNode"></A>
+<A NAME="DOC.2.15.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void dumpNode(const <!1><A HREF="IDOMNode.html">IDOMNode</A>* <!1><A HREF="DOMWriter.html#DOC.2.15.15">node</A>, std::ostream&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>)</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

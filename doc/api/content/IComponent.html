@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IComponent</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IComponent</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Component type specifier.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=845>
+<param name=classes value="IIComponent,MIComponent.html,IIXMLRepositoryFinder,MIXMLRepositoryFinder.html,IIXMLRepository,MIXMLRepository.html,IIThreadManager,MIThreadManager.html,IIThread,MIThread.html,IITextResults,MITextResults.html,IITextQuery,MITextQuery.html,IISQLUpdate,MISQLUpdate.html,IISQLResultSet,MISQLResultSet.html,IISQLField,MISQLField.html,IISQLConnection,MISQLConnection.html,IISQL,MISQL.html,IIRegexExpression,MIRegexExpression.html,IIRegex,MIRegex.html,IIRODOM,MIRODOM.html,IIPageHandler,MIPageHandler.html,IIPageFormReader,MIPageFormReader.html,IILogDecorator,MILogDecorator.html,IIHTTPServer,MIHTTPServer.html,IIHTTPResponseWriter,MIHTTPResponseWriter.html,IIHTTPResponse,MIHTTPResponse.html,IIHTTPRequestReader,MIHTTPRequestReader.html,IIDOMNodeList,MIDOMNodeList.html,IIDOMNode,MIDOMNode.html,IIDOMNamedNodeMap,MIDOMNamedNodeMap.html,IIComponentModuleManager,MIComponentModuleManager.html,IIComponentLocator,MIComponentLocator.html,IIComponentFactory,MIComponentFactory.html">
+<param name=before value="M,M|-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,MR-,Mr-">
+<param name=after value="M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M,M">
+<param name=indent value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.20.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   </TD><TD><B>~IComponent</B> ()<BR>
+<I> All components must be heap based and have a v-table.</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Component type specifier. All components must derive from this interface.
+Compoment sub-types must NOT have data members nor inline methods and MUST
+have all methods declared as pure-virtual (= 0).
+
+<P>IComponent ptr's are downcast to sub-type's (static_cast<>). Compiling
+with RTTI allows dynamic_cast<> to be used which may then be used to
+distinguish sub-types.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="~IComponent"></A>
+<A NAME="DOC.2.20.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   ~IComponent()</B></TT>
+<DD>
+All components must be heap based and have a v-table. Addtionally the
+dtor must be the first entry in the v-table, satisfied by the following
+implementation.
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="IXMLRepositoryFinder.html">IXMLRepositoryFinder</A><BR>
+<A HREF="IXMLRepository.html">IXMLRepository</A><BR>
+<A HREF="IThreadManager.html">IThreadManager</A><BR>
+<A HREF="IThread.html">IThread</A><BR>
+<A HREF="ITextResults.html">ITextResults</A><BR>
+<A HREF="ITextQuery.html">ITextQuery</A><BR>
+<A HREF="ISQLUpdate.html">ISQLUpdate</A><BR>
+<A HREF="ISQLResultSet.html">ISQLResultSet</A><BR>
+<A HREF="ISQLField.html">ISQLField</A><BR>
+<A HREF="ISQLConnection.html">ISQLConnection</A><BR>
+<A HREF="ISQL.html">ISQL</A><BR>
+<A HREF="IRegexExpression.html">IRegexExpression</A><BR>
+<A HREF="IRegex.html">IRegex</A><BR>
+<A HREF="IRODOM.html">IRODOM</A><BR>
+<A HREF="IPageHandler.html">IPageHandler</A><BR>
+<A HREF="IPageFormReader.html">IPageFormReader</A><BR>
+<A HREF="ILogDecorator.html">ILogDecorator</A><BR>
+<A HREF="IHTTPServer.html">IHTTPServer</A><BR>
+<A HREF="IHTTPResponseWriter.html">IHTTPResponseWriter</A><BR>
+<A HREF="IHTTPResponse.html">IHTTPResponse</A><BR>
+<A HREF="IHTTPRequestReader.html">IHTTPRequestReader</A><BR>
+<A HREF="IDOMNodeList.html">IDOMNodeList</A><BR>
+<A HREF="IDOMNode.html">IDOMNode</A><BR>
+<A HREF="IDOMNamedNodeMap.html">IDOMNamedNodeMap</A><BR>
+<A HREF="IComponentModuleManager.html">IComponentModuleManager</A><BR>
+<A HREF="IComponentLocator.html">IComponentLocator</A><BR>
+<A HREF="IComponentFactory.html">IComponentFactory</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

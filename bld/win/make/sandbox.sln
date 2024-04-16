@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "page", "tst\page.vcproj", "{53C15B75-1DCF-4921-B157-CC7F1DD4EDB1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "httpd", "tst\httpd.vcproj", "{6FA1A48C-F4AE-4C7A-A808-D02461E4D6B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53C15B75-1DCF-4921-B157-CC7F1DD4EDB1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{53C15B75-1DCF-4921-B157-CC7F1DD4EDB1}.Debug|Win32.Build.0 = Debug|Win32
+		{53C15B75-1DCF-4921-B157-CC7F1DD4EDB1}.Release|Win32.ActiveCfg = Release|Win32
+		{53C15B75-1DCF-4921-B157-CC7F1DD4EDB1}.Release|Win32.Build.0 = Release|Win32
+		{6FA1A48C-F4AE-4C7A-A808-D02461E4D6B6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6FA1A48C-F4AE-4C7A-A808-D02461E4D6B6}.Debug|Win32.Build.0 = Debug|Win32
+		{6FA1A48C-F4AE-4C7A-A808-D02461E4D6B6}.Release|Win32.ActiveCfg = Release|Win32
+		{6FA1A48C-F4AE-4C7A-A808-D02461E4D6B6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

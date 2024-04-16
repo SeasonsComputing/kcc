@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>struct  kcc::Timers</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>struct  <A HREF="#DOC.DOCU">kcc::Timers</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Timers Stack ADT</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::vector&lt;<!1><A HREF="Timer.html">Timer</A>&gt; <B><A HREF="#DOC.2.72.1">Collection</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   <B><A HREF="#DOC.2.72.4">Timers</A></B>(const <!1><A HREF="Char.html">Char</A>* n = "")
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   bool <B><A HREF="#DOC.2.72.18">empty</A></B>() const 
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   double <B><A HREF="#DOC.2.72.12">mean</A></B>() const 
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   double <B><A HREF="#DOC.2.72.13">median</A></B>() const 
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>const <!1><A HREF="Char.html">Char</A>* <B><A HREF="#DOC.2.72.2">name</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   double <B><A HREF="#DOC.2.72.8">now</A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   void <B><A HREF="#DOC.2.72.15">pop</A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   <!1><A HREF="Timer.html">Timer</A>&amp; <B><A HREF="#DOC.2.72.14">push</A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   void <B><A HREF="#DOC.2.72.9">reset</A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   double <B><A HREF="#DOC.2.72.7">secs</A></B>() const 
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   Collection::size_type <B><A HREF="#DOC.2.72.10">size</A></B>() const 
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   void <B><A HREF="#DOC.2.72.5">start</A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   void <B><A HREF="#DOC.2.72.6">stop</A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   double <B><A HREF="#DOC.2.72.11">sum</A></B>() const 
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="Timers.html#DOC.2.72.1">Collection</A> <B><A HREF="#DOC.2.72.3">timers</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   <!1><A HREF="Timer.html">Timer</A>&amp; <B><A HREF="#DOC.2.72.16">top</A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>inline   const <!1><A HREF="Timer.html">Timer</A>&amp; <B><A HREF="#DOC.2.72.17">top</A></B>() const 
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Timers Stack ADT
+
+<P>USAGE:
+
+<P>kcc::Timers t;
+t.start(); // push then top.start()
+... work ...
+t.stop();  // top.stop()
+double totSecs = t.secs();
+... OR ...
+double totSecs = t.now(); // top.stop() then top.secs()   
+
+<P>double avgSecs = t.mean();
+double sumSecs = t.sum();
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Collection"></A>
+<A NAME="DOC.2.72.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::vector&lt;<!1><A HREF="Timer.html">Timer</A>&gt; Collection</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="name"></A>
+<A NAME="DOC.2.72.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="Char.html">Char</A>* name</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="timers"></A>
+<A NAME="DOC.2.72.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Timers.html#DOC.2.72.1">Collection</A> timers</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="Timers"></A>
+<A NAME="DOC.2.72.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   Timers(const <!1><A HREF="Char.html">Char</A>* n = "")</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="start"></A>
+<A NAME="DOC.2.72.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void start()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="stop"></A>
+<A NAME="DOC.2.72.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void stop()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="secs"></A>
+<A NAME="DOC.2.72.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   double secs() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="now"></A>
+<A NAME="DOC.2.72.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   double now()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="reset"></A>
+<A NAME="DOC.2.72.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void reset()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="size"></A>
+<A NAME="DOC.2.72.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   Collection::size_type size() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="sum"></A>
+<A NAME="DOC.2.72.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   double sum() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="mean"></A>
+<A NAME="DOC.2.72.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   double mean() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="median"></A>
+<A NAME="DOC.2.72.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   double median() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="push"></A>
+<A NAME="DOC.2.72.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="Timer.html">Timer</A>&amp; push()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="pop"></A>
+<A NAME="DOC.2.72.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void pop()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="top"></A>
+<A NAME="DOC.2.72.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   <!1><A HREF="Timer.html">Timer</A>&amp; top()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="top"></A>
+<A NAME="DOC.2.72.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="Timer.html">Timer</A>&amp; top() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="empty"></A>
+<A NAME="DOC.2.72.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool empty() const </B></TT>
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

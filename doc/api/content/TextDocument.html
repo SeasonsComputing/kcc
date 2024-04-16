@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>struct  kcc::TextDocument</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>struct  <A HREF="#DOC.DOCU">kcc::TextDocument</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Text document</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  unsigned int <B><A HREF="#DOC.2.104.3">Contents</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>enum  <B><A HREF="#DOC.2.104.2">ContentsFlags</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>struct  <B><A HREF="#DOC.2.104.4">Match</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::vector&lt;<!1><A HREF="TextDocument.html#DOC.2.104.4">Match</A>&gt; <B><A HREF="#DOC.2.104.5">Matches</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>typedef  std::map&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, long&gt; <B><A HREF="#DOC.2.104.1">Terms</A></B>
+<DD><I>Text data structures </I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>void <B><A HREF="#DOC.2.104.10">clear</A></B>()
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="TextDocument.html#DOC.2.104.5">Matches</A> <B><A HREF="#DOC.2.104.9">matches</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="kcc.html#DOC.2.48">StringMap</A> <B><A HREF="#DOC.2.104.6">metadata</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="TextDocument.html#DOC.2.104.1">Terms</A> <B><A HREF="#DOC.2.104.8">terms</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif><!1><A HREF="kcc.html#DOC.2.43">String</A> <B><A HREF="#DOC.2.104.7">text</A></B>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Text document</BLOCKQUOTE>
+<DL>
+
+<A NAME="Terms"></A>
+<A NAME="DOC.2.104.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::map&lt;<!1><A HREF="kcc.html#DOC.2.43">String</A>, long&gt; Terms</B></TT>
+<DD>Text data structures 
+<DL><DT><DD></DL><P>
+<A NAME="ContentsFlags"></A>
+<A NAME="DOC.2.104.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  ContentsFlags</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="C_METADATA"></A>
+<A NAME="DOC.2.104.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_METADATA</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="C_TEXT"></A>
+<A NAME="DOC.2.104.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_TEXT</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="C_TERMS"></A>
+<A NAME="DOC.2.104.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_TERMS</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="C_QUERY_MATCHES"></A>
+<A NAME="DOC.2.104.2.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_QUERY_MATCHES</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="C_ALL"></A>
+<A NAME="DOC.2.104.2.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> C_ALL</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="Contents"></A>
+<A NAME="DOC.2.104.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  unsigned int Contents</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="Match"></A>
+<A NAME="DOC.2.104.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  Match</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="startOffset"></A>
+<A NAME="DOC.2.104.4.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>long startOffset</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="endOffset"></A>
+<A NAME="DOC.2.104.4.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>long endOffset</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="Match"></A>
+<A NAME="DOC.2.104.4.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Match(long so = -1L, long eo = -1L)</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="Matches"></A>
+<A NAME="DOC.2.104.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::vector&lt;<!1><A HREF="TextDocument.html#DOC.2.104.4">Match</A>&gt; Matches</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="metadata"></A>
+<A NAME="DOC.2.104.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.48">StringMap</A> metadata</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="text"></A>
+<A NAME="DOC.2.104.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> text</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="terms"></A>
+<A NAME="DOC.2.104.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="TextDocument.html#DOC.2.104.1">Terms</A> terms</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="matches"></A>
+<A NAME="DOC.2.104.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="TextDocument.html#DOC.2.104.5">Matches</A> matches</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="clear"></A>
+<A NAME="DOC.2.104.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void clear()</B></TT>
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

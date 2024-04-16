@@ -1,0 +1,335 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::Platform</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::Platform</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Utility class for native platform operations</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>fsDir</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, <!1><A HREF="Platform.html#DOC.2.37.7">Files</A>&amp; list)<BR>
+<I> Retrieve list of files and directories (excluding system and hidden files) Does not include current or parent directory names ("", "") </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>fsDirAbsolute</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; relative, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; absolute)<BR>
+<I> Get absolute directory from relative path </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>fsDirChange</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)<BR>
+<I> Change directory to path </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>fsDirCreate</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)<BR>
+<I> Create directory for path </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>fsDirCreateEmpty</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)<BR>
+<I> Create all directories for path cleaning existing contents </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>fsDirCurrent</B> (<!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)<BR>
+<I> Get current directory </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.22"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>fsExists</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.11">fullPath</A>)<BR>
+<I> Query if full path exists </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>fsFile</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, <!1><A HREF="Platform.html#DOC.2.37.6">File</A>&amp; <!1><A HREF="Log.html#DOC.2.33.8">file</A>)<BR>
+<I> Retrieve file object for a path </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.20"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>fsFullPath</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A>)<BR>
+<I> Build full path accounting for separator (accounts for absence or presence of path ending with separator prior to concatenation) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>fsNormalize</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)<BR>
+<I> Normalize path.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>fsRemove</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Log.html#DOC.2.33.8">file</A>)<BR>
+<I> Remove file path </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>fsRemoveAll</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)<BR>
+<I> Remove file path; if dir will remove all children dirs and contained files </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>fsRename</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; from, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; to)<BR>
+<I> Rename from path to path </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.19"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; </TD><TD><B>fsSep</B> ()<BR>
+<I> Path separator </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.21"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>fsSplit</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.11">fullPath</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Log.html#DOC.2.33.8">file</A>)<BR>
+<I> Split full path into path and name components </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="Platform.html#DOC.2.37.1">Module</A> </TD><TD><B>moduleBind</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A> = Strings::empty(), bool logFailure = true)<BR>
+<I> Bind to a shared library module </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void* </TD><TD><B>moduleFunction</B> (const <!1><A HREF="Platform.html#DOC.2.37.1">Module</A>&amp; <!1><A HREF="Components.html#DOC.2.6.2">module</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A>, bool logFailure = true)<BR>
+<I> Retrieve function from module </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>moduleSystemName</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A>)<BR>
+<I> Accessor to module system name (eg.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>moduleUnbind</B> (const <!1><A HREF="Platform.html#DOC.2.37.1">Module</A>&amp; <!1><A HREF="Components.html#DOC.2.6.2">module</A>)<BR>
+<I> Unbdind from shared libary module </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.23"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   long </TD><TD><B>procMemInUseKB</B> ()<BR>
+<I> Query process memory in use </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.24"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   double </TD><TD><B>procTimeInUseSecs</B> ()<BR>
+<I> Query process time in use </I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>struct  </TD><TD><B>File</B> <BR>
+<I>File object </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>typedef  std::vector&lt;<!1><A HREF="Platform.html#DOC.2.37.6">File</A>&gt; </TD><TD><B>Files</B> <BR>
+<I>Collection of File objects </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.37.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>typedef  void* </TD><TD><B>Module</B> <BR>
+<I>Module handle </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Utility class for native platform operations
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="Module"></A>
+<A NAME="DOC.2.37.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  void* Module</B></TT>
+<DD>Module handle 
+<DL><DT><DD></DL><P>
+<A NAME="moduleBind"></A>
+<A NAME="DOC.2.37.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="Platform.html#DOC.2.37.1">Module</A> moduleBind(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A> = Strings::empty(), bool logFailure = true)</B></TT>
+<DD>
+Bind to a shared library module
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A> library <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A> (without extension or prefix as these are per platform)
+<BR><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> to library (default will use system search)
+<BR><B>logFailure</B> -  logs platform message for failure reason
+<BR><DT><B>Returns:</B><DD>  handle to module (NULL if not found)<BR><DD></DL><P>
+<A NAME="moduleSystemName"></A>
+<A NAME="DOC.2.37.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> moduleSystemName(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A>)</B></TT>
+<DD>
+Accessor to module system name (eg. {name}.dll or lib{name}.do)
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A> location of library
+<BR><DT><B>Returns:</B><DD>  string module name<BR><DD></DL><P>
+<A NAME="moduleUnbind"></A>
+<A NAME="DOC.2.37.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void moduleUnbind(const <!1><A HREF="Platform.html#DOC.2.37.1">Module</A>&amp; <!1><A HREF="Components.html#DOC.2.6.2">module</A>)</B></TT>
+<DD>
+Unbdind from shared libary module
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Components.html#DOC.2.6.2">module</A> to <!1><A HREF="ComponentModule.html#DOC.2.3.7">unbind</A><BR><DD></DL><P>
+<A NAME="moduleFunction"></A>
+<A NAME="DOC.2.37.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void* moduleFunction(const <!1><A HREF="Platform.html#DOC.2.37.1">Module</A>&amp; <!1><A HREF="Components.html#DOC.2.6.2">module</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A>, bool logFailure = true)</B></TT>
+<DD>
+Retrieve function from module
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Components.html#DOC.2.6.2">module</A> <!1><A HREF="Components.html#DOC.2.6.2">module</A> to retrieve library from
+<BR><B></B> - <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A> namr of function
+<BR><B>logFailure</B> -  logs platform message for failure reason
+<BR><DT><B>Returns:</B><DD>  pointer to function (NULL if not found)<BR><DD></DL><P>
+<A NAME="File"></A>
+<A NAME="DOC.2.37.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  File</B></TT>
+<DD>File object 
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="name"></A>
+<A NAME="DOC.2.37.6.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> name</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="created"></A>
+<A NAME="DOC.2.37.6.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::time_t created</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="modified"></A>
+<A NAME="DOC.2.37.6.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::time_t modified</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="accessed"></A>
+<A NAME="DOC.2.37.6.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::time_t accessed</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="size"></A>
+<A NAME="DOC.2.37.6.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>unsigned long size</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="dir"></A>
+<A NAME="DOC.2.37.6.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool dir</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="File"></A>
+<A NAME="DOC.2.37.6.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> File()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="File"></A>
+<A NAME="DOC.2.37.6.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> File(const <!1><A HREF="Platform.html#DOC.2.37.6.8">File</A>&amp; f)</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="Files"></A>
+<A NAME="DOC.2.37.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  std::vector&lt;<!1><A HREF="Platform.html#DOC.2.37.6">File</A>&gt; Files</B></TT>
+<DD>Collection of File objects 
+<DL><DT><DD></DL><P>
+<A NAME="fsDir"></A>
+<A NAME="DOC.2.37.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void fsDir(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A>, <!1><A HREF="Platform.html#DOC.2.37.7">Files</A>&amp; list)</B></TT>
+<DD>
+Retrieve list of files and directories (excluding system and hidden files)
+Does not include current or parent directory names ("", "")
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="DOMReader.html#DOC.2.13.4">root</A> folder retrieve list from
+<BR><B>list</B> -  where to place the output<BR><DD></DL><P>
+<A NAME="fsFile"></A>
+<A NAME="DOC.2.37.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool fsFile(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, <!1><A HREF="Platform.html#DOC.2.37.6">File</A>&amp; <!1><A HREF="Log.html#DOC.2.33.8">file</A>)</B></TT>
+<DD>
+Retrieve file object for a path
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> of folder
+<BR><B></B> - <!1><A HREF="Log.html#DOC.2.33.8">file</A> where to put <!1><A HREF="Log.html#DOC.2.33.8">file</A> data
+<BR><DT><B>Returns:</B><DD>  true if file data populated<BR><DD></DL><P>
+<A NAME="fsDirCreate"></A>
+<A NAME="DOC.2.37.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool fsDirCreate(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)</B></TT>
+<DD>
+Create directory for path
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> of folder
+<BR><DT><B>Returns:</B><DD>  true if created, false if already exists or error<BR><DD></DL><P>
+<A NAME="fsDirCreateEmpty"></A>
+<A NAME="DOC.2.37.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool fsDirCreateEmpty(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)</B></TT>
+<DD>
+Create all directories for path cleaning existing contents
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> of folder
+<BR><DT><B>Returns:</B><DD>  true if created, false if error<BR><DD></DL><P>
+<A NAME="fsDirAbsolute"></A>
+<A NAME="DOC.2.37.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool fsDirAbsolute(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; relative, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; absolute)</B></TT>
+<DD>
+Get absolute directory from relative path
+
+<DL><DT><DT><B>Parameters:</B><DD><B>relative</B> -  <!1><A HREF="URL.html#DOC.2.75.7">path</A> of relative folder
+<BR><B>absolute</B> -  <!1><A HREF="URL.html#DOC.2.75.7">path</A> of absolute folder
+<BR><DT><B>Returns:</B><DD>  true if ok, false if error<BR><DD></DL><P>
+<A NAME="fsDirChange"></A>
+<A NAME="DOC.2.37.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool fsDirChange(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)</B></TT>
+<DD>
+Change directory to path
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> of folder
+<BR><DT><B>Returns:</B><DD>  true if changed, false if error<BR><DD></DL><P>
+<A NAME="fsDirCurrent"></A>
+<A NAME="DOC.2.37.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool fsDirCurrent(<!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)</B></TT>
+<DD>
+Get current directory
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> of <!1><A HREF="Thread.html#DOC.2.66.8">current</A> folder
+<BR><DT><B>Returns:</B><DD>  true if ok, false if error<BR><DD></DL><P>
+<A NAME="fsRename"></A>
+<A NAME="DOC.2.37.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool fsRename(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; from, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; to)</B></TT>
+<DD>
+Rename from path to path
+
+<DL><DT><DT><B>Parameters:</B><DD><B>from</B> -  <!1><A HREF="URL.html#DOC.2.75.7">path</A> for from <!1><A HREF="Log.html#DOC.2.33.8">file</A>
+<BR><B>to</B> -  <!1><A HREF="URL.html#DOC.2.75.7">path</A> for to <!1><A HREF="Log.html#DOC.2.33.8">file</A>
+<BR><DT><B>Returns:</B><DD>  true if renamed, false if error<BR><DD></DL><P>
+<A NAME="fsRemove"></A>
+<A NAME="DOC.2.37.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool fsRemove(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Log.html#DOC.2.33.8">file</A>)</B></TT>
+<DD>
+Remove file path
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> of <!1><A HREF="Log.html#DOC.2.33.8">file</A>
+<BR><DT><B>Returns:</B><DD>  true if removed, false if error<BR><DD></DL><P>
+<A NAME="fsRemoveAll"></A>
+<A NAME="DOC.2.37.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void fsRemoveAll(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)</B></TT>
+<DD>
+Remove file path; if dir will remove all children dirs and contained files
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="URL.html#DOC.2.75.7">path</A> of <!1><A HREF="Log.html#DOC.2.33.8">file</A> or <!1><A HREF="Platform.html#DOC.2.37.6.6">dir</A><BR><DD></DL><P>
+<A NAME="fsNormalize"></A>
+<A NAME="DOC.2.37.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> fsNormalize(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>)</B></TT>
+<DD>
+Normalize path. Will replace '\' with '/'
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> to normalize
+<BR><B>normalized</B> -  <!1><A HREF="URL.html#DOC.2.75.7">path</A><BR><DD></DL><P>
+<A NAME="fsSep"></A>
+<A NAME="DOC.2.37.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; fsSep()</B></TT>
+<DD>
+Path separator
+
+<DL><DT><DT><B>Returns:</B><DD>  path separator<BR><DD></DL><P>
+<A NAME="fsFullPath"></A>
+<A NAME="DOC.2.37.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> fsFullPath(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A>)</B></TT>
+<DD>
+Build full path accounting for separator (accounts for absence or presence of
+path ending with separator prior to concatenation)
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> directory <!1><A HREF="URL.html#DOC.2.75.7">path</A>
+<BR><B></B> - <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A> <!1><A HREF="Log.html#DOC.2.33.8">file</A> <!1><A HREF="Platform.html#DOC.2.37.6.1">name</A><BR><DD></DL><P>
+<A NAME="fsSplit"></A>
+<A NAME="DOC.2.37.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void fsSplit(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.11">fullPath</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.7">path</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Log.html#DOC.2.33.8">file</A>)</B></TT>
+<DD>
+Split full path into path and name components
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.11">fullPath</A> full <!1><A HREF="URL.html#DOC.2.75.7">path</A> to <!1><A HREF="IRegexExpression.html#DOC.2.23.5">split</A>
+<BR><B></B> - <!1><A HREF="URL.html#DOC.2.75.7">path</A> <!1><A HREF="Log.html#DOC.2.33.23">out</A> param of <!1><A HREF="URL.html#DOC.2.75.7">path</A> component
+<BR><B></B> - <!1><A HREF="Log.html#DOC.2.33.8">file</A> <!1><A HREF="Log.html#DOC.2.33.23">out</A> param of <!1><A HREF="Log.html#DOC.2.33.8">file</A> component<BR><DD></DL><P>
+<A NAME="fsExists"></A>
+<A NAME="DOC.2.37.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool fsExists(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.11">fullPath</A>)</B></TT>
+<DD>
+Query if full path exists
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.11">fullPath</A> full <!1><A HREF="URL.html#DOC.2.75.7">path</A> to test for existance
+<BR><DT><B>Returns:</B><DD>  true if exists<BR><DD></DL><P>
+<A NAME="procMemInUseKB"></A>
+<A NAME="DOC.2.37.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   long procMemInUseKB()</B></TT>
+<DD>
+Query process memory in use
+
+<DL><DT><DT><B>Returns:</B><DD>  memory in use in kb<BR><DD></DL><P>
+<A NAME="procTimeInUseSecs"></A>
+<A NAME="DOC.2.37.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   double procTimeInUseSecs()</B></TT>
+<DD>
+Query process time in use
+
+<DL><DT><DT><B>Returns:</B><DD>  time in use in secs<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

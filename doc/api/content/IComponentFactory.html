@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IComponentFactory</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IComponentFactory</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Component factory.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=125>
+<param name=classes value="IIComponent,MIComponent.html,IIComponentFactory,MIComponentFactory.html,IIRegexFactory,MIRegexFactory.html,IIHTTPServerFactory,MIHTTPServerFactory.html">
+<param name=before value="M,M,M|-,Mr-">
+<param name=after value="Md-,M,M,M">
+<param name=indent value="0,1,1,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.21.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="IComponent.html">IComponent</A>* </TD><TD><B>construct</B> ()<BR>
+<I> Factory method to construct a component.</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Component factory. All component modules must have only 1 factory.
+Factory's should be specialized to add additional construction param's or
+utility methods or to create other components from this module.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="construct"></A>
+<A NAME="DOC.2.21.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="IComponent.html">IComponent</A>* construct() = 0</B></TT>
+<DD>
+Factory method to construct a component. All component implementations
+must have at least an empty constructor for creation. Ownership
+of component is consumed by caller.
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="IRegexFactory.html">IRegexFactory</A><BR>
+<A HREF="IHTTPServerFactory.html">IHTTPServerFactory</A><BR>
+</DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

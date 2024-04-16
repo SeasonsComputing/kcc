@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::MD5</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::MD5</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> MD5 algorithm</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.36.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>MD5</B> (<!1><A HREF="MD5Digest.html">MD5Digest</A>&amp; <!1><A HREF="UUIDDigest.html#DOC.2.79.3">digest</A>)<BR>
+<I> Construct MD5 algorithm </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.36.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="MD5Digest.html">MD5Digest</A>&amp; </TD><TD><B>complete</B> ()<BR>
+<I> Complete hash algorithm  </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.36.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>hash</B> (const char* buf, int sz)<BR>
+<I> Hash buffer into MD5 digest </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.36.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>hash</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>, <!1><A HREF="MD5Digest.html">MD5Digest</A>&amp; <!1><A HREF="UUIDDigest.html#DOC.2.79.3">digest</A>)<BR>
+<I> Utility to hash text into MD5 digest </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.36.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>hash</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; hex)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.36.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>hash</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.36.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>~MD5</B> ()<BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+MD5 algorithm
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="MD5"></A>
+<A NAME="DOC.2.36.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> MD5(<!1><A HREF="MD5Digest.html">MD5Digest</A>&amp; <!1><A HREF="UUIDDigest.html#DOC.2.79.3">digest</A>)</B></TT>
+<DD>
+Construct MD5 algorithm
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="UUIDDigest.html#DOC.2.79.3">digest</A> where to store <!1><A HREF="MD5.html#DOC.2.36.3">hash</A> <!1><A HREF="UUIDDigest.html#DOC.2.79.3">digest</A> into<BR><DD></DL><P>
+<A NAME="~MD5"></A>
+<A NAME="DOC.2.36.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~MD5()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="hash"></A>
+<A NAME="DOC.2.36.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void hash(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>, <!1><A HREF="MD5Digest.html">MD5Digest</A>&amp; <!1><A HREF="UUIDDigest.html#DOC.2.79.3">digest</A>)</B></TT>
+<DD>
+Utility to hash text into MD5 digest
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A> <!1><A HREF="Exception.html#DOC.2.16.3">what</A> to <!1><A HREF="MD5.html#DOC.2.36.3">hash</A>
+<BR><B>hex</B> -  <!1><A HREF="Log.html#DOC.2.33.23">out</A> param of md5 <!1><A HREF="UUIDDigest.html#DOC.2.79.3">digest</A> as hex
+<BR><DT><B>Returns:</B><DD>  md5 digest as hex<BR><DD></DL><P>
+<A NAME="hash"></A>
+<A NAME="DOC.2.36.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void hash(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; hex)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="hash"></A>
+<A NAME="DOC.2.36.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> hash(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="TextDocument.html#DOC.2.104.7">text</A>)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="hash"></A>
+<A NAME="DOC.2.36.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void hash(const char* buf, int sz)</B></TT>
+<DD>
+Hash buffer into MD5 digest
+
+<DL><DT><DT><B>Parameters:</B><DD><B>buf</B> -  bytes to <!1><A HREF="MD5.html#DOC.2.36.6">hash</A>
+<BR><B>sz</B> -  <!1><A HREF="Timers.html#DOC.2.72.10">size</A> of bytes<BR><DD></DL><P>
+<A NAME="complete"></A>
+<A NAME="DOC.2.36.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="MD5Digest.html">MD5Digest</A>&amp; complete()</B></TT>
+<DD>
+Complete hash algorithm 
+
+<DL><DT><DT><B>Returns:</B><DD>  hased digest from constructor<BR><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

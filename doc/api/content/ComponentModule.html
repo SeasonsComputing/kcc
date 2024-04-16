@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::ComponentModule</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::ComponentModule</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Provides the binding to a component module and locating the factory construction entry point so the component factory may be created.</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>ComponentModule</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ComponentModule.html#DOC.2.3.3.2">id</A>, <!1><A HREF="IComponentLocator.html">IComponentLocator</A>* <!1><A HREF="ComponentModule.html#DOC.2.3.11">locator</A>, <!1><A HREF="IComponentModuleManager.html">IComponentModuleManager</A>* <!1><A HREF="ComponentModule.html#DOC.2.3.12">manager</A> = NULL)<BR>
+<I> Construct a module instance using location service </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>KCC_COMPONENT_EXCEPTION</B> (FactoryNotFound)<BR>
+<I>Factory not found exception </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>KCC_COMPONENT_EXCEPTION</B> (ComponentNotFound)<BR>
+<I>Component not found exception </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>bind</B> () throw(ComponentNotFound)<BR>
+<I> Bind to module (load object library).</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>bound</B> ()<BR>
+<I> Query if component module is bound </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IComponentFactory.html">IComponentFactory</A>* </TD><TD><B>constructFactory</B> () throw(ComponentNotFound, FactoryNotFound)<BR>
+<I> Construct factory for component (will bind to module if not bound) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const <!1><A HREF="ComponentModule.html#DOC.2.3.3">ComponentDefinition</A>&amp; </TD><TD><B>definition</B> () const <BR>
+<I>Accessors </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const <!1><A HREF="IComponentLocator.html">IComponentLocator</A>* </TD><TD><B>locator</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   const <!1><A HREF="IComponentModuleManager.html">IComponentModuleManager</A>* </TD><TD><B>manager</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>unbind</B> ()<BR>
+<I>Unbind from module (unload object library) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>~ComponentModule</B> ()<BR>
+<I>Clean-up component module (will onload if loaded) </I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.3.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>struct  </TD><TD><B>ComponentDefinition</B> <BR>
+<I>Component definition </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Provides the binding to a component module and locating
+the factory construction entry point so the component factory may
+be created.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="KCC_COMPONENT_EXCEPTION"></A>
+<A NAME="DOC.2.3.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> KCC_COMPONENT_EXCEPTION(ComponentNotFound)</B></TT>
+<DD>Component not found exception 
+<DL><DT><DD></DL><P>
+<A NAME="KCC_COMPONENT_EXCEPTION"></A>
+<A NAME="DOC.2.3.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> KCC_COMPONENT_EXCEPTION(FactoryNotFound)</B></TT>
+<DD>Factory not found exception 
+<DL><DT><DD></DL><P>
+<A NAME="ComponentDefinition"></A>
+<A NAME="DOC.2.3.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>struct  ComponentDefinition</B></TT>
+<DD>Component definition 
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="ComponentDefinition"></A>
+<A NAME="DOC.2.3.3.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ComponentDefinition(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _id)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="id"></A>
+<A NAME="DOC.2.3.3.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> id</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="name"></A>
+<A NAME="DOC.2.3.3.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> name</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="path"></A>
+<A NAME="DOC.2.3.3.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> path</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="metadata"></A>
+<A NAME="DOC.2.3.3.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Properties.html">Properties</A> metadata</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="ComponentModule"></A>
+<A NAME="DOC.2.3.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ComponentModule(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ComponentModule.html#DOC.2.3.3.2">id</A>, <!1><A HREF="IComponentLocator.html">IComponentLocator</A>* <!1><A HREF="ComponentModule.html#DOC.2.3.11">locator</A>, <!1><A HREF="IComponentModuleManager.html">IComponentModuleManager</A>* <!1><A HREF="ComponentModule.html#DOC.2.3.12">manager</A> = NULL)</B></TT>
+<DD>
+Construct a module instance using location service
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="ComponentModule.html#DOC.2.3.3.2">id</A> <!1><A HREF="ComponentModule.html#DOC.2.3.3.2">id</A> of component
+<BR><B></B> - <!1><A HREF="ComponentModule.html#DOC.2.3.11">locator</A> <!1><A HREF="ComponentModule.html#DOC.2.3.11">locator</A> provider (required) (ownership NOT consumed)
+<BR><B></B> - <!1><A HREF="ComponentModule.html#DOC.2.3.12">manager</A> <!1><A HREF="Components.html#DOC.2.6.2">module</A> <!1><A HREF="ComponentModule.html#DOC.2.3.12">manager</A> (optional) (ownership NOT consumed)<BR><DD></DL><P>
+<A NAME="~ComponentModule"></A>
+<A NAME="DOC.2.3.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~ComponentModule()</B></TT>
+<DD>Clean-up component module (will onload if loaded) 
+<DL><DT><DD></DL><P>
+<A NAME="bind"></A>
+<A NAME="DOC.2.3.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void bind() throw(ComponentNotFound)</B></TT>
+<DD>
+Bind to module (load object library).
+Calling more then once will not reload. To reload unbind then bind again.
+@throw ComponentNotFound component not found
+<DL><DT><DD></DL><P>
+<A NAME="unbind"></A>
+<A NAME="DOC.2.3.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void unbind()</B></TT>
+<DD>Unbind from module (unload object library) 
+<DL><DT><DD></DL><P>
+<A NAME="bound"></A>
+<A NAME="DOC.2.3.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool bound()</B></TT>
+<DD>
+Query if component module is bound
+
+<DL><DT><DT><B>Returns:</B><DD>  true if bound<BR><DD></DL><P>
+<A NAME="constructFactory"></A>
+<A NAME="DOC.2.3.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IComponentFactory.html">IComponentFactory</A>* constructFactory() throw(ComponentNotFound, FactoryNotFound)</B></TT>
+<DD>
+Construct factory for component (will bind to module if not bound)
+
+<DL><DT><DT><B>Returns:</B><DD>  factory instance for component module (owner IS consumed)
+@throw ComponentNotFound component not found
+@throw FactoryNotFound factory method not found<BR><DD></DL><P>
+<A NAME="definition"></A>
+<A NAME="DOC.2.3.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="ComponentModule.html#DOC.2.3.3">ComponentDefinition</A>&amp; definition() const </B></TT>
+<DD>Accessors 
+<DL><DT><DD></DL><P>
+<A NAME="locator"></A>
+<A NAME="DOC.2.3.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="IComponentLocator.html">IComponentLocator</A>* locator() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="manager"></A>
+<A NAME="DOC.2.3.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   const <!1><A HREF="IComponentModuleManager.html">IComponentModuleManager</A>* manager() const </B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

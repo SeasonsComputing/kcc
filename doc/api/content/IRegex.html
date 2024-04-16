@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>interface  kcc::IRegex</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>interface  <A HREF="#DOC.DOCU">kcc::IRegex</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> Regular expressions.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="IIComponent,MIComponent.html,IIRegex,MIRegex.html">
+<param name=before value="M,M">
+<param name=after value="Md-,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="up">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Fields</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>regex</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Failed</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Exception.html#DOC.2.16.3">what</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _regex)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>KCC_COMPONENT_EXCEPTION_BEGIN</B> (<!1><A HREF="IRegex.html#DOC.2.22.3">Failed</A>)<BR>
+<I>Regular expression failed exception </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="IRegexExpression.html">IRegexExpression</A>* </TD><TD><B>expression</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops) throw(IRegex::Failed)<BR>
+<I> Accessor to compiled regex expression.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>flush</B> (<!1><A HREF="IRegexExpression.html">IRegexExpression</A>* rx)<BR>
+<I> Lifecyle management</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>flushAll</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>match</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> = IRegex::O_NORMAL) throw(IRegex::Failed)<BR>
+<I> Match a target string against a regex </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>match</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="kcc.html#DOC.2.53">StringParts</A>&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> = IRegex::O_NORMAL, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true) throw(IRegex::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>replace</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; format = Strings::empty(), <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops = IRegex::O_NORMAL) throw(IRegex::Failed)<BR>
+<I> Replace a target string against a regex </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>replace</B> (<!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; format = Strings::empty(), <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops = IRegex::O_NORMAL) throw(IRegex::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>split</B> (<!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops = IRegex::O_NORMAL, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true) throw(IRegex::Failed)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>split</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops = IRegex::O_NORMAL, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true) throw(IRegex::Failed)<BR>
+<I> Split a string into a vector of strings based on regex </I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>OptionFlags</B> <BR>
+<I> Regular expression option flags</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.22.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>typedef  unsigned int </TD><TD><B>Options</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+Regular expressions. Provider compiles and caches all expressions. 
+For fine grained control of regex lifetime use an IRegexExpression.
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="KCC_COMPONENT_EXCEPTION_BEGIN"></A>
+<A NAME="DOC.2.22.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> KCC_COMPONENT_EXCEPTION_BEGIN(<!1><A HREF="IRegex.html#DOC.2.22.3">Failed</A>)</B></TT>
+<DD>Regular expression failed exception 
+<DL><DT><DD></DL><P>
+<A NAME="regex"></A>
+<A NAME="DOC.2.22.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> regex</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="Failed"></A>
+<A NAME="DOC.2.22.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Failed(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="Exception.html#DOC.2.16.3">what</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _regex)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="OptionFlags"></A>
+<A NAME="DOC.2.22.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  OptionFlags</B></TT>
+<DD>
+Regular expression option flags
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="O_ESCAPE_IN_LISTS"></A>
+<A NAME="DOC.2.22.4.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_ESCAPE_IN_LISTS</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="O_CHAR_CLASSES"></A>
+<A NAME="DOC.2.22.4.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_CHAR_CLASSES</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="O_INTERVALS"></A>
+<A NAME="DOC.2.22.4.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_INTERVALS</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="O_BK_REFS"></A>
+<A NAME="DOC.2.22.4.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_BK_REFS</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="O_NOCOLLATE"></A>
+<A NAME="DOC.2.22.4.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_NOCOLLATE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="O_ICASE"></A>
+<A NAME="DOC.2.22.4.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_ICASE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="O_NORMAL"></A>
+<A NAME="DOC.2.22.4.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> O_NORMAL</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="Options"></A>
+<A NAME="DOC.2.22.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>typedef  unsigned int Options</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="flush"></A>
+<A NAME="DOC.2.22.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void flush(<!1><A HREF="IRegexExpression.html">IRegexExpression</A>* rx) = 0</B></TT>
+<DD>
+Lifecyle management
+<DL><DT><DD></DL><P>
+<A NAME="flushAll"></A>
+<A NAME="DOC.2.22.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void flushAll() = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="expression"></A>
+<A NAME="DOC.2.22.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="IRegexExpression.html">IRegexExpression</A>* expression(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops) throw(IRegex::Failed) = 0</B></TT>
+<DD>
+Accessor to compiled regex expression. Will compile and cache expression if not cached.
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A> regular <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A> 
+<BR><B>ops</B> -  regular <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.4">options</A>
+@retrun <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A> <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A> (ownership NOT consumed)
+@throw <!1><A HREF="IRegex.html#DOC.2.22.3">Failed</A> if unable to <!1><A HREF="ISQLUpdate.html#DOC.2.102.2">execute</A> <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A><BR><DD></DL><P>
+<A NAME="split"></A>
+<A NAME="DOC.2.22.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void split(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops = IRegex::O_NORMAL, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true) throw(IRegex::Failed) = 0</B></TT>
+<DD>
+Split a string into a vector of strings based on regex
+
+<DL><DT><DT><B>Parameters:</B><DD><B>target</B> -  target string
+<BR><B></B> - <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A> regular <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A> to <!1><A HREF="IRegex.html#DOC.2.22.9">split</A> on
+<BR><B></B> - <!1><A HREF="Log.html#DOC.2.33.23">out</A> <!1><A HREF="Log.html#DOC.2.33.23">out</A> collection of <!1><A HREF="IRegex.html#DOC.2.22.9">split</A> strings (cleared on entry)
+<BR><B>ops</B> -  regular <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.4">options</A>
+<BR><B></B> - <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> <!1><A HREF="Log.html#DOC.2.33.23">out</A> vector
+@throw <!1><A HREF="IRegex.html#DOC.2.22.3">Failed</A> if unable to <!1><A HREF="ISQLUpdate.html#DOC.2.102.2">execute</A> <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A><BR><DD></DL><P>
+<A NAME="split"></A>
+<A NAME="DOC.2.22.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void split(<!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="kcc.html#DOC.2.44">StringVector</A>&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops = IRegex::O_NORMAL, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true) throw(IRegex::Failed) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="match"></A>
+<A NAME="DOC.2.22.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool match(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> = IRegex::O_NORMAL) throw(IRegex::Failed) = 0</B></TT>
+<DD>
+Match a target string against a regex
+
+<DL><DT><DT><B>Parameters:</B><DD><B>target</B> -  target string
+<BR><B></B> - <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A> regular <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A> to <!1><A HREF="IRegex.html#DOC.2.22.9">split</A> on
+<BR><B></B> - <!1><A HREF="Log.html#DOC.2.33.23">out</A> vector of <!1><A HREF="IRegex.html#DOC.2.22.11">match</A> targets
+<BR><B>ops</B> -  regular <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.4">options</A>
+<BR><B></B> - <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> <!1><A HREF="Log.html#DOC.2.33.23">out</A> parts
+<BR><DT><B>Returns:</B><DD>  true if a match on target
+@throw Failed if unable to execute expression<BR><DD></DL><P>
+<A NAME="match"></A>
+<A NAME="DOC.2.22.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool match(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, <!1><A HREF="kcc.html#DOC.2.53">StringParts</A>&amp; <!1><A HREF="Log.html#DOC.2.33.23">out</A>, <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> = IRegex::O_NORMAL, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true) throw(IRegex::Failed) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="replace"></A>
+<A NAME="DOC.2.22.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   <!1><A HREF="kcc.html#DOC.2.43">String</A> replace(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; format = Strings::empty(), <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops = IRegex::O_NORMAL) throw(IRegex::Failed) = 0</B></TT>
+<DD>
+Replace a target string against a regex
+
+<DL><DT><DT><B>Parameters:</B><DD><B>target</B> -  target string
+<BR><B></B> - <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A> regular <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A> to <!1><A HREF="IRegex.html#DOC.2.22.9">split</A> on
+<BR><B>format</B> -  format string to use for replacement
+<BR><B>ops</B> -  regular <!1><A HREF="IRegex.html#DOC.2.22.8">expression</A> <!1><A HREF="IRegexExpression.html#DOC.2.23.4">options</A>
+<BR><DT><B>Returns:</B><DD>  relpaces string
+@throw Failed if unable to execute expression<BR><DD></DL><P>
+<A NAME="replace"></A>
+<A NAME="DOC.2.22.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void replace(<!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; target, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="IRegex.html#DOC.2.22.2">regex</A>, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; format = Strings::empty(), <!1><A HREF="IRegex.html#DOC.2.22.5">Options</A> ops = IRegex::O_NORMAL) throw(IRegex::Failed) = 0</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

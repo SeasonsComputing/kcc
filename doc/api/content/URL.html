@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::URL</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::URL</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> URL ADT</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Fields</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A>     </TD><TD><B>fragment</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A>  </TD><TD><B>host</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A>   </TD><TD><B>path</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int </TD><TD><B>port</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A>    </TD><TD><B>query</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>scheme</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>URL</B> ( const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _scheme, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _host, int _port, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _path, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _query, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _fragment)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>URL</B> ()<BR>
+<I>Attributes </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>URL</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; url)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   int </TD><TD><B>compare</B> (const <!1><A HREF="URL.html">URL</A>&amp; rhs) const <BR>
+<I>Utility </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>decode</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; in)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>encode</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; in)<BR>
+<I> Encode/Decode an URL  encoded string </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>fullPath</B> () const <BR>
+<I> Accessors  </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   </TD><TD><B>operator String </B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>parameters</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>, <!1><A HREF="Dictionary.html">Dictionary</A>&amp; params, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true)<BR>
+<I> Get/set query parameters </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>parameters</B> (const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; params, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="URL.html">URL</A> </TD><TD><B>parse</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.11">fullPath</A>) throw(<!1><A HREF="Exception.html">Exception</A>)<BR>
+<I>Factory </I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.75.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>URLPort</B> <BR>
+<I>No port specified in URL </I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+URL ADT
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="URLPort"></A>
+<A NAME="DOC.2.75.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  URLPort</B></TT>
+<DD>No port specified in URL 
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="PORT_NONE"></A>
+<A NAME="DOC.2.75.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PORT_NONE</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="URL"></A>
+<A NAME="DOC.2.75.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> URL()</B></TT>
+<DD>Attributes 
+<DL><DT><DD></DL><P>
+<A NAME="URL"></A>
+<A NAME="DOC.2.75.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> URL(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; url)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="URL"></A>
+<A NAME="DOC.2.75.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> URL( const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _scheme, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _host, int _port, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _path, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _query, const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; _fragment)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="scheme"></A>
+<A NAME="DOC.2.75.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> scheme</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="host"></A>
+<A NAME="DOC.2.75.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A>  host</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="path"></A>
+<A NAME="DOC.2.75.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A>   path</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="query"></A>
+<A NAME="DOC.2.75.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A>    query</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="fragment"></A>
+<A NAME="DOC.2.75.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A>     fragment</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="port"></A>
+<A NAME="DOC.2.75.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int port</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="fullPath"></A>
+<A NAME="DOC.2.75.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> fullPath() const </B></TT>
+<DD>
+Accessors 
+
+<DL><DT><DT><B>Returns:</B><DD>  full path of URL compartments<BR><DD></DL><P>
+<A NAME="compare"></A>
+<A NAME="DOC.2.75.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   int compare(const <!1><A HREF="URL.html">URL</A>&amp; rhs) const </B></TT>
+<DD>Utility 
+<DL><DT><DD></DL><P>
+<A NAME="operator String "></A>
+<A NAME="DOC.2.75.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   operator String () const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="parse"></A>
+<A NAME="DOC.2.75.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="URL.html">URL</A> parse(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.11">fullPath</A>) throw(<!1><A HREF="Exception.html">Exception</A>)</B></TT>
+<DD>Factory 
+<DL><DT><DD></DL><P>
+<A NAME="parameters"></A>
+<A NAME="DOC.2.75.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void parameters(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>, <!1><A HREF="Dictionary.html">Dictionary</A>&amp; params, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true)</B></TT>
+<DD>
+Get/set query parameters
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="URL.html#DOC.2.75.8">query</A> <!1><A HREF="URL.html#DOC.2.75.8">query</A> params to <!1><A HREF="URL.html#DOC.2.75.14">parse</A>
+<BR><B>params</B> -  where to place parsed params
+<BR><B></B> - <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> params<BR><DD></DL><P>
+<A NAME="parameters"></A>
+<A NAME="DOC.2.75.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void parameters(const <!1><A HREF="Dictionary.html">Dictionary</A>&amp; params, <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="URL.html#DOC.2.75.8">query</A>, bool <!1><A HREF="UUIDDigest.html#DOC.2.79.7">clear</A> = true)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="encode"></A>
+<A NAME="DOC.2.75.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> encode(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; in)</B></TT>
+<DD>
+Encode/Decode an URL  encoded string
+
+<DL><DT><DT><B>Parameters:</B><DD><B>in</B> -  string to <!1><A HREF="URL.html#DOC.2.75.18">decode</A>
+<BR><DT><B>Returns:</B><DD>  decoded string<BR><DD></DL><P>
+<A NAME="decode"></A>
+<A NAME="DOC.2.75.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="kcc.html#DOC.2.43">String</A> decode(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; in)</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  KCC_CORE_EXPORT kcc::ISODate</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.10">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  KCC_CORE_EXPORT <A HREF="#DOC.DOCU">kcc::ISODate</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE> ISO Date ADT year   - whole year month  - 1 to 12 day    - 1 to 31 hour   - 0 to 24 minute - 0 to 59 second - 0 to 59</BLOCKQUOTE>
+<HR>
+
+<DL>
+<P><TABLE>
+<DT><H3>Public Fields</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int   </TD><TD><B>day</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int    </TD><TD><B>hour</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int     </TD><TD><B>minute</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int  </TD><TD><B>month</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int      </TD><TD><B>second</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int </TD><TD><B>year</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>ISODate</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ISODate.html#DOC.2.29.25">iso</A>)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>ISODate</B> ()<BR>
+<I>Attributes </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>ISODate</B> (int y, int mo, int d, int h=0, int <!1><A HREF="Mutex.html#DOC.2.67.1.1">m</A>=0, int s=0)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   int </TD><TD><B>compare</B> (const <!1><A HREF="ISODate.html">ISODate</A>&amp; rhs) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.22"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>gmtdatetime</B> () const <BR>
+<I>GMT format (Sun, 08 Feb 1971 19:57:13 GMT) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.25"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="ISODate.html">ISODate</A> </TD><TD><B>iso</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ISODate.html#DOC.2.29.25">iso</A>)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>isodate</B> () const <BR>
+<I>ISO extended format (YYYY-MM-DDTHH:MM:SSZ+/-HH:MM) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>isodatetime</B> (<!1><A HREF="ISODate.html#DOC.2.29.15">Format</A> f = ISODate::F_NONE) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>isotime</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.29"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="ISODate.html">ISODate</A> </TD><TD><B>local</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.27"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="ISODate.html">ISODate</A> </TD><TD><B>local</B> (const std::time_t&amp; t)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>null</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   </TD><TD><B>operator std::time_t </B> () const <BR>
+<I>Utility </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.26"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="ISODate.html">ISODate</A> </TD><TD><B>raw</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ISODate.html#DOC.2.29.26">raw</A>)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.19"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>rawdate</B> () const <BR>
+<I>ISO basic format (YYYYMMDDTHHMMSSZ+/-HHMM) </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.21"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>rawdatetime</B> (<!1><A HREF="ISODate.html#DOC.2.29.15">Format</A> f = ISODate::F_NONE) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.20"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="kcc.html#DOC.2.43">String</A> </TD><TD><B>rawtime</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.23"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   std::time_t </TD><TD><B>time</B> (const <!1><A HREF="ISODate.html">ISODate</A>&amp; d)<BR>
+<I>Factory </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.24"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="ISODate.html">ISODate</A> </TD><TD><B>tm</B> (const std::tm&amp; <!1><A HREF="ISODate.html#DOC.2.29.24">tm</A>)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.28"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="ISODate.html">ISODate</A> </TD><TD><B>utc</B> (const std::time_t&amp; t)<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.30"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   <!1><A HREF="ISODate.html">ISODate</A> </TD><TD><B>utc</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>valid</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.31"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   bool </TD><TD><B>valid</B> (const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ISODate.html#DOC.2.29.25">iso</A>)<BR>
+<I>Utility </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>valid_t</B> () const <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.2.29.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>Format</B> <BR>
+<I> ISO formatting:  Time zone and zulu formatting assume a local time and will be converted to UTC automatically when writing TZ or Z formats</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>
+ISO Date ADT
+year   - whole year
+month  - 1 to 12
+day    - 1 to 31
+hour   - 0 to 24
+minute - 0 to 59
+second - 0 to 59
+
+<P></BLOCKQUOTE>
+<DL>
+
+<A NAME="ISODate"></A>
+<A NAME="DOC.2.29.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ISODate()</B></TT>
+<DD>Attributes 
+<DL><DT><DD></DL><P>
+<A NAME="ISODate"></A>
+<A NAME="DOC.2.29.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ISODate(int y, int mo, int d, int h=0, int <!1><A HREF="Mutex.html#DOC.2.67.1.1">m</A>=0, int s=0)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="ISODate"></A>
+<A NAME="DOC.2.29.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ISODate(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ISODate.html#DOC.2.29.25">iso</A>)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="year"></A>
+<A NAME="DOC.2.29.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int year</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="month"></A>
+<A NAME="DOC.2.29.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int  month</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="day"></A>
+<A NAME="DOC.2.29.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int   day</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="hour"></A>
+<A NAME="DOC.2.29.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int    hour</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="minute"></A>
+<A NAME="DOC.2.29.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int     minute</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="second"></A>
+<A NAME="DOC.2.29.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int      second</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator std::time_t "></A>
+<A NAME="DOC.2.29.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   operator std::time_t () const </B></TT>
+<DD>Utility 
+<DL><DT><DD></DL><P>
+<A NAME="compare"></A>
+<A NAME="DOC.2.29.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   int compare(const <!1><A HREF="ISODate.html">ISODate</A>&amp; rhs) const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="valid_t"></A>
+<A NAME="DOC.2.29.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool valid_t() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="valid"></A>
+<A NAME="DOC.2.29.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool valid() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="null"></A>
+<A NAME="DOC.2.29.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool null() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="Format"></A>
+<A NAME="DOC.2.29.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  Format</B></TT>
+<DD>
+ISO formatting: 
+Time zone and zulu formatting assume a local time and will be
+converted to UTC automatically when writing TZ or Z formats
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="F_NONE"></A>
+<A NAME="DOC.2.29.15.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> F_NONE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="F_TIMEZONE"></A>
+<A NAME="DOC.2.29.15.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> F_TIMEZONE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="F_ZULU"></A>
+<A NAME="DOC.2.29.15.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> F_ZULU</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="isodate"></A>
+<A NAME="DOC.2.29.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> isodate() const </B></TT>
+<DD>ISO extended format (YYYY-MM-DDTHH:MM:SSZ+/-HH:MM) 
+<DL><DT><DD></DL><P>
+<A NAME="isotime"></A>
+<A NAME="DOC.2.29.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> isotime() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="isodatetime"></A>
+<A NAME="DOC.2.29.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> isodatetime(<!1><A HREF="ISODate.html#DOC.2.29.15">Format</A> f = ISODate::F_NONE) const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="rawdate"></A>
+<A NAME="DOC.2.29.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> rawdate() const </B></TT>
+<DD>ISO basic format (YYYYMMDDTHHMMSSZ+/-HHMM) 
+<DL><DT><DD></DL><P>
+<A NAME="rawtime"></A>
+<A NAME="DOC.2.29.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> rawtime() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="rawdatetime"></A>
+<A NAME="DOC.2.29.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> rawdatetime(<!1><A HREF="ISODate.html#DOC.2.29.15">Format</A> f = ISODate::F_NONE) const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="gmtdatetime"></A>
+<A NAME="DOC.2.29.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="kcc.html#DOC.2.43">String</A> gmtdatetime() const </B></TT>
+<DD>GMT format (Sun, 08 Feb 1971 19:57:13 GMT) 
+<DL><DT><DD></DL><P>
+<A NAME="time"></A>
+<A NAME="DOC.2.29.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   std::time_t time(const <!1><A HREF="ISODate.html">ISODate</A>&amp; d)</B></TT>
+<DD>Factory 
+<DL><DT><DD></DL><P>
+<A NAME="tm"></A>
+<A NAME="DOC.2.29.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="ISODate.html">ISODate</A> tm(const std::tm&amp; <!1><A HREF="ISODate.html#DOC.2.29.24">tm</A>)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="iso"></A>
+<A NAME="DOC.2.29.25"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="ISODate.html">ISODate</A> iso(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ISODate.html#DOC.2.29.25">iso</A>)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="raw"></A>
+<A NAME="DOC.2.29.26"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="ISODate.html">ISODate</A> raw(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ISODate.html#DOC.2.29.26">raw</A>)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="local"></A>
+<A NAME="DOC.2.29.27"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="ISODate.html">ISODate</A> local(const std::time_t&amp; t)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="utc"></A>
+<A NAME="DOC.2.29.28"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="ISODate.html">ISODate</A> utc(const std::time_t&amp; t)</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="local"></A>
+<A NAME="DOC.2.29.29"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="ISODate.html">ISODate</A> local()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="utc"></A>
+<A NAME="DOC.2.29.30"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   <!1><A HREF="ISODate.html">ISODate</A> utc()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="valid"></A>
+<A NAME="DOC.2.29.31"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   bool valid(const <!1><A HREF="kcc.html#DOC.2.43">String</A>&amp; <!1><A HREF="ISODate.html#DOC.2.29.25">iso</A>)</B></TT>
+<DD>Utility 
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Author:</B><DD>Ted V. Kremer
+<DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+<BR>
+This page was generated with the help of <A HREF="http://docpp.sourceforge.net">DOC++</A>.
+</BODY>
+</HTML>

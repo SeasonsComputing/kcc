@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>post httpserver test</title>
+</head>
+<body>
+    <form action="http://localhost:5150?test=post" method="post">
+        Checkbox: <input type="checkbox" name="cb" value="cb_1"/>
+        Radio1: <input type="radio" name="rb" value="rb_1"/>
+        Radio2: <input type="radio" name="rb" value="rb_2"/>
+        Radio3: <input type="radio" name="rb" value="rb_3"/>
+        Edit: <input type="text" name="ed" value="e_1"/>
+        <br/>
+        <input type="submit" value="submit"/>
+    </form>
+    <form action="http://localhost:5150?test=post" method="post" enctype="multipart/form-data">
+        Edit: <input type="text" name="formed" value="e_1"/>
+        File: <input type="file" name="fi"/>
+        <br/>
+        <input type="submit" value="submit"/>
+    </form>
+</body>
+</html>
